@@ -101,7 +101,7 @@ Data di fine del progetto: Indefinita
 
 ### Scopo
 
-Lo socpo di questo progetto consiste nello sviluppo di una tavolozza virtuale sulla quale sarà possibile disegnare a mano libera utilizzando un LeapMotion. Nella tavolozza sarà quindi possibile selezionare gli strumenti di disegno (ad esempio pennelli, matite,...) e selezionare il colora da utilizzare nel disegno. I movimenti delle mani corrisponederanno a determinate azioni sulla tavolozza (es. tracciare una riga), inoltre i disegni creati saranno salvabili ed esportabili su file separati.
+Lo socpo di questo progetto consiste nello sviluppo di una tavolozza virtuale sulla quale sarà possibile disegnare a mano libera utilizzando un Leap Motion. Nella tavolozza sarà quindi possibile selezionare gli strumenti di disegno (ad esempio pennelli, matite,...) e selezionare il colora da utilizzare nel disegno. I movimenti delle mani corrisponederanno a determinate azioni sulla tavolozza (es. tracciare una riga), inoltre i disegni creati saranno salvabili ed esportabili su file separati.
 
 Lo scopo di progetto consiste inoltre nell'imparare a gestire dei progetti in team e imparare ad utilizzare nuove risorse.
 
@@ -110,26 +110,10 @@ Lo scopo di progetto consiste inoltre nell'imparare a gestire dei progetti in te
 
 ### Analisi del dominio
 
-
-  -   Background/Situazione iniziale
-
-  -   Quale è e come è organizzato il contesto in cui il prodotto dovrà
-      funzionare?
-
-  -   Come viene risolto attualmente il problema? Esiste già un prodotto
-      simile?
-
-  -   Chi sono gli utenti? Che bisogni hanno? Come e dove lavorano?
-
-  -   Che competenze/conoscenze/cultura posseggono gli utenti in relazione
-      con il problema?
-
-  -   Esistono convenzioni/standard applicati nel dominio?
-
-  -   Che conoscenze teoriche bisogna avere/acquisire per poter operare
-      efficacemente nel dominio?
-
-  -   …
+È stato richiesto lo sviluppo di un'applicazione per la creazione di contenuti grafici, attraverso l'utilizzo di un sensore Leap Motion. 
+L'applicazione dovrà permettere dunque l'interazione dell'utente con essa tramite il solo movimento delle mani.
+Il programma dovrà essere simile a paint e semplice da utilizzare, inoltre dovrà dare la possibilita di salvare ed esportare le opere artistiche create.
+L'applicazione sarà stand alone e non necessiterà particolari conoscenze da parte degli utenti.
 
 ### Analisi e specifica dei requisiti
 
@@ -138,7 +122,7 @@ Lo scopo di progetto consiste inoltre nell'imparare a gestire dei progetti in te
   tramite interviste (da inserire nei diari), il progettista deve cercare
   di rispondere alle seguenti domande:
 
-  -   Quali sono i bisogni del committente?
+			  -   Quali sono i bisogni del committente?
 
   -   Quali funzioni deve svolgere il prodotto?
 
@@ -172,9 +156,15 @@ Lo scopo di progetto consiste inoltre nell'imparare a gestire dei progetti in te
 
   |**ID**	|**Nome**			|**Priorità**|**Vers**|**Note**  |
   |----|------------|--------|----|------|
-  |Req-12|Dovrà esserci una maschera di login|1|1.0|...|
-  |Req-13|Si dovranno poter immettere nuovi allievi|1|1.0|...|
-  |Req-14|Dovrà essere possibile la ricerca di allievi|1|1.0|...|
+  |Req-001|Tracking corretto delle mani|1|1.0| Utilizzo del sensore Leap Motion |
+  |Req-002|Dovrà essere possibile selezionare diversi strumenti di disegno (pennelli, matite, ...) |1|1.0||
+  |Req-003|Si dovrà selezionare il colore dalla avolozza |1|1.0||
+  |Req-004|Si potrà disegnare a mano libera sulla tavolozza virtuale |1|1.0|.|
+  |Req-005|I disegni si potranno salvare|1|1.0||
+  |Req-006|I disegni si potranno esportare come immagine|1|1.0||
+  |Req-007|Dovrà essere standalone|1|1.0||
+  |Req-008|Si potranno importare le immagini da modificare|2|1.0|.|
+  |Req-009|Sarà presente una galleria di immagini accessibili sempre|2|1.0||
   
   
 
@@ -226,16 +216,25 @@ in questo capitolo.
 
 ### Analisi dei mezzi
 
-Elencare e *descrivere* i mezzi disponibili per la realizzazione del
-progetto. Ricordarsi di sempre descrivere nel dettaglio le versioni e il
-modello di riferimento.
+Software:
 
-SDK, librerie, tools utilizzati per la realizzazione del progetto e
-eventuali dipendenze.
+- Google Chrome
+- Opera 
+- Firefox
+- MacDown	
+- Visual Studio V.
+- Unity V.
+- Libreria SDK di Leap Motion per il controllo del Leap Motion Controller
+- GitHub Desktop
+- Trello
 
-Su quale piattaforma dovrà essere eseguito il prodotto? Che hardware
-particolare è coinvolto nel progetto? Che particolarità e limitazioni
-presenta? Che hw sarà disponibile durante lo sviluppo?
+Hardware:
+
+- Mac A422-05 scolastico
+- Mac A422-06 scolastico
+- Mac A422-07 scolastico
+- Mac A422-08 scolastico
+- Leap Motion Controller fornito dal docente
 
 ## Progettazione
 
@@ -372,46 +371,12 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc
 ## Bibliografia
 
 ### Bibliografia per articoli di riviste
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
-
-2.  Titolo dell’articolo (tra virgolette),
-
-3.  Titolo della rivista (in italico),
-
-4.  Anno e numero
-
-5.  Pagina iniziale dell’articolo,
 
 ### Bibliografia per libri
 
-
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
-
-2.  Titolo del libro (in italico),
-
-3.  ev. Numero di edizione,
-
-4.  Nome dell’editore,
-
-5.  Anno di pubblicazione,
-
-6.  ISBN.
-
 ### Sitografia
 
-1.  URL del sito (se troppo lungo solo dominio, evt completo nel
-    diario),
-
-2.  Eventuale titolo della pagina (in italico),
-
-3.  Data di consultazione (GG-MM-AAAA).
-
-**Esempio:**
-
--   http://standards.ieee.org/guides/style/section7.html, *IEEE
-    Standards Style Manual*, 07-06-2008.
+-   https://www.ultraleap.com/, *Sito ufficiale del LeapMotion*, 14-01-2021.
 
 ## Allegati
 
