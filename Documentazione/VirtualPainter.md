@@ -117,54 +117,17 @@ L'applicazione sarà stand alone e non necessiterà particolari conoscenze da pa
 
 ### Analisi e specifica dei requisiti
 
-  Il progettista, dopo aver ricevuto il mandato, in collaborazione con il
-  committente redige una lista di requisiti. Durante questi incontri,
-  tramite interviste (da inserire nei diari), il progettista deve cercare
-  di rispondere alle seguenti domande:
-
-			  -   Quali sono i bisogni del committente?
-
-  -   Quali funzioni deve svolgere il prodotto?
-
-  -   Come devono essere implementate?
-
-  -   L’utente, come vorrebbe/dovrebbe interagire con il prodotto?
-
-  -   Come verrà utilizzato il prodotto?
-
-  -   Che tipo di interfaccia si immagina?
-
-  -   Che prestazioni minime deve fornire il prodotto?
-
-  -   Che grado di sicurezza deve avere il prodotto?
-
-  -   …
-
-  In base alla lista dei requisiti e all’analisi degli stessi, il
-  progettista redige una *specifica dei requisiti* in cui elenca e
-  descrive in modo dettagliato quali sono le funzionalità che il prodotto
-  fornirà. La specifica dovrebbe essere abbastanza dettagliata da poter
-  essere utilizzata come base per lo sviluppo, ma non troppo; ad esempio
-  non dovrebbe contenere dettagli di implementazione, o definizioni
-  dettagliate dell’interfaccia grafica a meno che questi non siano
-  considerati cruciali. Non si deve scordare che i requisiti non
-  rappresentano delle attività bensì delle caratteristiche che il prodotto
-  dovrà possedere.
-
-
-
-
-  |**ID**	|**Nome**			|**Priorità**|**Vers**|**Note**  |
-  |----|------------|--------|----|------|
-  |Req-001|Tracking corretto delle mani|1|1.0| Utilizzo del sensore Leap Motion |
-  |Req-002|Dovrà essere possibile selezionare diversi strumenti di disegno (pennelli, matite, ...) |1|1.0||
-  |Req-003|Si dovrà selezionare il colore dalla avolozza |1|1.0||
-  |Req-004|Si potrà disegnare a mano libera sulla tavolozza virtuale |1|1.0|.|
-  |Req-005|I disegni si potranno salvare|1|1.0||
-  |Req-006|I disegni si potranno esportare come immagine|1|1.0||
-  |Req-007|Dovrà essere standalone|1|1.0||
-  |Req-008|Si potranno importare le immagini da modificare|2|1.0|.|
-  |Req-009|Sarà presente una galleria di immagini accessibili sempre|2|1.0||
+|**ID**	|**Nome**			|**Priorità**|**Vers**|**Note**  |
+|----|------------|--------|----|------|
+|Req-001|Tracking corretto delle mani|1|1.0| Utilizzo del sensore Leap Motion |
+|Req-002|Dovrà essere possibile selezionare diversi strumenti di disegno (pennelli, matite, ...) |1|1.0||
+|Req-003|Si dovrà selezionare il colore dalla avolozza |1|1.0||
+|Req-004|Si potrà disegnare a mano libera sulla tavolozza virtuale |1|1.0|.|
+|Req-005|I disegni si potranno salvare|1|1.0||
+|Req-006|I disegni si potranno esportare come immagine|1|1.0||
+|Req-007|Dovrà essere standalone|1|1.0||
+|Req-008|Si potranno importare le immagini da modificare|2|1.0|.|
+|Req-009|Sarà presente una galleria di immagini accessibili sempre|2|1.0||
   
   
 
