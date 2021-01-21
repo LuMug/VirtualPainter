@@ -3,6 +3,14 @@
 ### SAMT, 2021-01-21
 
 ## Lavori svolti
+Link utili:
+ - https://github.com/gkngkc/UnityStandaloneFileBrowser
+ 
+ Inizialmente ci siamo spartiti il lavoro nella fase di design, Karim ha quindi fatto il design delle interfacce, Zeno si è informato sulla manipolazione delle immagini in unity, Sara e Stefano hanno lavorato sul design dell'architettura dell'applicativo.
+
+Il lavoro è stato rallentato dalle presentazioni dei progetti del primo semestre e da dei colloqui per degli stage.
+
+
 
 ### Karim Galliciotti
 
