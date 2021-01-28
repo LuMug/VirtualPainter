@@ -39,7 +39,7 @@ Link utili:
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
 |10:05 - 11:00 | Finito il Design della Architettura e il GANTT|
-|13:15 - 15:45 | |
+|13:15 - 15:45 | Aggiornamento documentazione ed inserimento della parte dei design|
 
 
 ##  Problemi riscontrati e soluzioni adottate
