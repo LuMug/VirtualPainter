@@ -4,8 +4,9 @@
 
 ## Lavori svolti
 Abbiamo creato la bacheca su Trello e l'abbiamo condivisa con il docente responsabile.
-Abbiamo tentato l'installazione di Uity sulle macchine scolastiche, l'installazione è stata bloccata dal proxy della scuola, di conseguenza abbiamo perso tempo 
-e abbiamo deciso che nelle prossime lezioni verranno utilizzati anche i PC personali. 
+Abbiamo tentato l'installazione di Unity sulle macchine scolastiche, l'installazione è stata bloccata dal proxy della scuola, di conseguenza abbiamo perso tempo 
+e abbiamo deciso che nelle prossime lezioni verranno utilizzati anche i PC personali.
+Infine siamo riusciti ad installare Unity su solamente una macchina scolastica.
 
 Link utili:
  - 
