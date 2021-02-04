@@ -13,10 +13,10 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|10:05 - 11:35 | Inizio tracciamento mani in Unity|
+|08:20 - 11:35 | Inizio tracciamento mani in Unity|
 |12:30 - 15:45 | Conclusione tracciamento mani in Unity|
 
-### Tracciamento mani in Unity
+## Tracciamento mani in Unity
 Per prima cosa ho scaricato gli Unity module packages (https://developer.leapmotion.com/unity) e li ho importati in Unity, in seguito ho installato il plugin "XR plugin Management" versione 3.2.16 (Window -> Package Manager) e l'ho selezionato sotto la scheda "Project Settings".
 
 Per testare il funzionamento delle configurazioni effettuate ho aperto la scena "Capsule Hands (Desktop)" (Nella cartella Assets/Plugins/LeapMotion/Core/Example) e verificato che LeapMotion interagisse con le mani presenti in essa.
@@ -31,8 +31,19 @@ HandsModel deve usare lo script "Hand Model Manager" e modificando il campo Size
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|10:05 - 11:35 | |
-|12:30 - 15:45 | |
+|08:20 - 09:50 | Installazione Visual Studio  |
+|10:05 - 14:00 | Creazione classe FileManager per caricamento e salvataggio texture|
+|14:15 - 15:45 | Cercato un package per l'esplorazione di file e percorsi|
+
+## Installazione Visual Studio
+Nelle prime due ore della mattina ho provato ad installare Visual Studio ma senza successo a causa della ISO di Windows 10 troppo vecchia che ho usato per la macchina virtuale. Per questo ho deciso di non soffermarmi troppo, visto che comunque Unity è stato installato a casa, a perdere tempo e ho installato Visual Studio Code. Non avendo l'aiuto di un itellisense è stato un po' più complicato a usare le classi di cui avevo bisogno essendo la prima volta che le utilizavo. 
+
+## Classe FileManager
+In questa giornata di lavoro ho realizzato la classe FileManager. Questa classe permette di caricare immagini JPG, e PNG sottoforma di texture e, viceversa, di salvare texture sottoforma di immagini JPG e PNG.
+
+## File Browser
+Poi ho cercato online qualcosa che potrebbe aiutarmi per scegliere i percorsi delle immagini da aprire e salvare. Ho trovato un package che permette di aprire una finestra "esplora file" di sistema (sia Windows che Mac che Linux), e scegliere file da aprire o percorsi in cui salvare. Il package si chiama "UnityStandaloneFileBrowser" ed è stato sviluppato da  Gökhan Gökçe e Ricardo Rodrigues (https://github.com/gkngkc/UnityStandaloneFileBrowser#:~:text=%20Unity%20Standalone%20File%20Browser%20%201%20Works,Ricardo%20Rodrigues.%207%20Basic%20WebGL%20support.%20More).
+
 
 ### Stefano Mureddu
 
@@ -47,11 +58,11 @@ HandsModel deve usare lo script "Hand Model Manager" e modificando il campo Size
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|10:05 - 11:35 | Creazione della GUI in Unity della pagina iniziale (Start Page) che cossriponde al menù iniziale|
-|11:35 - 12:30 | Creazione della GUI in Unity per la configurazione di una nuova tela / foglio|
-|13:15 - 15:45 | Creazione di una scena unica contenente le due GUI create al mattino e interazione tra i due Canvas tramite un bottone |
+|08:20 - 09:50 | Creazione della GUI in Unity della pagina iniziale (Start Page) che cossriponde al menù iniziale|
+|10:05 - 11:35 | Creazione della GUI in Unity per la configurazione di una nuova tela / foglio|
+|12:30 - 15:45 | Creazione di una scena unica contenente le due GUI create al mattino e interazione tra i due Canvas tramite un bottone |
 
-### Start Page GUI
+## Start Page GUI
 
 Per prima cosa è stata creata la scena "Start_Page" nel progetto di Unity "Virtual Painter", a questo punto si è inserito un nuovo Canvas nella scena appena creata.
 Al canvas è stato impostato il render mode: Screen Space - Camera, in questo modo il canvas sarà sempre grande come la Main Camera, quindi grande come l'applicazione.
