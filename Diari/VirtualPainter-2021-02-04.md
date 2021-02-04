@@ -52,6 +52,7 @@ HandsModel deve usare lo script "Hand Model Manager" e modificando il campo Size
 |13:15 - 15:45 | |
 
 ### Start Page GUI
+
 Per prima cosa è stata creata la scena "Start_Page" nel progetto di Unity "Virtual Painter", a questo punto si è inserito un nuovo Canvas nella scena appena creata.
 Al canvas è stato impostato il render mode: Screen Space - Camera, in questo modo il canvas sarà sempre grande come la Main Camera, quindi grande come l'applicazione.
 Il Canvas ha inoltre un Vertical Layout Group, che consentirà di disporre il Label con il titolo del programma e i bottoni uno sopra l'altro, e  sia l'altezza che la larghezza dei componenti all'interno di questo layout sono controllati dal canvas (altezza e larghezza sono spuntate nelle impostazioni: "Control Child Size" e "Child Force Expand").
@@ -69,6 +70,14 @@ Ad ogni bottone è stata assegnato un Grid Layout Group (con "Child Alignment" s
 Nella scena di configurazione del foglio è stato aggiunto un Canvas avente un Vertical Layout Group, il quale permette agli elemnti al suo interno di essere messi uno sotto l'altro, il Label (testo "Grandezza Foglio"), il pannello contenente gli Input Field e i Label per la gerstione delle impostazioni del foglio e il bottone "continua", ereditano altezza e larghezza dal canvas ed hanno la grandezza massima contenibile.
 
 La gestione dell'altezza e la larghezza è gestita da 2 Input Field, i quali accettano sultanto numeri interi.
+
+### Creazione di una Scena Unica
+
+Per evitare errori durante il passaggio di informazioni tra due scene abbiamo deciso infine di collassare tutto il programma in un'unica Scene (Scena di Unity).
+Abbiamo quindi copiato e incollato i due Canvas delle scene descritte in precedenza nella scena chiamata "Tela".
+A questo punto abbiamo creato un GameObject vuoto chiamato "ActionController" alla quale abbiamo assegnato lo script "ShowMenu".
+"ShowMenu" riceve come argomenti in entrata il Canvas "Start_Page", il Canvas "ConfigurazioneFoglio" e il bottone "NuovoFoglio" presente nel Canvas "Start_Page".
+Nel metodo "Start" abbiamo aggiunto un listener per il bottone, il quale rende inattiva il Canvas del menu e attiva il Canvas nelle quali verranno messe le impostazioni del nuovo foglio, inoltre nel metodo start viene attivato il "Menu_Start" (Canvas iniziale del programma) e viene disattivato il Canvas delle impostazioni di una nuova tela / foglio.
 
 ##  Problemi riscontrati e soluzioni adottate
 
