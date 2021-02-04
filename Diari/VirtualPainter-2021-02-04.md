@@ -50,8 +50,21 @@ Poi ho cercato online qualcosa che potrebbe aiutarmi per scegliere i percorsi de
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|10:05 - 11:35 | |
-|12:30 - 15:45 | |
+|08:20 - 09:50 |Clonazione macchina virtuale e installazione visual studio |
+|10:05 - 11:35 |Creazione script di creazione foglio|
+|12:30 - 13:00 |Aiuto a Karim|
+|13:00 - 14:30 |Aiuto a Sara|
+|14:30 - 15:45 |Aggiornamento diario e documentazione|
+
+#### Clonazione e installazione Visual Studio
+Durante le prime 2 ore, dopo la riunione, ho copiato la macchina virtuale e messo a posto alcuni problemi con essa che mi hanno portato via parecchio tempo.
+#### Script di creazione
+Durente le seconde 2 ore ho creato uno script per la creazione della tela da disegno, che dati altezza e larghezza ineriti in un form assegna questa grandezza alla tela.
+#### Aiuti
+Una volta concluso lo script ho cercato di aiutare sara col la parte del menu ma essendoci stato un problema da risolvere fino alle ultime 2 due ore non sono riuscito a importarlo.
+All'inizio della terze 2 ore ho aiutato Karim con il suo problema che abbiamo risolto molto velocemente permettendomi di tornare ad aiutare Sara.
+#### Diario e documentazione
+Alla fine ho fatto il diario e aggiornato la mia documentazione.
 
 ### Sara Bressan
 
