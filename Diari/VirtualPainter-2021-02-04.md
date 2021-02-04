@@ -5,7 +5,7 @@
 ## Lavori svolti
 
 Link utili:
- - 
+ - https://assetstore.unity.com/packages/2d/gui/icons/simple-icon-pastel-tone-107568 , Package contenente le immagini che sono state inserite nei bottoni.
 
 
 ### Karim Galliciotti
