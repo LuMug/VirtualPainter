@@ -16,6 +16,16 @@ Link utili:
 |10:05 - 11:35 | Inizio tracciamento mani in Unity|
 |12:30 - 15:45 | Conclusione tracciamento mani in Unity|
 
+### Tracciamento mani in Unity
+Per prima cosa ho scaricato gli Unity module packages (https://developer.leapmotion.com/unity) e li ho importati in Unity, in seguito ho installato il plugin "XR plugin Management" versione 3.2.16 (Window -> Package Manager) e l'ho selezionato sotto la scheda "Project Settings".
+
+Per testare il funzionamento delle configurazioni effettuate ho aperto la scena "Capsule Hands (Desktop)" (Nella cartella Assets/Plugins/LeapMotion/Core/Example) e verificato che LeapMotion interagisse con le mani presenti in essa.
+
+Dopo aver confermato il successo del test ho provato a rifarla da capo.
+Per prima cosa ho trascinato il prefab LeapHandController (Assets/Plugins/LeapMotion/Core/Prefabs) nella scena e creato un nuovo GameObject di nome "HandsModel", che conterrà "RigidRoundHand_L", "RigidRoundHand_R" (entrambi in Assets/Plugins/LeapMotion/Core/Prefabs/HandModelPhysical), "Capsule Hand Left" e "Capsule Hand Right" (entrambi in Assets/Plugins/LeapMotion/Core/Prefabs/HandModelsNonHuman).
+
+HandsModel deve usare lo script "Hand Model Manager" e modificando il campo Size sotto Models Pool da 0 a 2 compariranno 2 nuovi gruppi di campi, da chiamare "Graphics_Hands" e "Physics_Hands". Sotto Graphics_Hands, nei campi Left Model e Right Model vanno selezionati "Capsule Hand Right e Left", mentre in "Physics_Hands" verranno selezionati "RigidRoundHand_L e R". In entrambi i gruppi vanno spuntate le caselle "Is enable" e "Can duplicate".
+
 ### Zeno Darani
 
 
@@ -59,16 +69,6 @@ Ad ogni bottone è stata assegnato un Grid Layout Group (con "Child Alignment" s
 Nella scena di configurazione del foglio è stato aggiunto un Canvas avente un Vertical Layout Group, il quale permette agli elemnti al suo interno di essere messi uno sotto l'altro, il Label (testo "Grandezza Foglio"), il pannello contenente gli Input Field e i Label per la gerstione delle impostazioni del foglio e il bottone "continua", ereditano altezza e larghezza dal canvas ed hanno la grandezza massima contenibile.
 
 La gestione dell'altezza e la larghezza è gestita da 2 Input Field, i quali accettano sultanto numeri interi.
-
-### Tracciamento mani in Unity
-Per prima cosa ho scaricato gli Unity module packages (https://developer.leapmotion.com/unity) e li ho importati in Unity, in seguito ho installato il plugin "XR plugin Management" versione 3.2.16 (Window -> Package Manager) e l'ho selezionato sotto la scheda "Project Settings".
-
-Per testare il funzionamento delle configurazioni effettuate ho aperto la scena "Capsule Hands (Desktop)" (Nella cartella Assets/Plugins/LeapMotion/Core/Example) e verificato che LeapMotion interagisse con le mani presenti in essa.
-
-Dopo aver confermato il successo del test ho provato a rifarla da capo.
-Per prima cosa ho trascinato il prefab LeapHandController (Assets/Plugins/LeapMotion/Core/Prefabs) nella scena e creato un nuovo GameObject di nome "HandsModel", che conterrà "RigidRoundHand_L", "RigidRoundHand_R" (entrambi in Assets/Plugins/LeapMotion/Core/Prefabs/HandModelPhysical), "Capsule Hand Left" e "Capsule Hand Right" (entrambi in Assets/Plugins/LeapMotion/Core/Prefabs/HandModelsNonHuman).
-
-HandsModel deve usare lo script "Hand Model Manager" e modificando il campo Size sotto Models Pool da 0 a 2 compariranno 2 nuovi gruppi di campi, da chiamare "Graphics_Hands" e "Physics_Hands". Sotto Graphics_Hands, nei campi Left Model e Right Model vanno selezionati "Capsule Hand Right e Left", mentre in "Physics_Hands" verranno selezionati "RigidRoundHand_L e R". In entrambi i gruppi vanno spuntate le caselle "Is enable" e "Can duplicate".
 
 ##  Problemi riscontrati e soluzioni adottate
 
