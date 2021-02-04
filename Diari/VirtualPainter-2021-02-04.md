@@ -13,16 +13,16 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|10:05 - 11:35 | |
-|12:30 - 15:45 | |
+|10:05 - 11:35 | Inizio tracciamento mani in Unity|
+|12:30 - 15:45 | Conclusione tracciamento mani in Unity|
 
 ### Zeno Darani
 
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|||
-|||
+|10:05 - 11:35 | |
+|12:30 - 15:45 | |
 
 ### Stefano Mureddu
 
@@ -59,6 +59,8 @@ Ad ogni bottone è stata assegnato un Grid Layout Group (con "Child Alignment" s
 Nella scena di configurazione del foglio è stato aggiunto un Canvas avente un Vertical Layout Group, il quale permette agli elemnti al suo interno di essere messi uno sotto l'altro, il Label (testo "Grandezza Foglio"), il pannello contenente gli Input Field e i Label per la gerstione delle impostazioni del foglio e il bottone "continua", ereditano altezza e larghezza dal canvas ed hanno la grandezza massima contenibile.
 
 La gestione dell'altezza e la larghezza è gestita da 2 Input Field, i quali accettano sultanto numeri interi.
+
+### Tracciamento mani in Unity
 
 
 ##  Problemi riscontrati e soluzioni adottate
