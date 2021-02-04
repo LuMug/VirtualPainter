@@ -49,7 +49,7 @@ HandsModel deve usare lo script "Hand Model Manager" e modificando il campo Size
 |--------------|------------------------------|
 |10:05 - 11:35 | Creazione della GUI in Unity della pagina iniziale (Start Page) che cossriponde al menù iniziale|
 |11:35 - 12:30 | Creazione della GUI in Unity per la configurazione di una nuova tela / foglio|
-|13:15 - 15:45 | |
+|13:15 - 15:45 | Creazione di una scena unica contenente le due GUI create al mattino e interazione tra i due Canvas tramite un bottone |
 
 ### Start Page GUI
 
@@ -81,6 +81,7 @@ Nel metodo "Start" abbiamo aggiunto un listener per il bottone, il quale rende i
 
 ##  Problemi riscontrati e soluzioni adottate
 
+Non si riusciva a interagire con i bottoni e i textBox delle GUI una volta integrati entrambi i Canvas in una Scena unica, abbiamo risolto il problema mettendo i due Canvas in due Layer differenti (uno più avanti e l'altro dietro).
 
 ##  Punto della situazione rispetto alla pianificazione
 
