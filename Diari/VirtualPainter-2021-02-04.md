@@ -61,8 +61,7 @@ Nella scena di configurazione del foglio è stato aggiunto un Canvas avente un V
 La gestione dell'altezza e la larghezza è gestita da 2 Input Field, i quali accettano sultanto numeri interi.
 
 ### Tracciamento mani in Unity
-
-
+Per prima cosa ho scaricato gli Unity module packages (https://developer.leapmotion.com/unity) e li ho importati in Unity, in seguito ho installato il plugin "XR plugin Management" (Window -> Package Manager).
 ##  Problemi riscontrati e soluzioni adottate
 
 
