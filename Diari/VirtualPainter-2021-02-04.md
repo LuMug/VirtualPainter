@@ -51,7 +51,7 @@ HandsModel deve usare lo script "Hand Model Manager" e modificando il campo Size
 |11:35 - 12:30 | Creazione della GUI in Unity per la configurazione di una nuova tela / foglio|
 |13:15 - 15:45 | |
 
-### Start Page GUI
+### Start Page GUI
 
 Per prima cosa è stata creata la scena "Start_Page" nel progetto di Unity "Virtual Painter", a questo punto si è inserito un nuovo Canvas nella scena appena creata.
 Al canvas è stato impostato il render mode: Screen Space - Camera, in questo modo il canvas sarà sempre grande come la Main Camera, quindi grande come l'applicazione.
@@ -71,7 +71,7 @@ Nella scena di configurazione del foglio è stato aggiunto un Canvas avente un V
 
 La gestione dell'altezza e la larghezza è gestita da 2 Input Field, i quali accettano sultanto numeri interi.
 
-### Creazione di una Scena Unica
+### Creazione di una Scena Unica
 
 Per evitare errori durante il passaggio di informazioni tra due scene abbiamo deciso infine di collassare tutto il programma in un'unica Scene (Scena di Unity).
 Abbiamo quindi copiato e incollato i due Canvas delle scene descritte in precedenza nella scena chiamata "Tela".
