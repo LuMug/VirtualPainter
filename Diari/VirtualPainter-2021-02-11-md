@@ -34,11 +34,19 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 09:50 | |
-|10:05 - 11:35 ||
-|12:30 - 13:00 ||
-|13:00 - 14:30 ||
-|14:30 - 15:45 ||
+|08:20 - 09:50 |Implementazione script nel progetto|
+|10:05 - 11:35 |Documentazione progettazione|
+|12:30 - 14:00 |Rifiniture script + documentazione|
+|14:15 - 15:45 |Aiuto a Karim + diario|
+
+### Implementazione script
+All'inizio ho preso lo script creato la scorsa volta e lo ho implementato nel programma sul pc di Karim. Abbiamo avuto qualche difficoltà data dal fatto che non avevo riferimenti uguali quando lo ho creato sulla mia macchina, tuttavia siamo riusciti a far si che funzionasse.
+### Documentazione progettazione
+Successivamente ho documentato alcuni aspetti della progettazione come il design delle interfacce e quello dell'architettura.
+### Rifiniture script e documentazione
+Nel pomeriggio insieme a Karim ho messo a posto qualche problemino con lo script che era sorto nella mattinata e, una volta finito, ho documentanto una prima parte dell'implmementazione.
+### Aiuto a Karim e diario
+L'ultima ora e mezza la ho passata a fare il diario e ad aiutare Karim con quello che stava facendo.
 
 
 
