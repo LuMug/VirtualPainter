@@ -24,10 +24,14 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 09:50 ||
-|10:05 - 14:00 ||
-|14:15 - 15:45 ||
+|08:20 - 14:00 | Creazione ColorPicker|
+|14:15 - 15:45 | Aggiunta della paletta di colori al ColorPicker|
 
+#### Creazione ColorPiker
+Oggi ho lavorato alla funzione della selezione del colore. Ho iniziato creando la parte grafica composta da un canvas contenente un immagine a forma circolare che rappresenterà il colore selezionato, e quattro slider per rappresentare le tonalità di rosso, verde, blu e alpha (trasparenza). Ho quindi creato lo script ColorPicker per gestire il cambio del coore tramite l'utilizzo degli slider. Infatti all'interno dello script ci sono dei metodi ascoltatori degli slider che quando cambiano il loro valore vanno a modificare la tonalità del colore dell'immagine. Dopodiche ho aggiunto a fianco ad ogni slider un campo di testo che contiene il valore della tonalità nel range tra [0;255].
+
+#### Aggiunta paletta di colori
+Verso le 14:00 sono passato alla creazine della paletta di colori, ovvero ulteriori colori da tenere salvati mentre si disegna. Per farlo ho suddiviso il canvas iniziale in due con un GridLayout così da ottenere una seconda sezione sotto. In questa sezione ho fatto una copia dell'immagine che indica il colore selezionato e nel metodo start del ColorPicker  che viene eseguito all'inizo dello script ne creo altre 12 copie così da averene una lista che rappresenterà la paletta.
 
 ### Stefano Mureddu
 
@@ -69,3 +73,5 @@ Per prima cosa ho aggiunto alla mia parte di progetto le parti fatte da Karim du
 
 
 ## Programma di massima per la prossima giornata di lavoro
+### Zeno
+Finire la paletta di colori.
