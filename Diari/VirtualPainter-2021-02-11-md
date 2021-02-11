@@ -49,9 +49,12 @@ Link utili:
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
 |08:20 - 09:50 | Mi sono informata su come creare le interazioni tra interfaccia grafica e LeapMotion Controller.|
-|10:05 - 11:35 ||
+|10:05 - 11:35 | Integrazione del codice di tutti i componenti del team nella scena principale e interfaccia grafica dell'inventario. Integrazione dell'inventario se la mano non dominante è girata.|
 |12:30 - 15:45 ||
 
+### Inserimento delle mani e dello script GetLeapFingers
+Per prima cosa ho aggiunto alla mia parte di progetto le parti fatte da Karim durante la lezione precedente.
+(Visualizzazione e utilizzo delle mani e lo script per vedere se la mano non dominante è girata).
 
 ##  Punto della situazione rispetto alla pianificazione
 
