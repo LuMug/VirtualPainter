@@ -17,6 +17,10 @@ public class ShowMenu : MonoBehaviour
     // Bottone presente nella Start_Page, il quale apre il menu di impostazioni di una nuova tela
     public Button nuovoFoglio;
 
+    //Bottone presente nel menu di configurazione della nuova tela,
+    //il quale disattiva i menu e mostra la tela
+    public Button continua;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,9 @@ public class ShowMenu : MonoBehaviour
         // Aggiunge un listener al bottone
         nuovoFoglio = nuovoFoglio.GetComponent<Button>();
         nuovoFoglio.onClick.AddListener(changeConfig);
+
+        continua = continua.GetComponent<Button>();
+        continua.onClick.AddListener(hideConfig);
     }
 
     // Update is called once per frame
@@ -47,4 +54,13 @@ public class ShowMenu : MonoBehaviour
         showConfig = true;
         configMenu.SetActive(showConfig);
     }
+
+    //Disattiva il menu del foglio
+    public void hideConfig()
+    {
+        showConfig = false;
+        configMenu.SetActive(showConfig);
+    }
+
+    
 }

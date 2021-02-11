@@ -25,8 +25,8 @@ public class FileManager
     //ritorna la texture ricavata dall'immagine
     public Texture2D GetTexture()
     {
-        Texture2D tex = new Texture2D(2,2);
-        if(!File.Exists(Path))
+        Texture2D tex = new Texture2D(2, 2);
+        if (!File.Exists(Path))
         {
             return null;
         }
@@ -38,13 +38,13 @@ public class FileManager
     //salva una texture in un formato jpg
     public void SaveTextureJPG(Texture2D tex)
     {
-        byte[] imageBytes = ImageConversion.EncodeToJPG(tex);    
-        File.WriteAllBytes(Path, imageBytes); 
+        byte[] imageBytes = ImageConversion.EncodeToJPG(tex);
+        File.WriteAllBytes(Path, imageBytes);
     }
 
     public void SaveTexturePNG(Texture2D tex)
     {
-        byte[] imageBytes = ImageConversion.EncodeToPNG(tex);    
-        File.WriteAllBytes(Path, imageBytes); 
+        byte[] imageBytes = ImageConversion.EncodeToPNG(tex);
+        File.WriteAllBytes(Path, imageBytes);
     }
 }
