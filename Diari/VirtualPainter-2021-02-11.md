@@ -6,7 +6,9 @@
 
 Link utili:
 -https://developer-archive.leapmotion.com/documentation/v2/unity/devguide/Leap_Gestures.html
+
 -https://unitycoder.com/blog/2015/11/04/leap-motion-get-finger-position-direction/
+
 -https://developer-archive.leapmotion.com/documentation/csharp/devguide/Leap_Hand.html
 
 
@@ -15,8 +17,32 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 | |
-|12:30 - 15:45 | |
+|08:20 - 09:50 | Importato script sulla build principale e implementato creazione foglio|
+|10:05 - 11:35 | Implementato creazione foglio, cominciato salvataggio foglio, cominciato caricamento foglio|
+|12:30 - 14:00 | Continuato salvataggio foglio, implementato caricamento foglio|
+|14:15 - 15:45 | Continuato salvataggio foglio|
+
+#### Creazione foglio
+ Io e Stefano abbiamo sistemato lo script "CreateFile" e aggiunto il codice necessario 
+ allo script "ShowMenu" per poter nascondere i menu e mostrare la tela.
+ 
+ Per mostrare la tela si deve aggiungere come componente all'ActionController lo script
+ "CreateFile"  e passargli come riferimenti "Input Altezza", "Input Larghezza" (Campi di testo),
+ "Tela Disegnabile" (Il piano che rappresenta la tela) e "Continua" (Il pulsante continua).
+ 
+Con Zeno ho sistemato il fatto che provando a creare un nuovo foglio quest'ultimo non assumeva il colore richiesto.
+ Per fare ciò abbiamo creato un nuovo materiale e gli abbiamo assegnato la shader di default per gli sprite. Così facendo Siamo riusciti a presentare una tela bianca.
+ 
+Ho modificato lo script "CreateFile" per poter consentire all'utente di salvare il file dove vuole, tenendo conto di tutti i fogli creati dall'utente su un file json. Purtroppo cercando di fare ciò mi sono non sono riuscito ad andare avanti perché ho avuto dei problemi con il namespace di "Newton.Json".
+
+#### Caricamento foglio esistente
+ Per caricare un foglio già esistente ho creato un nuovo script chiamato "GetFile"
+ usato il modello fatto da Zeno, "FileManager", che contiene
+ tutti i metodi necessari per salvare e ricavare una texture.
+ All'interno del mio script ho fatto in modo che quando l'utente decide di caricare un foglio
+ già esitente si apra il file explorer del sistema operativo che gli consentirà di scegliere
+ solamente un'immagine.
+
 
 
 ### Zeno Darani
@@ -75,3 +101,6 @@ Per prima cosa ho aggiunto alla mia parte di progetto le parti fatte da Karim du
 ## Programma di massima per la prossima giornata di lavoro
 ### Zeno
 Finire la paletta di colori.
+
+### Karim
+Finire salvataggio nuova tela e inizio azione disegno.
