@@ -88,11 +88,82 @@ L'ultima ora e mezza la ho passata a fare il diario e ad aiutare Karim con quell
 |--------------|------------------------------|
 |08:20 - 09:50 | Mi sono informata su come creare le interazioni tra interfaccia grafica e LeapMotion Controller.|
 |10:05 - 11:35 | Integrazione del codice di tutti i componenti del team nella scena principale e interfaccia grafica dell'inventario. Integrazione dell'inventario se la mano non dominante è girata.|
-|12:30 - 15:45 ||
+|12:30 - 15:45 | Fine della creazione dell'inventario, inserimento dei nuovi elementi creati dal resto del gruppo|
 
-### Inserimento delle mani e dello script GetLeapFingers
-Per prima cosa ho aggiunto alla mia parte di progetto le parti fatte da Karim durante la lezione precedente.
-(Visualizzazione e utilizzo delle mani e lo script per vedere se la mano non dominante è girata).
+Link utili: https://leapmotion.github.io/UnityModules/interaction-engine.html
+
+Per prima cosa ho impostato il timestep a 0.0111111 (90 frames/secondo) come consigliato dalla documentazione 
+del Leap Motion Controller.
+Queste impostazioni sono state cambiate in "Edit -> Project Settings -> Time".
+
+### Creazione della tela disegnabile
+
+Per prima cosa ho creato nella scena principale un piano che fungerà da tela disegnabile (si chiama anche "TelaDisegnabile") esattamente come è stata creata dai miei compagni.
+La posizione di questo GameObject è x = 0, y = 0 e z = 140.
+La rotazione corrisponde a x = 90, y = 180 e z = 0.
+La scala iniziale è di x = 12, y = 14 e z = 12.
+
+### Spostamento della main camera
+
+Per poter visualizzare sia le mani che la tela contemporaneamente ho messo la "Main Camera", cioè la telecamera principale in posizione x = 0, y = 0 e z = 3.066 .
+
+
+### Aggiunta delle mani
+
+#### HandsModel
+
+In seguito ho aggiunto le due mani create da Karim la lezione precedente (l'HandsModel e il LeapHandCOntroller  -> Vedi diario di Karim della scorsa lezione) all'interno di un GameObject vuoto chiamato "Hands".
+La posizione di questo GameObject è x = -1.04, y = 0 e z = -0.04 .
+
+#### Attachment Hands
+
+All'interno del HandsModel ho inserito il prefab "Attachment Hands" che si trova nel progetto in 
+"Assets/Plugins/LeapMotion/Core/Prefabs".
+All'interno di questo Prefab si trovano i due Attachment Hand (Left e Right), uno per la mano sinistra e uno per la mano destra.
+La mano destra non viene per ora modificata, mentre nella mano sinistra ho inserito un GameObject chiamato "Palm Forward Transform", il quale verrà utilizzato in seguito come target (per indicare la posizione della mano - del palmo).
+
+Il codice seguente è stato implementato grazie alla seguente guida : https://leapmotion.github.io/UnityModules/interaction-engine.html .
+
+In seguito ho inserito il GameObject "Palm UI Pivot Animation", il quale dovrebbe gestire la rotazione della mano per gestire la visualizzazione (o la non visualizzazione) dell'inventario (però non funziona -> bisogna sistemare le cordinate lette dalla mano).
+All'interno del GameObject appena creato ho messo due GameObject (Hidden e Visible) contenenti le cordinate che indicano la posizione per la quale l'inventario si vede e le cordinate per la quale l'inventario non si vede.
+"Palm UI Pivot Animation" ha al suo interno lo script "Transform Tween Behaviour" fornito dal Package scaricato in precedenza del LeapMotion Controller, le proprietà inserite sono:
+	- Target transform: Palm Forward Transform (GameObject creato in precedenza)
+	- Start Transform: Hidden
+	- End Transform: Visible
+	- Le altre impostazioni sono quelle di default.
+
+Dopo aver eseguito i passaggi precedenti ho creato il "Palm UI Pivot Anchor" il quale andrà a contenere la grafica dell'inventario e al suo interno ha lo script "Simple Facing Camera Callbacks" il quale ha le seguenti caratteristiche:
+	- To face camera: Palm Forward Transform
+	- Camera to face: none
+	- On Begin Facing Camera(): -> Runtime Only -> Palm UI Pivot Animation -> TranformTweenBehaviour.PlayForward
+	- On End Facing Camera(): -> Runtime Only -> Palm UI Pivot Animation -> TranformTweenBehaviour.PlayBackward
+
+All'interno di questo contenitore ho messo il GameObject "Palm UI" avente lo script "Ignore Collisions In Children" che serve a prevenire collisioni tra gli elementi della UI.
+Dentro "Palm UI" ho inserito un GameObject chiamato "Button Panel" che corrisponde all'inventario.
+Dentro l'inventario ho inserito una serie di bottoni 3d (6 bottoni con immagini diverse per ogni funzione dell'inventario) creati con dei cubi alla quale è stato assegnato lo script "Interaction Button" (Script del Package del LeapMotion), il Manager indicato delle proprietà dello script corrisponde all'InteractionManager (vedi capitoli seguenti).
+
+#### InteractionManager
+
+All'interno dell'HandModel ho creato il GameObject "IntercationManager" inserendo al suo interno lo script "Interaction Manager" e lasciando le impostazioni di default, in seguito all'interno del GameObject appena creato ho inserito i Prefab:
+	- Interaction Hand Left
+	- Interaction Hand Right
+entrambe queste Prefab sono trovabili nel progetto in "Assets/Plugins/LeapMotion/Modules/InteractionEngine/Prefabs/Interaction Controllers".
+
+#### Inserimento degli scripts nell'ActionController
+
+Nel GameObject "ActionController" creato la scorsa settimana ho apportato i seguenti cambiamenti:
+
+- Modificato lo script "ShowMenu" aggiungendo come parametri in entrata "Hands" e "TelaDisegnabile", nel metodo Start dello script questi due GameObject sono stati impostati come non attivi. (Così non si vedono in contemporanea con il menù iniziale).
+
+- Aggiunta dello script "Startdrawing" che serve a disattivare i menù iniziali (Start_Page e impostazioni) e,  a mostrare mani e tela quando si pigia il bottone "Continua" oppure il bottone "FoglioEsistente".
+
+- Aggiunta dello script "CreateFile" creato da Karim (vedi Diario di Karim).
+
+- Aggiunta dello script "GetFile" creato da Zeno (vedi Diario di Zeno).
+
+
+## Errori
+
 
 ##  Punto della situazione rispetto alla pianificazione
 
@@ -104,3 +175,6 @@ Finire la paletta di colori.
 
 ### Karim
 Finire salvataggio nuova tela e inizio azione disegno.
+
+### Sara
+Finire l'inventario e sistemare gli errori per la quale l'inventario si vede anche se la mano non è girata.
