@@ -12,11 +12,33 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 09:50 | |
-|10:05 - 11:35 | |
-|12:30 - 14:00 | |
-|14:15 - 15:45 | |
+|08:20 - 11:35 |File json che tiene in memoria i file creati |
+|12:30 - 15:45 |Iniziato a pensare a come poter disegnare sulle texture, convertito valore da pixel a unity per altezza e larghezza immagine|
 
+### Memoria file creati
+Inizialmente quando cercavamo di salvare il percorso del file nella lista quando veniva creato veniva sollevata
+una NullPointerException, causata dal metodo "JsonConvert.DeserializeObject" che cercava di raccogliere dei dati
+dal file json vuoto e in seguito non riuscivamo ad aggiugere il percorso alla lista
+dataci dallo stesso metodo. Per risolvere il tutto abbiamo visto che sarebbe stato più ottimale usare un Json array
+contenente i percorsi creati con una classe apposita (Classe Paths, creata da noi, che contiene solamente l'attributo path)
+aggiungerci il nuovo percorso e in seguito controllare che il file json non sia vuoto. Se esso è vuoto andiamo direttamente
+salvarci la nuova path altrimenti usiamo "JsonConvert.DeserializeObject" che ritorna un Json array contenente tutti
+i vecchi percorsi e ci aggiungiamo quello nuovo. A questo punto usiamo "JsonConvert.SerializeObject" e riscriviamo
+il tutto nel file .json.
+
+### Disegni su texture
+Le seconde due ore le abbiamo passate a pensare e cercare ad un modo per poter disegnare sulle texture.
+Inizialmente abbiamo trovato un tutorial di uno che usava una RawImage in un canvas, cosa che abbiamo provato
+ad implementare ma cha abbiamo quasi subito scartato. Perciò siamo arrivati alla conclusione che avremmo sfruttato
+le coordinate delle dita per assegnarle a determinati pixel sull'immagine. Per fare ciò dobbiamo però tener conto di
+diversi fattori, come la grandezza in pixel dell'immagine. Difatti, visto che vorremmo avere sempre l'immagine
+il più brande possibile, useremo una specie di "Zoom", ovvero se l'immagine è grande dovremmo tenere la texture
+e molto più distante alla mainCamera e alla mani rispetto ad un immagine più piccola.  
+
+### Covertire valori altezza e larghezza da pixel a valori di unity
+Verso la fine mi sono occupato di convertire l'altezza e la larghezza in pixel inseriti alla creazione del file nei
+valori usati in unity. Visto che cercando su internet abbiamo trovato che in genere 1 unità sono 100pixel abbiamo
+tenuto questo rapporto.
 
 ### Zeno Darani
 
@@ -79,6 +101,7 @@ Ho scoperto che si può tracciare la mano utilizzando i metodi delle mani (vedi 
 
 
 ### Karim
+Procedere con l'azione di disegno sulla tela
 
 
 ### Sara
