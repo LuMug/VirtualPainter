@@ -33,11 +33,16 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 09:50 ||
-|10:05 - 11:35 ||
-|12:30 - 14:00 ||
-|14:15 - 15:45 ||
+|08:20 - 11:35 |Risolto un problema con Karim|
+|12:30 - 15:35 |Iniziato a lavorare su come disegnare|
 
+##Risolto un problema con Karim
+Abbiamo fatto si che si crei un file json con gli ultimi file aperti così da poter fare in futuro un'apertura rapida
+Abbiamo un po litigato con il file json e qualche null pointer ex e con il file che si sovrascriveva male.
+
+##Iniziato a lavorare su come disegnare
+Abbiamo iniziato a lavorare sulla parte più importante della applicazione, ma per far si che sia tutto a posto abbiamo dovuto adattare le varie grandezze dei fogli di lavoro.
+La prossima lezione inizieremo a calcolare la posizione delle mani rispetto al foglio adattato alla finestra per disegnare nel punto giusto.
 
 
 ### Sara Bressan
