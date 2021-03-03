@@ -45,9 +45,16 @@ tenuto questo rapporto.
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 14:00 | |
-|14:15 - 15:45 | |
+|08:20 - 09:50 | Risoluzione Bug e implementazione del ColorPicker|
+|10:05 - 15:45 | Creazione della versione 3d del ColorPicker|
 
+#### Risoluzione Bug e implementazione del ColorPicker
+
+Come primo lavoro ho risolto un bug nella scelta del colore del colorpicker. Il problema consisteva che il primo colore una volta deselezionato non poteva più venir selezionato per modificarlo. Questo perchè essendo che era il pallino che clonavo per generare gli alrti mi sono dimenticato di aggiungergli il metodo ascoltatore, cosa che facevo con gli altri colori dentro un ciclo al momento della creazione. Dopodiché assieme a Sara abbiamo aggiunto il mio colorpicker al progetto principale aggiungendolo come accessorio da collegare al polso del braccio sinistro.
+
+#### Creazione della versione 3d del ColorPicker
+
+Ho iniziato quindi a lavorare su una versione tre dimensionale del colorpicker così da essere interagibile con le mani del leapmotion tramite al proprio sistema di interazione con gli oggetti. Al momento ho implementato uno slider 3 dimensionale funzionante formato da cubi. La parte che ha richiesto tanto tempo è stato a capire la struttura per gestire correttamente le interazioni con gli oggeti. Per il funzionamento dello script sarà solamente necessario adattarlo al cambiamento degli oggetti utilizzati ma la logica rimarrà la stessa. 
 
 
 ### Stefano Mureddu
@@ -98,7 +105,7 @@ Ho scoperto che si può tracciare la mano utilizzando i metodi delle mani (vedi 
 
 ## Programma di massima per la prossima giornata di lavoro
 ### Zeno
-
+Concludere il ColorPicker a tre dimensioni e implementarlo nel progetto principale.
 
 ### Karim
 Procedere con l'azione di disegno sulla tela
