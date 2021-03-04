@@ -30,8 +30,18 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 ||
-|12:30 - 15:35 ||
+|08:20 - 11:35 |Documentazione|
+|12:30 - 15:35 |Completata conversione da pixel a unità e scala|
+
+#### Documentazione
+
+Ho passato la mattina a documentare parti già completate e a dare supporto e aiutare quando un compagno aveva bisogno.
+Ho finito di documentare creazione file, la prova LeapMotionController e il tracciamento mani.
+
+#### Completata conversione da pixel a unità e scala
+
+Per scalare da pixel inseriti nei form a le unità per la grandezza fisica della tela lavorando con Karim abbiamo trovato un metodo di conversione e trovando l'errore siamo riusciti a risolvere tutto con successo.
+Nell'ultima ora abbiamo inoltre iniziato a lavorare sul salva ed esci.
 
 
 ### Sara Bressan
