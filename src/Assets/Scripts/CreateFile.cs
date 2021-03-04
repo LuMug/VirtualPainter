@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class CreateFile : MonoBehaviour
 {
     public InputField InputAltezza;
@@ -57,7 +56,7 @@ public class CreateFile : MonoBehaviour
             file.SaveTextureJPG(texture);
             file.SaveTextureJPG(texture);
         }
-      
+
         List<Paths> paths = new List<Paths>();
         paths = new List<Paths>
         {
@@ -74,7 +73,7 @@ public class CreateFile : MonoBehaviour
         {
             File.WriteAllText("Assets/Models/paths.json", JsonConvert.SerializeObject(paths));
         }
-        
+
     }
 
     public void createNewTela()

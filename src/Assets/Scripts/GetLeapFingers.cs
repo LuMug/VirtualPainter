@@ -2,6 +2,7 @@
 using System.Collections;
 using Leap;
 using Leap.Unity;
+using System;
 
 public class GetLeapFingers : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GetLeapFingers : MonoBehaviour
 	Hand leap_hand;
 	Controller controller = new Controller();
 
+	public GameObject menu;
 
 	void Start()
 	{
@@ -19,14 +21,23 @@ public class GetLeapFingers : MonoBehaviour
 
 	void Update()
 	{
-		Frame frame = controller.Frame();
-		for (int i = 0; i < frame.Hands.Count; i++)
+		try
 		{
-			Hand leapHand = frame.Hands[i];
-            if (leapHand.PalmNormal.y > 0.6)
-            {
-                Debug.Log("Girato");
-            }
+			if (leap_hand != null)
+			{
+				if (leap_hand.PalmNormal.y >= 0)
+				{
+					menu.SetActive(true);
+				}
+				else
+				{
+					menu.SetActive(false);
+				}
+			}
+        }
+        catch (NullReferenceException e)
+        {
+			Debug.LogError("Mani non inserite");
         }
 	}
 }

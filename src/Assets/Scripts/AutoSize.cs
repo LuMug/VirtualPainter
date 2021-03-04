@@ -10,7 +10,7 @@ public class AutoSize : MonoBehaviour
     public void AutoSizeTela(Camera mainCamera, GameObject tela, int larghezza, int altezza)
     {
         var distance = (mainCamera.transform.position - tela.transform.position).magnitude;
-        FixedSizeZ = altezza / (distance * mainCamera.fieldOfView) ;
+        FixedSizeZ = altezza / (distance * mainCamera.fieldOfView);
         FixedSizeX = larghezza / (distance * mainCamera.fieldOfView);
         var sizeZ = distance * FixedSizeZ * mainCamera.fieldOfView;
         var sizeX = distance * FixedSizeX * mainCamera.fieldOfView;
