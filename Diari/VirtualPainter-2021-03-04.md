@@ -40,7 +40,9 @@ Link utili:
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
 |08:20 - 11:35 | Aggiunta delle azioni al click dei bottoni dell'inventario|
-|12:30 - 15:45 | Integrazione del codice scritto da Karim e Stefano nel progetto iniziale|
+|12:30 - 15:17 | Mi sono documentata cercando il modo di disegnare e ho effettuato l'integrazione del codice scritto da Karim e Stefano nel progetto iniziale|
+|15:17 - 15:45 | Creazione dell'interfaccia utente per il salvataggio e l'uscita dal programma.|
+
 
 #### Aggiunta delle azioni al click dei bottoni dell'inventario
 
@@ -64,10 +66,19 @@ Inizialmente quando si cliccavano i tasti con la mano destra non succedeva nulla
 in cerca dell'errore durante la mattinata ho scoperto che "Contact Enabled" era disattivato nell'Interaction Hand 
 della mano destra, una volta attivato il flag i bottoni hanno iniziato a funzionare correttamente.
 
+#### Disegno
+
+Per disegnare ho creato uno script nominato "Draw" e l'ho assegnato al RigidRoundHand_R, il codice in questione 
+per ora notifica solamente se il dito indice e il pollice della mano destra si stanno toccando (isPinching).
+
 #### Integrazione codice
 
 Ho aggiunto al progetto principale i codici creati da Karim e Stefano per la creazione della tela in scala:
 Attenzione!!! Il gioco deve avere risoluzione schermo di 16:9 altrimenti la tela non ricopre l'intera schermata del programma.
+
+#### Creazione del Menù UI per l'uscita e il salvataggio dal programma
+
+Questa UI è visualizzabile quando si clicca il pulsante esci dell'inventario.
 
 ## Errori
 
