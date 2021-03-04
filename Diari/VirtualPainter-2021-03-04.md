@@ -12,8 +12,22 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 | |
-|12:30 - 15:45 ||
+|8:20-15:00| Script che mostra la tela alle sue massime dimensioni|
+|15:00-15:45| Integrato lo script per le dimensioni della tela nella build di Sara e iniziato lo script per l'uscita dall'applicazione|
+
+### Scalatura tela
+
+Inizialmente l'dea per avere la tela alle sue dimensioni massime era quella di avvicinarla o allontanarla dalla mainCamera.
+Idea in seguito scartata verso la fine dell prime due ore avendo pensato ad un modo più semplice e meno macchinoso, ovvero solamente di scalare le dimensioni della tela tenendola sempre nello stesso posto. 
+Inizialmente lo script creato scalava l'immagine invertendo altezza e larghezza e dopo averci indagato un bel po' abbiamo scoperto che nel codice che le assegnava alla texture da creare gliele forniva al contrario, 
+ovvero altezza al posto di larghezza e viceversa. 
+Dopo averli assegnati
+nel modo giusto la tela veniva scalata nel modo corretto sia durante la creazione che all'importazione di un file, anche se solo con una risoluzione di 16:9.
+
+### Exit
+
+L'idea è quella di far uscire una finestra che chieda all'utente se vuole uscire salvando, senza salvare oppure di annullare l'uscita.
+Per intanto abbiamo solamente implementato il codice che va a prendere il file corrente andandolo a salvare e Sara ha cominciato a creare la finestra.
 
 
 ### Zeno Darani
@@ -102,6 +116,6 @@ Questa UI è visualizzabile quando si clicca il pulsante esci dell'inventario.
 
 
 ### Karim
-
+Completare l'uscita e ottimizzare la scalatura in modo che funzioni con qualunque tipo di risoluzione.
 
 ### Sara
