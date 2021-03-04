@@ -40,7 +40,7 @@ Link utili:
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
 |08:20 - 11:35 | Aggiunta delle azioni al click dei bottoni dell'inventario|
-|12:30 - 15:45 | |
+|12:30 - 15:45 | Integrazione del codice scritto da Karim e Stefano nel progetto iniziale|
 
 #### Aggiunta delle azioni al click dei bottoni dell'inventario
 
@@ -63,6 +63,11 @@ Lo script "OpenImpostazioni" assegnato al bottone delle impostazioni nasconde ma
 Inizialmente quando si cliccavano i tasti con la mano destra non succedeva nulla, dopo aver investigato 
 in cerca dell'errore durante la mattinata ho scoperto che "Contact Enabled" era disattivato nell'Interaction Hand 
 della mano destra, una volta attivato il flag i bottoni hanno iniziato a funzionare correttamente.
+
+#### Integrazione codice
+
+Ho aggiunto al progetto principale i codici creati da Karim e Stefano per la creazione della tela in scala:
+Attenzione!!! Il gioco deve avere risoluzione schermo di 16:9 altrimenti la tela non ricopre l'intera schermata del programma.
 
 ## Errori
 
