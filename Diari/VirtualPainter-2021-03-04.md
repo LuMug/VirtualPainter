@@ -35,8 +35,25 @@ Per intanto abbiamo solamente implementato il codice che va a prendere il file c
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 09:50 | |
-|10:05 - 15:45 | |
+|08:20 - 11:35 | Creazione del modello del nuovo ColorPicker |
+|12:30 - 15:45 | Riadattamento dello script|
+
+#### Creazione del modello del nuovo ColorPicker
+
+Oggi ho continuato a lavorare sulla nuova versione del ColorPicker. Come prima cosa ho ricostruito la struttura del vecchio ColorPicker utilizzando componenti tre dimensionali. Infatti il nuovo ColorPicker come base non usa più un pannello 2d ma un parallelepipedo rettangolo. Per la parte sopra con gli slider ho preso dei modelli già fatti dagli esempi e li ho riscalati e riadattati. Da parte ad ogni slider ci sono i valori numerici che essi rappresentano. Sotto ho inserito un cubo che rappresenta il colore selezionato.
+
+#### Riadattamento dello script
+
+Per la parte di scripting ho dovuto riadattare i metodi utilizzando le nuove componenti (Un GameObject generico al posto dell'immagine che rappresenta il colore, InteractiveSlider del LeapMotion al posto degli slider standard di Unity, TextMesh al posto di Text per la rappresentazione numerica del colore). Per la prima versione avevo aggiunto agli slider un metodo ascoltatore usando:
+
+```markdown
+SliderRed.onValueChanged.AddListener(OnChangedRed);
+```
+Adesso ho dovuto utilizzare questo altro metodo che necessita la creazione di un oggetto Action. Questo tipo di oggetto serve a richiamare il codice contenuto in un determinato metodo. Viene utilizzato nel sistema di eventi di unity. Infatti per la nuova versione del ColorPicker ho usato:
+```markdown
+SliderRed.HorizontalSlideEvent = new Action<float>(OnChangedRed);
+```
+In questa linea di codice si assegna un'azione da eseguire quando l'HorizontalSlideEvent verrà triggerato. Il <float> sta ad indicare che il metodo OnChangeRed ha un metodo che si aspetta un parametro di tipo float, che in questo caso è il valore attuale dello slider. Il valore è fornito dall'evento.
 
 
 ### Stefano Mureddu
