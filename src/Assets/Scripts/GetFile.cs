@@ -1,9 +1,9 @@
-﻿using SFB;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using System.IO;
+using SFB;
 
 public class GetFile : MonoBehaviour
 {
@@ -22,6 +22,10 @@ public class GetFile : MonoBehaviour
     //Bottone per scegliere l'immagine da caricare
     public Button getSheet;
 
+    public Camera camera;
+
+    private AutoSize autoSize = new AutoSize();
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,7 +39,7 @@ public class GetFile : MonoBehaviour
     {
         //Filtri per far scegliere all'utente solo immagini
         var extensionsFile = new[] {
-            new ExtensionFilter("Image Files", "png", "jpg", "jpeg" ),
+            new ExtensionFilter("Image Files", "png", "jpg"),
         };
         //Tutte le path selezionate
         string[] paths = StandaloneFileBrowser.OpenFilePanel("Open Image", "", extensionsFile, false);
@@ -49,6 +53,7 @@ public class GetFile : MonoBehaviour
             telaDisegnabile.GetComponent<Renderer>().material.mainTexture = texture;
             //Disattiva il menu
             hideMenuStart();
+            autoSize.AutoSizeTela(camera, telaDisegnabile, texture.width, texture.height);
         }
     }
 
