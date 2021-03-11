@@ -41,8 +41,7 @@ Link utili:
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
 |08:20 - 11:35 | Aggiunta dell'apertura del menù "Esci" nell'inventario |
-|12:30 - 15:17 | |
-|15:17 - 15:45 | |
+|12:30 - 15:45 | Gestione della rotazione della tela e mi sono informata sui metodi di disegno|
 
 Nell'LeapHandController la TimePose è stata impostata come "Desktop Mode A", in questo modo le mani 
 vengono rilevate se il LeapMotionController è posizionato in orizzontale su una superficie piana.
@@ -68,6 +67,10 @@ Infine se viene cliccato il tasto "Annulla", le mani vengono nuovamente mostrate
 
 Non è possibile testare l'uscita dal programma (Application.Quit();) se non è ancora stata eseguita una build del programma.
 
+#### Ruotando la mano, anche la tela ruota
+
+Girando la mano la tela ruota (è solo un esperimento).
+
 ## Errori
 
 
@@ -83,3 +86,4 @@ Non è possibile testare l'uscita dal programma (Application.Quit();) se non è 
 
 
 ### Sara
+Aggiungere ciò che è stato fatto da Zeno , Karim e Stefano.
