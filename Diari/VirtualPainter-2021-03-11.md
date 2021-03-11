@@ -44,6 +44,9 @@ Link utili:
 |12:30 - 15:17 | |
 |15:17 - 15:45 | |
 
+Nell'LeapHandController la TimePose è stata impostata come "Desktop Mode A", in questo modo le mani 
+vengono rilevate se il LeapMotionController è posizionato in orizzontale su una superficie piana.
+
 #### Integrazione dell'interfaccia "Esci" quando si clicca il pulsante sull'inventario
 Nello script "Exit" assegnato al bottone di uscita dell'inventario (vedi diario precedente)
 ho aggiunto le seguenti linee di codice:
