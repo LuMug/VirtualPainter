@@ -31,9 +31,19 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 ||
-|12:30 - 15:35 ||
+|08:20 - 11:35 |Lavorato con Karim sul disegnare sulla tela|
+|12:30 - 14:00 |Creato lo script per salvare col nome|
+|14:15 - 15:45 |Lavorato con Karim sul disegnare sulla tela|
 
+### Lavorato con Karim sul disegnare sulla tela
+
+Insieme a Karim ho lavorato sulla parte importonte del progetto, ovvero il disegnare sulla tela. Per farlo abbiamo passato una buona ora a guradare vari opzioni su come farlo e abbiamo deciso di optare per una che si basa su un vettore che parte dalla mano e tocca costantemente la tela. Questo vettore invoca costantemente un metodo che controlla se la mano è nella posizione di disegno e se è vero disegna su quelle coordinate. Sfortunatamente la fase di testing ha poi rivelato che non funzionava come volevamo e dopo aver cambiato i vari controlli per disegnare siamo riusciti almeno a far disegnare, seppur nel punto sbagliato, un pallino blu al momento giusto.
+
+
+### Creato lo script per salvare col nome
+
+Per questo script, a cui abbiamo lavorato mentre il leap motion era occupato e non potevamo fare i test, abbiamo preso parte dello script per la creazione del file e abbiamo tenuto solo la parte di pre salvataggio che faceva esattamente quello che avevamo bisogno.
+Abbiamo passato poi lo script a Sara per l'implementazione ed il testing di esso.
 
 ### Sara Bressan
 
