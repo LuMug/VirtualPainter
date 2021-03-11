@@ -44,7 +44,26 @@ Link utili:
 |12:30 - 15:17 | |
 |15:17 - 15:45 | |
 
-#### Integrazione dell'interfaccia "Esci" quando si clicca il pulsante sull'inentario
+#### Integrazione dell'interfaccia "Esci" quando si clicca il pulsante sull'inventario
+Nello script "Exit" assegnato al bottone di uscita dell'inventario (vedi diario precedente)
+ho aggiunto le seguenti linee di codice:
+
+if (button.isPressed && !prevPress)
+{
+    exitUI.SetActive(true);
+    hands.SetActive(false);
+}
+
+Se il bottone viene cliccato, le mani non vengono più visualizzate e al loro posto viene 
+visualizzata l'interfaccia utente creata l'ultima lezione (Exit_menu).
+
+In seguito ho creato un nuovo script "close" (con Karim), il quale gestisce le interazioni dell'utente con l'interfaccia.
+"Close" è stato quindi assegnato all'ActionController.
+Se il bottone "si" (che indica se si vuole salvare e uscire) viene cliccato viene richiamato il metodo "salvaEdEsci" il quale salva la texture (tela) e chiude il programma.
+Se invece viene cliccato il bottone "no" (non salvare, ma uscire ugualmente) il programma viene chiuso.
+Infine se viene cliccato il tasto "Annulla", le mani vengono nuovamente mostrate e l'UI non viene più visualizzata.
+
+Non è possibile testare l'uscita dal programma (Application.Quit();) se non è ancora stata eseguita una build del programma.
 
 ## Errori
 
