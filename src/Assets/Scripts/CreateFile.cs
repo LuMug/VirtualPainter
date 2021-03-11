@@ -54,7 +54,6 @@ public class CreateFile : MonoBehaviour
         else if (extension.Equals("jpg"))
         {
             file.SaveTextureJPG(texture);
-            file.SaveTextureJPG(texture);
         }
 
         List<Paths> paths = new List<Paths>();
@@ -66,6 +65,13 @@ public class CreateFile : MonoBehaviour
         {
             string json = File.ReadAllText("Assets/Models/paths.json");
             List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
+            for (int i = 0; i < oldPaths.Count; i++)
+            {
+                if (paths[0].path.Equals(oldPaths[i].path))
+                {
+                    oldPaths.RemoveAt(i);
+                }
+            }
             oldPaths.Add(paths[0]);
             File.WriteAllText("Assets/Models/paths.json", JsonConvert.SerializeObject(oldPaths));
         }

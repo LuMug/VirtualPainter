@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using System.IO;
+using Newtonsoft.Json;
 
 public class GetFile : MonoBehaviour
 {
@@ -47,6 +48,22 @@ public class GetFile : MonoBehaviour
         if (paths.Length == 1 && File.Exists(paths[0]))
         {
             file = new FileManager(paths[0]);
+            string json = File.ReadAllText("Assets/Models/paths.json");
+            List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
+            for (int i = 0; i < oldPaths.Count; i++)
+            {
+                if (paths[0].Equals(oldPaths[i].path))
+                {
+                    oldPaths.RemoveAt(i);
+                }
+            }
+            List<Paths> filePath = new List<Paths>();
+            filePath = new List<Paths>
+            {
+                new Paths {path = paths[0]}
+            };
+            oldPaths.Add(filePath[0]);
+            File.WriteAllText("Assets/Models/paths.json", JsonConvert.SerializeObject(oldPaths));
             //Prende l'immagine
             texture = file.GetTexture();
             //La applico sulla tela
