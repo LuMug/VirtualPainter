@@ -74,10 +74,10 @@ Questa classe ha inoltre i tre metodi pubblici : IsHandPinching, GetPinchDistanc
 #### GetLeapFinger
 Nel metodo GetLeapFinger creato in precedenza dopo aver controllato che la mano sinistra è effettivamente visibile controlla se entrambe le mani hanno il pollice e l'indice che si toccano (Pinching).
 Se le dita si toccano allora viene controllata la distanza tra le due mani:
-- Se la distanza è maggiore di 0.38 unità di Unity allora viene eseguito un ZoomOut*
-- Se la distanza è minore di 0.2 unità di Unity allore viene eseguito un ZoomIn*
+- Se la distanza è maggiore di 0.38 unità di Unity allora viene eseguito un ZoomOut
+- Se la distanza è minore di 0.2 unità di Unity allore viene eseguito un ZoomIn
 
-* Vedi metodi pubblici della classe Zoom.
+Vedi metodi pubblici della classe Zoom per ZoomIn e ZoomOut.
 
 
 ## Errori
