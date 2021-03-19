@@ -20,11 +20,14 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 | |
-|12:30 - 15:45 | |
+|08:20 - 11:35 | Modifica struttura ColorPicker|
+|12:30 - 15:45 | Modifica classe ColorPicker e implementazione|
 
-#### Creazione del modello del nuovo ColorPicker
+#### Modifica struttura ColorPicker
+Oggi ho iniziato a rielaborare la gestione dei colori della paletta del ColorPicker. Prima i colori erano situati sulla parte inferiore dello strumento, ma ciò si è rilevata una posizione scomoda da raggiungere. Allora ho optato per un piccolo ridesign dell'interfaccia spostando i colori a destra e mettendoli posizionati in una matrice. Quindi nello script ho dovuto solamente modificare la fase di posizionamento dei colori clonati. Poi ho iniziato a lavorare sulla selezione del colore attivo. Per fare questo ho assegnato lo script InteractionButton come componente del GameObject rappresentante il colore della paletta. In questo modo è possibile interagirvi con il sistema di interaction del leap motion.
 
+#### Modifica classe ColorPicker e implementazione
+Ho dovuto quindi apportare alcune modifiche al vecchio script dovute al nuovo metodo di interazione adottato. Finita la classe ho quindi esportato il pacchetto contenente il modello del ColorPicker con i suoi materiali, e lo script della classe ColorPicker. Poi con Sara lo abbiamo implementato nel progetto principale. Adesso è possibile selezionare il colore mentre si disegna, anche se ci sono ancora alcuni problemi da risolvere.
 
 ### Stefano Mureddu
 
