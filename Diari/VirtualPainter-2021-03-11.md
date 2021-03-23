@@ -12,8 +12,15 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|8:20-15:00| |
-|15:00-15:45| |
+|8:20-11:35| Disegno su tela|
+|12:30-14:00| Salvataggio con nome|
+|14:15-15:45| disegno su tela|
+
+### Disegno su tela
+Con Stefano abbiamo passato la prima ora a discutere su come avremmo potuto fare a realizzare questa azione e alla fine abbiamo deciso che avremmo optato per l'utilizzo dei Raycast. Essi conisterebbero in un raggio che parte da un punto (in questo caso il dito indice) e notifica continuamente de questo raggio entra in collisione con qualcosa (in questo caso la tela). Noi vorremmo prendere le coordinate del punto di collisione e disegnarci. dopo averci lavorato es essere arrivati alla fase di testing purtroppo il programma non funzionava come avremmo voluto, perciò dopo aver fatto molti cambiamento siamo riusciti a disegnare un punto sulla tela, anche se nel posto sbagliato.
+
+### Script per salvare con nome
+Con Stefano abbiamo lavorato a questo script mentre il LeapMotion era occupato, perciò non potevamo continuare con l'azione di disegno. Per realizzarlo abbiamo solamente una parte dello script della creazione del file tenendo solamente la parte di salvataggio, visto che dava i risultati necessari. In seguito abbiamo passato lo script a Sara per la fase di test di esso.
 
 ### Zeno Darani
 
