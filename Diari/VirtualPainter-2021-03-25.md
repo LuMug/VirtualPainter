@@ -39,12 +39,22 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 09:50 |  |
-|10:05 - 11:35 |  |
-|12:30 - 15:45 | |
+|08:20 - 15:45 | Creazione degli strumenti (gomma, penna e filler)|
 
+#### Menù degli strumenti
+
+Ho creato degli interaction buttons e uno slider, i 3 bottoni servono ad attivare le 3 tre funzionalità:
+penna, gomma e filler, mentre lo slider gestisce la gradezza della gomma e della penna.
+
+#### Integrazione del gestore della dimensione del pennello
+
+Nello script ManageRight ho inserito i metodi creati da Zeno per la gestione della grandezza della penna.
 
 ## Errori
+
+Il colore e la dimensione di default venivano messi ogni volta che si toglieva e si inseriva la mano destra,
+per rimuovere questo problema ogni volta che viene inserita la mano nuovamente vengono settati i valori
+presi dallo slider per la gestione della dimensione del pennello e l'ultimo colore utilizzato.
 
 
 ##  Punto della situazione rispetto alla pianificazione
