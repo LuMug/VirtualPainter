@@ -34,10 +34,17 @@ Ho dovuto quindi apportare alcune modifiche al vecchio script dovute al nuovo me
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 ||
-|12:30 - 14:00 ||
-|14:15 - 15:45 ||
+|08:20 - 14:00 |Messo a posto la fase di disegno|
+|14:00 - 15:45 |Creato script per salvare|
 
+
+#### Disegno
+
+Ad inizio lezione io e Karim abbiamo deciso di cambiare completamente il modo di disegnare. Dopo varie ricerche abbiamo deciso di utilizzare i raycast, ovvero dei vettori che in base a dove si trova la mano danno la coordinata sulla texture. Abbiamo passato quasi tutta la giornata a fare questo e alla fine siamo riusciti a far funzionare tutto :)
+
+#### Script per salvare
+
+Sempre con Karim abbiamo creato 2 script, uno per salvare il file, e l'altro per salvare il file con un nuovo nome. Abbiamo utilizzato il file json che avevamo creato precedentemente e lo script di salvataggio iniziale così da non perderci troppo tempo, e per utilizzare il json che altrimenti non avremmo utilizzato da nessuna parte.
 
 ### Sara Bressan
 
