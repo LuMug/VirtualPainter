@@ -46,7 +46,7 @@ Ho dovuto quindi apportare alcune modifiche al vecchio script dovute al nuovo me
 |--------------|------------------------------|
 |08:20 - 09:50 | Creazione della funzione di rotazione della tela |
 |10:05 - 11:35 | Creazione della funzione di Zoom della tela |
-|12:30 - 15:45 | |
+|12:30 - 15:45 | Integrazione del codice di Zeno e della tavolozza dei colori|
 
 #### Rotazione della tela
 Per gestire la rotazione della tela ho creato un nuovo script chiamato "Rotate".
@@ -82,6 +82,10 @@ Se le dita si toccano allora viene controllata la distanza tra le due mani:
 
 Vedi metodi pubblici della classe Zoom per ZoomIn e ZoomOut.
 
+#### Integrazione della tavolozza dei colori
+
+Ho inserito nel progetto la tavolozza di colori creata da Zeno con annesso codice.
+Inoltre ho fatto in modo che cliccando l'apposito bottone colori dall'inventario la tavolozza sparisca e riappaia.
 
 ## Errori
 A volte le mani vengono visualizzate erroneamente oppure al contrario: per 
