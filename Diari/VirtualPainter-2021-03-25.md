@@ -21,8 +21,10 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 | |
-|12:30 - 15:45 | |
+|10:05 - 14:00 | Ridimensionamento del pennello|
+|14:15 - 15:45 | |
+
+Sono arrivato in classe e mi sono consultato con i miei compagni di progetto per fare il quadro della situazione. Dunque ho scelto di aiutare Sara con la funzionalità di ridemnsionamento del pennello. Lei ha creato la parte grafica composta da uno slider con componente InteractionSlider, lo stesso che ho usato per i valori RGB del ColorPicker. Io mi sono occupato di modificare lo script DrawRaycast in modo di poter disegnare utilizando la dimensione del pennello assegnata dallo slider. Il funzionamento è molto simile a quello presente nello script ColorPIcker. In pratica alla classe DrawRaycast è stata aggiunta la proprietà BrushSizeSlider alla quale verrà assegnato il riferimento allo slider dall'editor di Unity. Quindi ho creato il metodo UpdateBrushSize(float value) che permette di aggiornare la dimensione del pennello in base al valore passato come argomento. La dimensione del pennello viene calcolata come: value * MAX_BRUSH_SIZE, dove value è compreso nel range [0;1] e MAX_BRUSH_SIZE è una costante che corrisponde alla dimensione massima del pennello. Se la dimensione calcolata risulta minore di 1 viene impostata a 1. Poi ho testato assieme a Sara il funzionamento dello script con lo slider.
 
 ### Stefano Mureddu
 
