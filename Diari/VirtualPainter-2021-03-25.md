@@ -33,9 +33,18 @@ Sono arrivato in classe e mi sono consultato con i miei compagni di progetto per
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 11:35 ||
-|12:30 - 14:00 ||
-|14:15 - 15:45 ||
+|08:20 - 14:00 |Documentato e aiutato chi aveva bisogno	|
+|14:15 - 15:45 |Fatto i diari|
+
+
+#### Documentato
+
+Ho passato quasi tutta la giornata a documentare e ad aiutare chi aveva bisogno. Le parti che ho documentato sono quelle sulla creazione della tela come l'aggiunta della texture o il ridimensionamento.
+Ogni tanto ho aiutato Karim con dei piccoli problemi oppure ho assistito ad un paio di dimostrazioni di Sara.
+
+#### Diari
+
+Ho recuperato il diario di settimana scorsa e fatto quello di questa. Durante il resto del tempo ho discusso con Zeno dell'andamento e del futuro del progetto.
 
 
 ### Sara Bressan
