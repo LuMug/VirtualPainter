@@ -59,7 +59,8 @@ presi dallo slider per la gestione della dimensione del pennello e l'ultimo colo
 
 ##  Punto della situazione rispetto alla pianificazione
 
-
+Il cambio di strumenti funziona, è possibile salvare il disegno e disegnare con vari colori, inoltre
+si può cancellare il disegno.
 
 ## Programma di massima per la prossima giornata di lavoro
 ### Zeno
