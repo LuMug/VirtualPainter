@@ -5,7 +5,8 @@
 ## Lavori svolti
 
 Link utili:
-
+- Icone: https://www.flaticon.com/search?word=fill
+- 
 
 ### Karim Galliciotti
 
