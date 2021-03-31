@@ -13,8 +13,16 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|8:20-15:00| |
-|15:00-15:45| |
+|8:20 - 15:45  | Azione riempimento|
+
+### Riempimento
+
+Mi sono occupato della realizazzione dell'azione di riempimento. Prima di tutto ho fatto delle ricerche per vedere se esistesse qualcosa che faccia già questa azioni, ma senza risultati mi sono ritrovato a cercare di capire come funzionano gli algoritimi di riempimento. Dopo varie ricerche mi sono imbattuto in una pagina Github che mette a disposizione il suo codice, perciò ho prima cercato di capire il funzionamento di quest'ultimo e di seguito l'ho adattato al nostro codice.
+
+### Problemi
+
+Il codice preso funziona bene solamente con immagini di piccole dimensioni poichè guarda un pixel per volta mettendoci un'infinità di tempo, perciò bloccando tutto il programma. Per risolvere ciò teoricamente bisognerebbe rendere più veloce il tutto facendogli controllare più pixel per volta magari usando le Thread.
+
 
 ### Zeno Darani
 
