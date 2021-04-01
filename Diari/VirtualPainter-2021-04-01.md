@@ -39,9 +39,18 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:45 | Risoluzione errori, test e ottimizzazione dell'applicazione|
+|08:20 - 11:35 | Risoluzione errori, test e ottimizzazione dell'applicazione|
+|12:30 - 15:45 | Visualizzazione strumento utilizzato |
 
 Vedi punto Errori del diario.
+
+#### Visualizzazione strumento utilizzato
+
+Per prima cosa ho creato un Canvas nella scena, questo Canvas ha RenderMode con la MainCamera, in questo modo pur cambiando la dimensione
+dello schermo lo strumento selezionato sarà sempre in alto a sinistra.
+
+Nel canvas ho creato tre oggetti immagini (gomma, penna e riempi) le quali mostrano ognuna uno strumento, ogni qualvolta viene selezionato
+uno strumento diverso dal precedente verrà mostrato solamente l'oggetto immagine dell'oggetto in uso.
 
 ## Errori
 
