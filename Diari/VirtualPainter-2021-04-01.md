@@ -39,8 +39,9 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:45 | Creazione degli strumenti (gomma, penna e filler)|
+|08:20 - 15:45 | Risoluzione errori, test e ottimizzazione dell'applicazione|
 
+Vedi punto Errori del diario.
 
 ## Errori
 
