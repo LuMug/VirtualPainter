@@ -51,6 +51,7 @@ dello schermo lo strumento selezionato sarà sempre in alto a sinistra.
 
 Nel canvas ho creato tre oggetti immagini (gomma, penna e riempi) le quali mostrano ognuna uno strumento, ogni qualvolta viene selezionato
 uno strumento diverso dal precedente verrà mostrato solamente l'oggetto immagine dell'oggetto in uso.
+In seguito ho aggiunto un'altro oggetto RawImage alla quale cambio il colore secondo il colore del pennello attualmente in uso.
 
 ## Errori
 
