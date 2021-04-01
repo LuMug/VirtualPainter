@@ -45,6 +45,18 @@ Vedi punto Errori del diario.
 
 ## Errori
 
+- Cambio nome classe GetLeapFingers in ManageLeft.
+- Eliminato PixelConverter(classe)
+
+
+Problemi:      
+- Tavola menu appare anche in assenza delle mani.
+	Soluzione:
+	- Un if nello script CheckHandsIn cha abbiamo inserito in HandsModel, questo if controlla se l'oggetto RigidRoundHand_L è null in questo caso nasconde il menù.
+- Tela scalata in basso di un po' di pixel. -> Causa: Durante l'impostazione delle dimensioni della tela il MoveCanvas capta i click sul numpad della tastiera muovando la tela
+	Soluzione:
+	- Disattivare il MoveTela quando la tela non si vede.
+-Rimozione rotazione con la mano che doventa possibile solamente coi tasti.  
 
 ##  Punto della situazione rispetto alla pianificazione
 
