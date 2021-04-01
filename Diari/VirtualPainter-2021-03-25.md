@@ -71,6 +71,12 @@ penna, gomma e filler, mentre lo slider gestisce la gradezza della gomma e della
 
 Nello script ManageRight ho inserito i metodi creati da Zeno per la gestione della grandezza della penna.
 
+#### Creazione del InfoPanel
+
+Ho creato un pannello che mostra i comandi principali per l'utilizzo dell'applicazione,
+questo menù è visibile selezionando il tasto "i" e diventa invisibile utilizzando la stessa
+modalità.
+
 ## Errori
 
 Il colore e la dimensione di default venivano messi ogni volta che si toglieva e si inseriva la mano destra,
