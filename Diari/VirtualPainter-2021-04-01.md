@@ -30,8 +30,17 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 14:00 |Documentato e aiutato chi aveva bisogno	|
-|14:15 - 15:45 |Fatto i diari|
+|08:20 - 15:15 |Lavorato sul ctrl+Z	|
+|15:15 - 15:45 |Fatto il diari|
+
+
+#### ctrl+z
+
+Il ctrl+z che ho ideato non fa altro che prendere un array di texture e aggiungerci sempre la texture dopo l'ultima modifica
+Per farlo ogni volta ciclo l'array spostando in là le vecchie texture per poi aggiungerci quella nuova così da avere sempre 9 texture ricaricabili
+Prima di salvare una nuova texture controllo se è stata fatta una nuova modifica dopo l'ultimo salvataggio o se la modifica è ancora in corso.
+Quando si clicca ctrl + z la texture della tela viese settata come la penultima dell'array(penultima perchè l'ultima è quella con l'ultima modifica da rimuovere), e, successivamente sposta tutte le altre texture avanti, così da avere pronta la texture ancora precedente pronta in caso di un altro ctrl+z.
+Il problema è che quando prendiamo la texture vengono sovrascritte tutte perchè queste non vengono istanziate, ma abbiamo in programma di fixarlo se si riesce già oggi.
 
 
 ### Sara Bressan
