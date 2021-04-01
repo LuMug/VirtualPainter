@@ -5,6 +5,7 @@
 ## Lavori svolti
 
 Link utili:
+- Ctrl-z: https://stackoverflow.com/questions/3944552/undo-for-a-paint-program
 
 
 ### Karim Galliciotti
