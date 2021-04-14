@@ -13,7 +13,13 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|8:20 - 15:45  | Azione riempimento|
+|8:20 - 11:45  | Risoluzione errori, test e ottimizzazione dell'applicazione|
+|12:35 - 15:45 |ctrl+z|
+
+Vedi punto errori
+
+### Ctrl+z
+Il pomeriggio ho aiutato Stefano a far funzionare il ctrl+z. Non siamo riusciti a farlo perfettamente funzionante, difatti funziona se lo si esegue una sola volta, dalla seconda rimuove la texture. Per il funzionamento vedi punto ctrl+z di Stefano.
 
 
 
