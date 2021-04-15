@@ -12,20 +12,39 @@ public class CreateFile : MonoBehaviour
     public GameObject telaDisegnabile;
     public Button continua;
     private FileManager file;
-    public Camera camera;
+    public new Camera camera;
     private AutoSize autoSize = new AutoSize();
+    public GameObject colori;
+    public GameObject strumenti;
+    public GameObject actionController;
+
+    private bool alreadyCreated;
 
 
     void Start()
     {
         continua = continua.GetComponent<Button>();
         continua.onClick.AddListener(createNewTela);
+
+        colori.SetActive(false);
+        strumenti.SetActive(false);
+        actionController.GetComponent<MoveCanvas>().SetCantMove();
+
+        if (alreadyCreated)
+        {
+            this.GetComponent<OpenSalvaConNome>().Salva();
+        }
+        else
+        {
+            alreadyCreated = true;
+        }
     }
+
     public void createNew(int imageWidth, int imageHeight)
     {
         //oggetto è il nome dell'oggetto usato come tela
         var texture = new Texture2D(imageWidth, imageHeight, TextureFormat.RGBA32, false);
-        telaDisegnabile.gameObject.transform.localScale = new Vector3(PixelConverter.UnityToPixels(imageWidth), 0, PixelConverter.UnityToPixels(imageHeight));
+        telaDisegnabile.gameObject.transform.localScale = new Vector3(UnityToPixels(imageWidth), 0, UnityToPixels(imageHeight));
         telaDisegnabile.GetComponent<Renderer>().material.mainTexture = texture;
         for (int y = 0; y < texture.height; y++)
         {
@@ -86,6 +105,12 @@ public class CreateFile : MonoBehaviour
     {
         //inputAltezza e inputLarghezza sono i nomi dei form da cui prendere i dati
         createNew(Int32.Parse(InputLarghezza.text), Int32.Parse(InputAltezza.text));
+        actionController.GetComponent<MoveCanvas>().SetCanMove();
+    }
+
+    public static float UnityToPixels(int unityValue)
+    {
+        return (float)unityValue / 100;
     }
 
 }

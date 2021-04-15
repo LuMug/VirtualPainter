@@ -23,7 +23,7 @@ public class GetFile : MonoBehaviour
     //Bottone per scegliere l'immagine da caricare
     public Button getSheet;
 
-    public Camera camera;
+    public new Camera camera;
 
     private AutoSize autoSize = new AutoSize();
 

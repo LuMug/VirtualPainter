@@ -1,10 +1,11 @@
 ﻿using Leap.Unity.Interaction;
 using Newtonsoft.Json;
-using SFB;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using SFB;
+using UnityEngine.UI;
 
 public class OpenSalvaConNome : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class OpenSalvaConNome : MonoBehaviour
     private bool prevPress = false;
     //Controlla che il bottone per salvare con nome sia premuto
     private bool prevPressConNome = false;
+    // Bottone "Si" della UI Exit
+    public Button saveFromUI;
 
     private FileManager file;
 
@@ -26,6 +29,7 @@ public class OpenSalvaConNome : MonoBehaviour
     {
         buttonSalva = buttonSalva.GetComponent<InteractionButton>();
         buttonSalvaConNome = buttonSalvaConNome.GetComponent<InteractionButton>();
+        saveFromUI.onClick.AddListener(Salva);
     }
 
     // Update is called once per frame
@@ -34,25 +38,7 @@ public class OpenSalvaConNome : MonoBehaviour
         //Controlla che il bottone per salvare sia premuto e che non lo era allo stato precedente
         if (buttonSalva.isPressed && !prevPress)
         {
-            //Prende i percorsi dei file salvati
-            string json = File.ReadAllText("Assets/Models/paths.json");
-            List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
-            //Prende l'estensione dell'ultimo file
-            string extension = oldPaths[oldPaths.Count - 1].path.Substring(oldPaths[oldPaths.Count - 1].path.Length - 3, 3);
-            //Prende l'ultimo file attivo
-            file = new FileManager(oldPaths[oldPaths.Count - 1].path);
-            //Prende la texture dalla tela
-            var texture = (Texture2D)telaDisegnabile.GetComponent<Renderer>().material.mainTexture;
-            Debug.Log(oldPaths[oldPaths.Count - 1].path);
-            //Controlla l'estensione con la quale salvare il file
-            if (extension.Equals("png"))
-            {
-                file.SaveTexturePNG(texture);
-            }
-            else if (extension.Equals("jpg"))
-            {
-                file.SaveTextureJPG(texture);
-            }
+            Salva();
             //Setta lo stato del bottone come attivo
             prevPress = true;
         }
@@ -121,6 +107,29 @@ public class OpenSalvaConNome : MonoBehaviour
         {
             //Setta lo stato del bottone come disattivo
             prevPressConNome = false;
+        }
+    }
+
+    public void Salva()
+    {
+        //Prende i percorsi dei file salvati
+        string json = File.ReadAllText("Assets/Models/paths.json");
+        List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
+        //Prende l'estensione dell'ultimo file
+        string extension = oldPaths[oldPaths.Count - 1].path.Substring(oldPaths[oldPaths.Count - 1].path.Length - 3, 3);
+        //Prende l'ultimo file attivo
+        file = new FileManager(oldPaths[oldPaths.Count - 1].path);
+        //Prende la texture dalla tela
+        var texture = (Texture2D)telaDisegnabile.GetComponent<Renderer>().material.mainTexture;
+        Debug.Log(oldPaths[oldPaths.Count - 1].path);
+        //Controlla l'estensione con la quale salvare il file
+        if (extension.Equals("png"))
+        {
+            file.SaveTexturePNG(texture);
+        }
+        else if (extension.Equals("jpg"))
+        {
+            file.SaveTextureJPG(texture);
         }
     }
 }

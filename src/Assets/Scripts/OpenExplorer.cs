@@ -1,12 +1,16 @@
 ﻿using Leap.Unity.Interaction;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class OpenExplorer : MonoBehaviour
 {
     private InteractionButton button;
-    private bool prevPress;
+    private bool prevPress = false;
+
+    private FileManager file;
 
     // Start is called before the first frame update
     void Start()
@@ -14,23 +18,24 @@ public class OpenExplorer : MonoBehaviour
         button = GetComponent<InteractionButton>();
     }
 
-    private void openStrumenti()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (button.isPressed && !prevPress)
         {
-            Debug.Log("Pressed");
-            prevPress = true;
-        }
-        else if (!button.isPressed && prevPress)
-        {
-            Debug.Log("Not pressed");
-            prevPress = false;
+            string json = File.ReadAllText("Assets/Models/paths.json");
+            List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
+            string extension = oldPaths[oldPaths.Count - 1].path.Substring(oldPaths[oldPaths.Count - 1].path.Length - 3, 3);
+            file = new FileManager(oldPaths[oldPaths.Count - 1].path);
+            var texture = file.GetTexture();
+            if (extension.Equals("png"))
+            {
+                file.SaveTexturePNG(texture);
+            }
+            else if (extension.Equals("jpg"))
+            {
+                file.SaveTextureJPG(texture);
+            }
         }
     }
 }

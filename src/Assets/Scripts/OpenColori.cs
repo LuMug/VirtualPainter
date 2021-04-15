@@ -8,9 +8,16 @@ public class OpenColori : MonoBehaviour
     private InteractionButton button;
     private bool prevPress;
 
+    private bool active = false;
+
+    public GameObject colorPicker;
+
+    public GameObject rightHand;
+
     // Start is called before the first frame update
     void Start()
     {
+        colorPicker.SetActive(false);
         button = GetComponent<InteractionButton>();
     }
 
@@ -24,12 +31,18 @@ public class OpenColori : MonoBehaviour
     {
         if (button.isPressed && !prevPress)
         {
-            Debug.Log("Pressed");
+            active = !active;
+            colorPicker.SetActive(active);
+
+            if (!active)
+            {
+                rightHand.GetComponent<ManageRight>().ChangeColor();
+            }
+
             prevPress = true;
         }
         else if (!button.isPressed && prevPress)
         {
-            Debug.Log("Not pressed");
             prevPress = false;
         }
     }

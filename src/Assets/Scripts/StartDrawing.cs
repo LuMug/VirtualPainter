@@ -20,6 +20,8 @@ public class StartDrawing : MonoBehaviour
     // Corrisponde alla tela disegnabile
     public GameObject telaDisegnabile;
 
+    public GameObject actionController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,7 @@ public class StartDrawing : MonoBehaviour
     public void HideNuovaTela()
     {
         configMenu.SetActive(false);
+        actionController.GetComponent<MoveCanvas>().SetCanMove();
         ShowHands();
     }
 

@@ -3,16 +3,47 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Close : MonoBehaviour
 {
+    // File Manager
     private FileManager file;
+
+    // UI del menù di uscita
+    public GameObject exitUI;
+
+    // Mani
+    public GameObject hands;
+
+    // Bottoni presenti sull'UI
+    public Button si;
+    public Button no;
+    public Button annulla;
+
+    public GameObject colori;
+    public GameObject strumenti;
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        colori.SetActive(false);
+        strumenti.SetActive(false);
+
+        si = si.GetComponent<Button>();
+        no = no.GetComponent<Button>();
+        annulla = annulla.GetComponent<Button>();
+
+        si.onClick.AddListener(salvaEdEsci);
+        no.onClick.AddListener(esci);
+        annulla.onClick.AddListener(Annulla);
+    }
 
     public void salvaEdEsci()
     {
         string json = File.ReadAllText("Assets/Models/paths.json");
         List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
-        string extension = oldPaths[oldPaths.Count - 1].path.Substring(oldPaths.Count - 3, 3);
+        string extension = oldPaths[oldPaths.Count - 1].path.Substring(oldPaths[oldPaths.Count - 1].path.Length - 3, 3);
         file = new FileManager(oldPaths[oldPaths.Count - 1].path);
         var texture = file.GetTexture();
         if (extension.Equals("png"))
@@ -28,5 +59,11 @@ public class Close : MonoBehaviour
     public void esci()
     {
         Application.Quit();
+    }
+
+    public void Annulla()
+    {
+        exitUI.SetActive(false);
+        hands.SetActive(true);
     }
 }

@@ -10,6 +10,8 @@ public class OpenImpostazioni : MonoBehaviour
     public GameObject configurazione_tela;
     public GameObject hands;
     public GameObject tela;
+    public GameObject actionController;
+    public GameObject colorPicker;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,9 @@ public class OpenImpostazioni : MonoBehaviour
             configurazione_tela.SetActive(true);
             hands.SetActive(false);
             tela.SetActive(false);
+            colorPicker.SetActive(false);
             prevPress = true;
+            actionController.GetComponent<MoveCanvas>().SetCantMove();
         }
         else if (!button.isPressed && prevPress)
         {

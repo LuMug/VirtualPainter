@@ -2,11 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
+using System.IO;
 
 public class Exit : MonoBehaviour
 {
     private InteractionButton button;
-    private bool prevPress;
+    private bool prevPress = false;
+
+    public GameObject exitUI;
+
+    public GameObject hands;
+
+    private FileManager file;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +27,8 @@ public class Exit : MonoBehaviour
     {
         if (button.isPressed && !prevPress)
         {
-            Application.Quit();
-            prevPress = true;
-        }
-        else if (!button.isPressed && prevPress)
-        {
-            prevPress = false;
+            exitUI.SetActive(true);
+            hands.SetActive(false);
         }
     }
 }
