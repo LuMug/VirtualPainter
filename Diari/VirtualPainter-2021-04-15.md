@@ -40,7 +40,8 @@ Link utili:
 |--------------|------------------------------|
 |08:20 - 15:45 | Debugging e ottimizzazione del codice |
 
-
+Errore sistemato per la quale le mani non eseguivano nessuna azione siccome venivano creati dei cloni delle mani.
+Soluzione: Nell'HandModel Manager delle mani l'impostazione "Can Duplicate" deve essere disattivata.
 
 ## Errori
 
