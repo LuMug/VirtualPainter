@@ -51,7 +51,9 @@ Errore: Non venivano captate le uscite e le entrate delle mani nella finestra.
 Soluzione: Sia "ManageLeft" che "ManageRight" implementano "HandTransitionBehavior", a questo punto bisogna importare i due seguenti metodi:
 
 - "HandReset" viene richiamato all'inserimento della mano nella scena
-- "HandFinish" viene richiamato all'uscita della mano dalla scena 
+- "HandFinish" viene richiamato all'uscita della mano dalla scena
+
+Errore: le texture è rotonda, quindi fuoriuscendo dai lati della texture mentre si colora si disegna nel lato opposto.
 
 ## Errori
 
