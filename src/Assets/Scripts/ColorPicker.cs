@@ -137,6 +137,7 @@ public class ColorPicker : MonoBehaviour
             activeColor.GetComponent<Transform>().localScale.x * SELECTED_COLOR_SIZE_INCR,
             activeColor.GetComponent<Transform>().localScale.y * SELECTED_COLOR_SIZE_INCR
         );
+        OnColorSelected();
     }
 
     /**
