@@ -30,8 +30,15 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:15 |	|
-|15:15 - 15:45 ||
+|08:20 - 15:15 |Documentato e aiutato Karim|
+|15:15 - 15:45 |Fatto il diario e tentato di finire quello che stavamo facendo|
+
+#### Documentato
+Durante la mattinata ho documentato le varie azioni di salvataggio e il ctrl+z, mentre nel pomeriggio la parte di disegno della tela(solo il disegno senza colore o strumento)
+
+#### aiuto a Karim
+Mentre documentavo ho aiutato Karim con i suoi lavori, prima abbiamo finito di mettere a posto l'azion ctrl+z creata da me in precedenza, che poi ho subito documentato, e successivamente abbiamo provato a risolvere il resize della tela. Sfortunatamente non siamo riusciti a risolverla visto che se le proporzioni cambiavano non si disegnava più giusto
+
 
 ### Sara Bressan
 
