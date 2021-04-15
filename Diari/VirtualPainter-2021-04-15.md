@@ -43,6 +43,16 @@ Link utili:
 Errore sistemato per la quale le mani non eseguivano nessuna azione siccome venivano creati dei cloni delle mani.
 Soluzione: Nell'HandModel Manager delle mani l'impostazione "Can Duplicate" deve essere disattivata.
 
+Errore: Quando la mano destra usciva dalla finestra le impostazioni del pennello venivano resettate
+Soluzione: creazione di una variabile "brushValue" nella quale viene salvato il valore dello slide della dimensione del pennello,
+il quale viene settato al rientro della mano nella finestra.
+
+Errore: Non venivano captate le uscite e le entrate delle mani nella finestra.
+Soluzione: Sia "ManageLeft" che "ManageRight" implementano "HandTransitionBehavior", a questo punto bisogna importare i due seguenti metodi:
+
+- "HandReset" viene richiamato all'inserimento della mano nella scena
+- "HandFinish" viene richiamato all'uscita della mano dalla scena 
+
 ## Errori
 
 - Cambio nome classe GetLeapFingers in ManageLeft.
