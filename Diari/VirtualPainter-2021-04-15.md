@@ -22,8 +22,25 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|10:05 - 14:00 | |
-|14:15 - 15:45 | |
+|08:20 - 09:50 | Debuggato problema con ColorPicker|
+|10:05 - 15:45 | Pulizia generale del codice|
+
+#### Debuggato problema con ColorPicker
+
+Oggi ho iniziato con il sistemare un bug nel ColorPicker. Il problema consisteva che quando il programma partiva
+il primo colore aveva gli slider rappresentanti i suoi valori in una posizione diversa da quelle che divrebbero
+essere in base al colore di default. In breve il colore di default [0,0,0,255] (Nero) aveva gli slider impostati
+sui valori [0,0,0,0] (trasparente). Quindi per risolverlo ho aggiunto nel metodo start dello script ColorPicker.cs
+una linea dove viene richiamato il metodo OnColorSelected che va ad aggiornare gli slider ed i suoi valori, solitamente
+usato quando un colore viene selezionato dalla paletta.
+
+#### Pulizia generale del codice
+
+Poi ho aiutato Sara nel debuggare problemi inerenti alla gestione delle mani. Uno traquesti era che quando il programma partiva,
+venivano create delle copie delle mani. Questo generava il problema che a volte lo script che gestisce le mani, attivava quelle 
+clonate e non quelle originali. Perciò il menu non funzionava correttamente. Mi sono ricordato  quindi di una proprietà del
+Hands Model, lo script che prende i dati dal HandController e aggiorna la posizione delle mani, chiamata "Can Duplicate".
+L'abbiamo quindi disattivata ed effettivamente i cloni non sono più apparsi.
 
 ### Stefano Mureddu
 
