@@ -1,50 +1,127 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Windows;
+using System.IO;
 
-/**
- * Classe utile per manipolare i file per il caricamento ed il
- * salvataggio delle tele in fromato JPG e PNG.
- */
-public class FileManager
+namespace VirtualPainter
 {
-    //il percorso al file
-    private string path;
-    public string Path
+    ///<summary>
+    /// La classe <c>FileManager</c> contiene funzionalità per il caricamento ed il
+    /// salvataggio di texture in formato JPG e PNG.
+    /// </summary>
+    public class FileManager
     {
-        get { return path; }
-        set { path = value; }
-    }
-
-    public FileManager(string path)
-    {
-        Path = path;
-    }
-
-    //ritorna la texture ricavata dall'immagine
-    public Texture2D GetTexture()
-    {
-        Texture2D tex = new Texture2D(2, 2);
-        if (!File.Exists(Path))
+        /// <summary>
+        /// Indica la modalità di scrittura da usare quando si instanzia un oggetto
+        /// FileManager.
+        /// </summary>
+        public const int WRITE_MODE = 0;
+        /// <summary>
+        /// Indica la modalità di lettura da usare quando si instanzia un oggetto
+        /// FileManager.
+        /// </summary>
+        public const int READ_MODE = 1;
+        /// <summary>
+        /// Il percorso del file.
+        /// </summary>
+        private string path;
+        public string Path
         {
-            return null;
+            get { return path; }
+            set { path = value; }
         }
-        byte[] imageBytes = File.ReadAllBytes(Path);
-        tex.LoadImage(imageBytes);
-        return tex;
-    }
+        /// <summary>
+        /// La modalità con cui il file è aperto.
+        /// <para>Se mode = 0 l'istanza è in modalità scrittura</para>
+        /// <para>Se mode = 1 l'istanza è in modalità lettura</para>
+        /// </summary>
+        private int mode;
+        public int Mode
+        {
+            get { return mode; }
+        }
 
-    //salva una texture in un formato jpg
-    public void SaveTextureJPG(Texture2D tex)
-    {
-        byte[] imageBytes = ImageConversion.EncodeToJPG(tex);
-        File.WriteAllBytes(Path, imageBytes);
-    }
+        /// <summary>
+        /// Instanzia un oggetto FileManager con le sue caratteristiche.
+        /// </summary>
+        /// <param name="path">Il percorso del file da salvare o caricare.</param>
+        /// <param name="mode">La modalità con cui l'oggetto verrà istanziato.</param>
+        public FileManager(string path, int mode)
+        {
+            Path = path;
+        }
 
-    public void SaveTexturePNG(Texture2D tex)
-    {
-        byte[] imageBytes = ImageConversion.EncodeToPNG(tex);
-        File.WriteAllBytes(Path, imageBytes);
+        /// <summary>
+        /// Ricava una texture dal file JPEG o PNG definito dalla proprietà path. 
+        /// </summary>
+        /// <returns>La texture ricavata dall'immagine</returns>
+        /// <exception cref="System.IO.FileNotFoundException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
+        public Texture2D GetTexture()
+        {
+            if (Mode == READ_MODE)
+            {
+                Texture2D tex = new Texture2D(2, 2);
+                if (!File.Exists(Path))
+                {
+                    throw new System.IO.FileNotFoundException(
+                        "Il percorso indicato non esiste o non è attualmente raggiungibile." +
+                        " Assicurarsi di avere i prvilegi necessari."
+                    );
+                }
+                byte[] imageBytes = File.ReadAllBytes(Path);
+                tex.LoadImage(imageBytes);
+                return tex;
+            }
+            else
+            {
+                throw new InvalidOperationException(
+                    "L'istanza dell'oggeto è in modalità write." +
+                    "Per ricavare una texture instanziare in modalità read."
+                );
+            }
+        }
+
+        /// <summary>
+        /// Salva una texture in formato JPG nel percorso designiato.
+        /// </summary>
+        /// <param name="tex">La texture da salvare come immagine.</param>
+        /// <exception cref="InvalidOperationException"></exception>
+        public void SaveTextureJPG(Texture2D tex)
+        {
+            if (Mode == WRITE_MODE)
+            {
+                byte[] imageBytes = ImageConversion.EncodeToJPG(tex);
+                File.WriteAllBytes(Path, imageBytes);
+            }
+            else
+            {
+                throw new InvalidOperationException(
+                    "L'istanza dell'oggeto è in modalità read." +
+                    "Per ricavare una texture instanziare in modalità write."
+                );
+            }
+        }
+        /// <summary>
+        /// Salva una texture in formato PNG nel percorso designiato.
+        /// </summary>
+        /// <param name="tex">La texture da salvare come immagine.</param>
+        /// <exception cref="InvalidOperationException"></exception>
+        public void SaveTexturePNG(Texture2D tex)
+        {
+            if (Mode == WRITE_MODE)
+            {
+                byte[] imageBytes = ImageConversion.EncodeToPNG(tex);
+                File.WriteAllBytes(Path, imageBytes);
+            }
+            else
+            {
+                throw new InvalidOperationException(
+                    "L'istanza dell'oggeto è in modalità read." +
+                    "Per ricavare una texture instanziare in modalità write."
+                );
+            }
+        }
     }
 }
