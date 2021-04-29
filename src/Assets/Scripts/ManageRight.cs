@@ -6,67 +6,118 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManageRight : MonoBehaviour
+// Author: Zeno Darani, Sara Bressan, Karim Galliciotti, Stefano Mureddu
+
+/// <summary>
+/// 
+/// </summary>
+public class ManageRight : HandTransitionBehavior
 {
+    /// <summary>
+    /// La dimensione massima del pennello.
+    /// </summary>
     public const int MAX_BRUSH_SIZE = 80;
-    /** 
-	 *  Lo slider che assegna il suo valore alla grandezza del pennello.
-	 */
+    /// <summary>
+    /// Lo slider che assegna il suo valore alla grandezza del pennello.
+    /// </summary>
     public InteractionSlider BrushSizeSlider;
-    /**
-	 * La dimensione del pennello in px.
-	 */
+    /// <summary>
+    /// La dimensione del pennello in px.
+    /// </summary>
     private int brushSize = 10;
-
+    /// <summary>
+    /// Il contenitore delle mani.
+    /// </summary>
     HandModel hand_model;
+    /// <summary>
+    /// La mano.
+    /// </summary>
     Hand leap_hand;
+    /// <summary>
+    /// Il controller delle mani.
+    /// </summary>
     Controller controller = new Controller();
-
+    /// <summary>
+    /// Menù di selezione del colore.
+    /// </summary>
     public GameObject colorPicker;
-
+    /// <summary>
+    /// Il colore del pennarello
+    /// </summary>
     Color color = new Color(0,0,0);
-
+    /// <summary>
+    /// Controller delle azioni
+    /// </summary>
     public GameObject actionController;
-
+    /// <summary>
+    /// La mano sinistra
+    /// </summary>
     public GameObject leftHand;
-
+    /// <summary>
+    /// Piano su cui si applica a tela.
+    /// </summary>
     public GameObject tela;
-
+    /// <summary>
+    /// Contiene lo stato precedente della mano.
+    /// </summary>
     bool prevPinch = false;
-
+    /// <summary>
+    /// Contiene lo stato di pinch attuale della mano
+    /// </summary>
     private bool pinch;
+    /// <summary>
+    /// Contiene lo stato di grab attuale della mano
+    /// </summary>
     private bool grab;
+    /// <summary>
+    /// Contiene lo stato della gomma
+    /// </summary>
     private bool erase;
+    /// <summary>
+    /// La distanza delle dita pinchate
+    /// </summary>
     private float pinchDistance;
+    /// <summary>
+    /// La posizione della mano
+    /// </summary>
     private Vector palmNormal;
+    /// <summary>
+    /// 
+    /// </summary>
+    private bool handIn;
+    /// <summary>
+    /// La grandezza del pennarello compreso tra 0 e 1.
+    /// </summary>
+    private float brushValue;
 
+    /// <summary>
+    /// Meteodo eseguito all'avvio dell'applicazione.
+    /// </summary>
     void Start()
     {
-        hand_model = GetComponent<HandModel>();
+        hand_model = this.GetComponent<RigidHand>();
         leap_hand = hand_model.GetLeapHand();
         if (leap_hand == null) Debug.LogError("No leap_hand founded");
 
         // assegna l'azione UpdateBrushSize all'evento di movimento dello slider
         BrushSizeSlider.HorizontalSlideEvent = new Action<float>(UpdateBrushSize);
 
-        UpdateBrushSize(BrushSizeSlider.defaultHorizontalValue);
-        if (!erase)
-        {
-            ChangeColor();
-        }
-        else
-        {
-            SetEraser();
-        }
-
+        // Debugging code
+        Texture2D tt = (Texture2D)tela.GetComponent<Renderer>().material.mainTexture;
+        //DrawCircle(tt,Color.black, 0, 0, 10);
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Metodo eseguuto ad ogni frame.
+    /// </summary>
     void Update()
     {
+        leap_hand = hand_model.GetLeapHand();
+        if (leap_hand == null) Debug.LogError("No leap_hand founded");
+
         try
         {
-            if (leap_hand != null && leap_hand.IsRight)
+            if (handIn)
             {
                 palmNormal = leap_hand.PalmPosition;
 
@@ -117,26 +168,41 @@ public class ManageRight : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ritorna se la mano è pinchata
+    /// </summary>
+    /// <returns>lo stato di pinching della mano</returns>
     public bool IsHandPinching()
     {
         return pinch;
     }
-
+    /// <summary>
+    /// Ritorna se la mano è totalmente chiusa (pugno)
+    /// </summary>
+    /// <returns>ritorna lo stato di grab della mano</returns>
     public bool IsHandGrabbing()
     {
         return grab;
     }
-
+    /// <summary>
+    /// Ritorna la distanza fra la dita pinchate
+    /// </summary>
+    /// <returns>la distanza fra le dita pinchate</returns>
     public float GetPinchDistance()
     {
         return pinchDistance;
     }
-
+    /// <summary>
+    /// Ritorna la posizione della mano
+    /// </summary>
+    /// <returns>la posizione della mano</returns>
     public Vector GetPalmNormal()
     {
         return palmNormal;
     }
-
+    /// <summary>
+    /// Disegna prendendo il dito indice come riferimento.
+    /// </summary>
     public void Draw()
     {
         //guarda se le dita sono nella giusta posizione
@@ -165,6 +231,15 @@ public class ManageRight : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Disegna un pallino di raggio "radius" in un punto.
+    /// </summary>
+    /// <param name="tex">texture su cui disegnare</param>
+    /// <param name="color">colore del pennello</param>
+    /// <param name="x">coordinata x del punto in cui disegnare</param>
+    /// <param name="y">coordinata y del punto in cui disegnare</param>
+    /// <param name="radius">raggio del pallino</param>
+    /// <returns></returns>
     public Texture2D DrawCircle(Texture2D tex, Color color, int x, int y, int radius)
     {
         //Debug.Log("X: " + x);
@@ -175,18 +250,22 @@ public class ManageRight : MonoBehaviour
             for (int v = y - radius; v < y + radius + 1; v++)
             {
                 if ((x - u) * (x - u) + (y - v) * (y - v) < rSquared)
+                {
                     tex.SetPixel(u, v, color);
+                    //Debug.Log(u);
+                }
             }
         }
         return tex;
     }
 
-    /**
-	 * Aggiorna la dimensione del pennello.
-	 * @param value il valore di moltiplicazione [0;1] della dimensione massima del pennello
-	 */
+    /// <summary>
+    /// Aggiorna la dimensione del pennello.
+    /// </summary>
+    /// <param name="value">il valore di moltiplicazione [0;1] della dimensione massima del pennello</param>
     private void UpdateBrushSize(float value)
     {
+        brushValue = value;
         //Debug.Log(value);
         if (value < 0 || value > 1)
         {
@@ -198,29 +277,41 @@ public class ManageRight : MonoBehaviour
             brushSize = 1;
         }
     }
+    /// <summary>
+    /// Cambia il colore del pennello.
+    /// </summary>
     public void ChangeColor()
     {
         color = colorPicker.GetComponent<ColorPicker>().SelectedColor;
         GameObject.Find("ActionController").GetComponent<CurrentInstrument>().ChangeColor(color);
     }
-
+    /// <summary>
+    /// Imposta la gomma come strumento attivo.
+    /// </summary>
     public void SetEraser()
     {
         erase = true;
         color = Color.white;
     }
-
+    /// <summary>
+    /// Imposta il pennello come strumento attivo.
+    /// </summary>
     public void SetPen()
     {
         erase = false;
         ChangeColor();
     }
-
+    /// <summary>
+    /// Ritorna lo stato delle gomma (attivo/disattivo)
+    /// </summary>
+    /// <returns>lo stato della gomma</returns>
     public bool GetEraser()
     {
         return erase;
     }
-
+    /// <summary>
+    /// Effettua l'azione di riempimento.
+    /// </summary>
     public void fill()
     {
         //guarda se le dita sono nella giusta posizione
@@ -246,19 +337,37 @@ public class ManageRight : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Rappresentazione di un punto
+    /// </summary>
     public struct Point
     {
-
+        /// <summary>
+        /// Coordinata x di un punto.
+        /// </summary>
         public int x;
+        /// <summary>
+        /// Coordinata y di un punto.
+        /// </summary>
         public int y;
-
+        /// <summary>
+        /// Istanzia le caratteristiche di un punto
+        /// </summary>
+        /// <param name="x">coordinata x di un punto</param>
+        /// <param name="y">coordinata y di un punto</param>
         public Point(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
     }
-
+    /// <summary>
+    /// Algoritmo utile per il riempimento
+    /// </summary>
+    /// <param name="texture">la texture su cui disegnare</param>
+    /// <param name="tollerance">valore che determina quanto un valore rgb può cambiare per essere preso in considerazione</param>
+    /// <param name="x">coordinata x di un punto</param>
+    /// <param name="y">coordinata y di un punto</param>
     public static void FloodFill(Texture2D texture, float tollerance, int x, int y)
     {
         var targetColor = Color.red;
@@ -308,7 +417,16 @@ public class ManageRight : MonoBehaviour
             iterations++;
         }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="texture"></param>
+    /// <param name="width"></param>
+    /// <param name="height"></param>
+    /// <param name="p"></param>
+    /// <param name="sourceColor"></param>
+    /// <param name="tollerance"></param>
+    /// <returns></returns>
     static bool CheckValidity(Texture2D texture, int width, int height, Point p, Color sourceColor, float tollerance)
     {
         Debug.Log("A");
@@ -330,5 +448,29 @@ public class ManageRight : MonoBehaviour
         Debug.Log(distance);
 
         return distance <= tollerance;
+    }
+
+    protected override void HandReset()
+    {
+        if (leap_hand != null)
+        {
+            Debug.Log("RIGHT IN");
+            handIn = true;
+            UpdateBrushSize(brushValue);
+            if (!erase)
+            {
+                ChangeColor();
+            }
+            else
+            {
+                SetEraser();
+            }
+        }
+    }
+
+    protected override void HandFinish()
+    {
+        Debug.Log("RIGHT OUT");
+        handIn = false;
     }
 }
