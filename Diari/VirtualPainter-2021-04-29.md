@@ -12,8 +12,11 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|8:20 - 11:45  | |
-|12:35 - 15:45 ||
+|8:20  - 15:45 | Documentazione e revisione codice|
+
+### Documentazione e commento
+
+Oggi ho perlopiù documentato e revisionato le parti di implementazioni svolte da me.
 
 
 ### Zeno Darani
