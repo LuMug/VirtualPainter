@@ -50,6 +50,8 @@ Non buildava allora abbiamo aggiornato le versioni, poi una volta buildato non a
 La build del sistema non veniva eseguita correttamente, per correggere questo errore abbiamo deselezionato e poi selezionato di nuovo la versione 
 della build x64.
 
+Il pacchetto da noi utilizzato per creare la traduzione (Location) è utilizzabile solo nell'editor di Unity, di conseguenza siamo stati obbligati a 
+rimuovere la funzionalità di traduzione del programma.
 
 ##  Punto della situazione rispetto alla pianificazione
 
