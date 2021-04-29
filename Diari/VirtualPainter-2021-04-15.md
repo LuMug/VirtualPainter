@@ -1,6 +1,6 @@
 # VirtualPainter | Diario di lavoro
 ##### Karim Galliciotti, Zeno Darani, Stefano Mureddu e Sara Bressan
-### SAMT, 2021-04-01
+### SAMT, 2021-04-15
 
 ## Lavori svolti
 
@@ -13,8 +13,20 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|8:20 - 11:45  | |
-|12:35 - 15:45 ||
+|8:20 - 9:50   | Ctrl+z|
+|10:05 - 15:45 | Resize tela|
+
+### Ctrl+z
+
+Sta mattina ho sistemato il ctrl+z usando le liste invece degli array e decidendo di porre un
+limite massimo di 15 ctrl+z per non renderlo troppo pesante visto che si salva le
+texture ad ogni modifica.
+
+### Resize della tela
+
+Il resto della giornata ho provato a sistemare il resize della tela, andando in contro a qualche
+problema. La tela prende le giuste dimensioni, ma la texture rimane della stessa dimensione,
+rendendo la texture tutta strechata.
 
 
 ### Zeno Darani
