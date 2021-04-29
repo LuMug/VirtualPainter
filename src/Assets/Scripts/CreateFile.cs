@@ -39,7 +39,12 @@ public class CreateFile : MonoBehaviour
             alreadyCreated = true;
         }
     }
-
+    /// <summary>
+    /// Crea una nuova texture che viene applicata al piano che funge da tela salvandola in formato jpg o png e in seguito ne salva il
+    /// percorso nel file "paths.json".
+    /// </summary>
+    /// <param name="imageWidth">larghezza della texture in pixel</param>
+    /// <param name="imageHeight">altezza della texture in pixel</param>
     public void createNew(int imageWidth, int imageHeight)
     {
         //oggetto è il nome dell'oggetto usato come tela
@@ -63,7 +68,7 @@ public class CreateFile : MonoBehaviour
         // Save file
         string filePath = StandaloneFileBrowser.SaveFilePanel("Save File", "", "MySaveFile", extensionsFile);
 
-        file = new FileManager(filePath);
+        file = new FileManager(filePath, FileManager.WRITE_MODE);
 
         string extension = filePath.Substring(filePath.Length - 3, 3);
         if (extension.Equals("png"))
@@ -80,9 +85,9 @@ public class CreateFile : MonoBehaviour
         {
             new Paths {path = filePath}
         };
-        if (File.ReadAllText("Assets/Models/paths.json").Length > 1)
+        if (File.ReadAllText("./paths.json").Length > 1)
         {
-            string json = File.ReadAllText("Assets/Models/paths.json");
+            string json = File.ReadAllText("./paths.json");
             List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
             for (int i = 0; i < oldPaths.Count; i++)
             {
@@ -92,11 +97,11 @@ public class CreateFile : MonoBehaviour
                 }
             }
             oldPaths.Add(paths[0]);
-            File.WriteAllText("Assets/Models/paths.json", JsonConvert.SerializeObject(oldPaths));
+            File.WriteAllText("./paths.json", JsonConvert.SerializeObject(oldPaths));
         }
         else
         {
-            File.WriteAllText("Assets/Models/paths.json", JsonConvert.SerializeObject(paths));
+            File.WriteAllText("./paths.json", JsonConvert.SerializeObject(paths));
         }
 
     }
