@@ -107,7 +107,21 @@ namespace VirtualPainter
         /// <summary>
         /// Il valore del colore selezionato.
         /// </summary>
-        public Color SelectedColor { get { return activeColor.GetComponent<MeshRenderer>().material.color; } }
+        public Color SelectedColor 
+        {
+            get
+            { 
+                if(!activeColor == null)
+                {
+                    return activeColor.GetComponent<MeshRenderer>().material.color;
+                }
+                else
+                {
+                    return new Color(0, 0, 0, 255);
+                }
+                 
+            }
+        }
 
         /// <summary>
         /// Il GameObject che rappresenta il colore attualmente selezionato.
