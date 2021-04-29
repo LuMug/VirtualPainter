@@ -43,8 +43,25 @@ Ho fatto una prova utilizando il software Doxygen e ho generato una doc di prova
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:45 |  |
+|08:20 - 15:45 |  Documentazione, Revisione codice e Build |
 
+Ho rebuildato il programma e sistemato modificato il metodo HandReset il quale ora controlla che la mano 
+sia effettivamente inserita prima di utilizzarla.
+
+protected override void HandReset()
+    {
+        if (leap_hand != null)
+        {
+            Debug.Log("RIGHT IN");
+            handIn = true;
+            ...
+        }
+    }
+}
+
+In seguito ho riguardato tutti i codici e ottimizzato il programma.
+Ho aiutato Zeno a sistemare un problema per la quale il colore selezionato non veniva applicato 
+durante il disegno.
 
 ##  Punto della situazione rispetto alla pianificazione
 
@@ -57,5 +74,6 @@ Ho fatto una prova utilizando il software Doxygen e ho generato una doc di prova
 
 
 ### Sara
+Finire ManageRight e Exit
 
 ### Stefano
