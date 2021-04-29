@@ -39,12 +39,15 @@ public class Close : MonoBehaviour
         annulla.onClick.AddListener(Annulla);
     }
 
+    /// <summary>
+    /// Salva la texture in formato "png" o "jpg" e chiude l'applicazione.
+    /// </summary>
     public void salvaEdEsci()
     {
-        string json = File.ReadAllText("Assets/Models/paths.json");
+        string json = File.ReadAllText("./paths.json");
         List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
         string extension = oldPaths[oldPaths.Count - 1].path.Substring(oldPaths[oldPaths.Count - 1].path.Length - 3, 3);
-        file = new FileManager(oldPaths[oldPaths.Count - 1].path);
+        file = new FileManager(oldPaths[oldPaths.Count - 1].path, FileManager.WRITE_MODE);
         var texture = file.GetTexture();
         if (extension.Equals("png"))
         {
