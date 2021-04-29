@@ -24,9 +24,11 @@ Vedi punto "Buildato" di Stefano
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 09:50 | |
-|10:05 - 15:45 | |
+|08:20 - 15:45 | Documentazione codice|
 
+#### Documentazione codice
+Oggi ho ripreso i miei codici e gli ho riccommentati utilizando tag XML così da poter poi generare la documentazione per le classi.
+Ho fatto una prova utilizando il software Doxygen e ho generato una doc di prova in formato HTML.
 ### Stefano Mureddu
 
 
