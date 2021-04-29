@@ -110,13 +110,11 @@ namespace VirtualPainter
         public Color SelectedColor 
         {
             get
-            { 
-                if(!activeColor == null)
+            {
+                try
                 {
                     return activeColor.GetComponent<MeshRenderer>().material.color;
-                }
-                else
-                {
+                }catch(NullReferenceException ex){
                     return new Color(0, 0, 0, 255);
                 }
                  
