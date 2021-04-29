@@ -30,14 +30,16 @@ Oggi ho perlopiù documentato e revisionato le parti di implementazioni svolte d
 Oggi ho ripreso i miei codici e gli ho riccommentati utilizando tag XML così da poter poi generare la documentazione per le classi.
 Ho fatto una prova utilizando il software Doxygen e ho generato una doc di prova in formato HTML.
 
-
 ### Stefano Mureddu
 
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:15 ||
-|15:15 - 15:45 ||
+|08:20 - 15:45 |Lavorato sulla documentazione|
+
+#### Documentato
+
+DocumentatoDocumentatoDocumentatoDocumentatoDocumentatoDocumentatoDocumentatoDocumentato
 
 
 
