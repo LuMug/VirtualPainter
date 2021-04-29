@@ -1,6 +1,6 @@
 # VirtualPainter | Diario di lavoro
 ##### Karim Galliciotti, Zeno Darani, Stefano Mureddu e Sara Bressan
-### SAMT, 2021-04-29
+### SAMT, 2021-04-22
 
 ## Lavori svolti
 
