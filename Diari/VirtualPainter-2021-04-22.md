@@ -12,8 +12,11 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|8:20 - 11:45  | |
-|12:35 - 15:45 ||
+|8:20 - 15:45  | Build dell'applicazione |
+
+### Build dell'applicazione
+
+Vedi punto "Buildato" di Stefano
 
 
 ### Zeno Darani
