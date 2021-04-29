@@ -24,14 +24,16 @@ Link utili:
 |08:20 - 09:50 | |
 |10:05 - 15:45 | |
 
-
 ### Stefano Mureddu
 
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:15 ||
-|15:15 - 15:45 ||
+|08:20 - 15:45 |Pianto cercando di far funzionare la build|
+
+#### Buildato
+
+Non buildava allora abbiamo aggiornato le versioni, poi una volta buildato non andava il programma, poi dopo aver passato tutto il giorno a cercare di risolvere inutilmente gli ultimi 2 minuti abbiamo tolto e rimesso una spunta. È andato. Abbiamo pianto. Tanto
 
 ### Sara Bressan
 
