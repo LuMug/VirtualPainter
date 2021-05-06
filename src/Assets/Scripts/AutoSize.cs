@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// Author: Karim Galliciotti e Stefano Mureddu
 
 /// <summary>
 /// La classe <c>AutoSize</c> ha la funzione di scalare le dimensioni del piano della tela in modo da

@@ -6,66 +6,69 @@ using System.IO;
 using UnityEngine;
 using SFB;
 using UnityEngine.UI;
+// Author: Sara Bressan
 
 /// <summary>
-/// La classe <c>OpenSalvaConNome</c> permette di salvare una texture in formato JPG o PNG in nuovo percorso a scelta.
-/// Il nuovo percorso verrà salvato nel file paths.json.
+/// Lo script <c>OpenSalvaConNome</c> serve a salvare il disegno con un nome attraverso l'explorer windows.
 /// </summary>
 public class OpenSalvaConNome : MonoBehaviour
 {
     /// <summary>
-    /// Bottone per salvare.
+    /// Corriposnde al bottone salva presente nel menù inventario.
     /// </summary>
     public InteractionButton buttonSalva;
 
     /// <summary>
-    /// Bottone per salvare con nome.
+    /// Corrisponde al bottone salvaConNome presente nel menù inventario.
     /// </summary>
     public InteractionButton buttonSalvaConNome;
 
     /// <summary>
-    /// Tela su cui disegnare.
+    /// Tela sulla quale disegnare.
     /// </summary>
     public GameObject telaDisegnabile;
-
+    
     /// <summary>
-    /// Controlla che il bottone per salvare sia premuto.
+    /// Indica se il bottone per salvare è premuto.
     /// </summary>
     private bool prevPress = false;
-
+    
     /// <summary>
-    /// Controlla che il bottone per salvare con nome sia premuto.
+    /// Indica se il bottone per salvare con nome è premuto.
     /// </summary>
     private bool prevPressConNome = false;
-
+    
     /// <summary>
-    ///  Bottone "Si" della UI Exit.
+    /// Bottone "Si" della UI per uscire dal programma.
+    /// "Si" sta per "Si voglio salvare il mio disegno prima di uscire".
     /// </summary>
     public Button saveFromUI;
 
     /// <summary>
-    /// Gestisce il salvataggio dei file.
+    /// FileManager che salva in un file png o jpg il disegno.
     /// </summary>
     private FileManager file;
 
     /// <summary>
-    /// Metodo eseguito all'avvio dello script.
+    /// Metodo richiamato una volta nel primo frame.
     /// </summary>
     void Start()
     {
         buttonSalva = buttonSalva.GetComponent<InteractionButton>();
         buttonSalvaConNome = buttonSalvaConNome.GetComponent<InteractionButton>();
+        // Aggiungo un ascoltatore che ascolta gli eventi generati dal bottone "Si".
         saveFromUI.onClick.AddListener(Salva);
     }
 
     /// <summary>
-    /// Metodo eseguito ad ogni frame.
+    /// Metodo richiamato ad ogni frame.
     /// </summary>
     void Update()
     {
         //Controlla che il bottone per salvare sia premuto e che non lo era allo stato precedente
         if (buttonSalva.isPressed && !prevPress)
         {
+            // Salva il disegno.
             Salva();
             //Setta lo stato del bottone come attivo
             prevPress = true;
@@ -151,7 +154,7 @@ public class OpenSalvaConNome : MonoBehaviour
     }
 
     /// <summary>
-    /// Salva la texture nello stesso percorso.
+    /// Metodo per salvare il disegno.
     /// </summary>
     public void Salva()
     {

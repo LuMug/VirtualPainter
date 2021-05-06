@@ -1,19 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// Author: Sara Bressan
 
+/// <summary>
+/// Lo script <c>MoveCanvas</c> serve a muovere la tela rispetto alla telecamera 
+/// (ciò che l'utente vede).
+/// </summary>
 public class MoveCanvas : MonoBehaviour
 {
-    // tela
+    /// <summary>
+    /// Corrisponde all'oggetto Tela.
+    /// </summary>
     public GameObject tela;
 
-    // posizione iniziale
+    /// <summary>
+    /// Corrisponde alla posizione originale della tela.
+    /// </summary>
     private Vector3 oldPosition;
 
-    // indica se la tela si può muovere oppure no
+    /// <summary>
+    /// Indica se è possibile muovere la tela.
+    /// </summary>
     private bool canMove;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start è un metodo che viene richiamato una volta la prima esecuzione di questo script (primo frame).
+    /// </summary>
     void Start()
     {
         // Salva la posizione iniziale della tela rispetto alla telecamera
@@ -21,9 +34,12 @@ public class MoveCanvas : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update è un metodo che viene richiamato ad ogni frame.
+    /// </summary>
     void Update()
     {
+        // Se si può muovere la tela
         if (canMove)
         {
 
@@ -64,57 +80,57 @@ public class MoveCanvas : MonoBehaviour
         }
     }
 
-    /**
-     * Fa in modo che la tela si muova.
-     */
+    /// <summary>
+    /// Setta la tela come muovibile.
+    /// </summary>
     public void SetCanMove()
     {
         canMove = true;
     }
 
-    /**
-     * Fa in modo che la tela non possa muoversi.
-     */
+    /// <summary>
+    /// Setta la tela come non muovibile.
+    /// </summary>
     public void SetCantMove()
     {
         canMove = false;
     }
 
-    /**
-     * Sposta la tela in su
-     */
+    /// <summary>
+    /// Sposta la tela verso l'alto.
+    /// </summary>
     public void MoveUp()
     {
         tela.transform.position += new Vector3(0, 0.5f, 0);
     }
 
-    /**
-     * Sposta la tela in giu
-     */
+    /// <summary>
+    /// Sposta la tela verso il basso.
+    /// </summary>
     public void MoveDown()
     {
         tela.transform.position -= new Vector3(0, 0.5f, 0);
     }
 
-    /**
-     * Sposta la tela a destra
-     */
+    /// <summary>
+    /// Sposta la tela verso destra.
+    /// </summary>
     public void MoveRight()
     {
         tela.transform.position += new Vector3(0.5f, 0, 0);
     }
 
-    /**
-     * Sposta la tela a sinistra
-     */
+    /// <summary>
+    /// Sposta la tela verso sinistra.
+    /// </summary>
     public void MoveLeft()
     {
         tela.transform.position -= new Vector3(0.5f, 0, 0);
     }
 
-    /**
-     * Posiziona la tela come era inizialmente
-     */
+    /// <summary>
+    /// Resetta la posizione della tela nella sua posizione originale.
+    /// </summary>
     public void ResetPoition()
     {
         tela.transform.position = oldPosition;

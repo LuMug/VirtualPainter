@@ -5,98 +5,123 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+// Author: Sara Bressan, Zeno Darani, Karim Galliciotti e Stefano Mureddu
 
 /// <summary>
-/// La classe <c>CreateFile</c> ha lo scopo di creare una nuova tela con texture bianca.
+/// Create file serve a creare la tela (texture) e a ridimensionarla.
 /// </summary>
 public class CreateFile : MonoBehaviour
 {
     /// <summary>
-    /// L'altezza della tela in pixel.
+    /// Campo dell'interfaccia delle impostazioni della tela nella quale si deve inserire l'altezza della tela
+    /// in pixels.
     /// </summary>
     public InputField InputAltezza;
 
     /// <summary>
-    /// La larghezza della tela in pixel
+    /// Campo dell'interfaccia delle impostazioni della tela nella quale si deve inserire la larghezza della tela
+    /// in pixels.
     /// </summary>
     public InputField InputLarghezza;
 
     /// <summary>
-    /// La tela su cui disegnare.
+    /// Piano sulla quale è presente la texture (tela) sulla quale si andrà a disegnare.
     /// </summary>
     public GameObject telaDisegnabile;
 
     /// <summary>
-    /// Il bottone che permette di cominciare a disegnare.
+    /// Bottone continua della interfaccia delle impostazioni della tela.
     /// </summary>
     public Button continua;
 
     /// <summary>
-    /// Gestisce il salvataggio del file.
+    /// Gestore file il quale salva il disegno / tela.
     /// </summary>
     private FileManager file;
 
     /// <summary>
-    /// La main camera.
+    /// Main camera del progetto.
     /// </summary>
     public new Camera camera;
 
     /// <summary>
-    /// Gestisce la scala nel quale viene rappresentata la tela.
+    /// Autosize che serve a ridimensionare la tela in modo automatico scalandola in modo che 
+    /// appaia sempre riempiendo lo schermo dell'utente.
     /// </summary>
     private AutoSize autoSize = new AutoSize();
 
     /// <summary>
-    /// La tavola dei colori.
+    /// Oggetto color picker per la selezione dei colori utilizzati per disegnare.
     /// </summary>
-    public GameObject colori;
+    public GameObject colorPicker;
 
     /// <summary>
-    /// Menu di selezione dei strumenti
+    /// Pannello per la scelta dello strumento (penna o gomma) attivo.
     /// </summary>
     public GameObject strumenti;
 
     /// <summary>
-    /// Controller delle azioni.
+    /// Action Controller, GameObject che gestisce i vari script del programma.
     /// </summary>
     public GameObject actionController;
 
     /// <summary>
-    /// Contiene lo stato della tela (Creata = true)
+    /// Indica se la tela è già stata creata.
     /// </summary>
     private bool alreadyCreated;
 
     /// <summary>
-    /// Metodo eseguito all'avvio dell'applicazione.
+    /// Start viene eseguito una volta alla partenza dello script.
     /// </summary>
     void Start()
     {
-
+        // Assegnazione del bottone "continua".
         continua = continua.GetComponent<Button>();
-        continua.onClick.AddListener(createNewTela);
+        // Nel caso in cui il bottone continua venga selezionato viene richiamato il metodo "CreateNewTela".
+        continua.onClick.AddListener(CreateNewTela);
 
-        colori.SetActive(false);
+        // Disattiva il ColorPicker.
+        colorPicker.SetActive(false);
+        // Disattiva il menù strumento attivo.
         strumenti.SetActive(false);
+        // Fa in modo che la tela non si muovi nonostante vengano premuti i tasti del numpad assegnati a 
+        // questa funzionalità.
         actionController.GetComponent<MoveCanvas>().SetCantMove();
 
-        // Controlla che la texture sia già stata creata
+        // Se la tela è già stata creata.
         if (alreadyCreated)
         {
+            // Salva il disegno attuale.
             this.GetComponent<OpenSalvaConNome>().Salva();
         }
+        // Se la tela non è mai stata creata.
         else
         {
+            // Setta la tela come già creata.
             alreadyCreated = true;
         }
     }
+
     /// <summary>
-    /// Crea una nuova texture che viene applicata al piano che funge da tela salvandola in formato jpg o png e in seguito ne salva il
+    ///Crea una nuova texture che viene applicata al piano che funge da tela salvandola in formato jpg o png e in seguito ne salva il
     /// percorso nel file "paths.json".
     /// </summary>
-    /// <param name="imageWidth">larghezza della texture in pixel</param>
-    /// <param name="imageHeight">altezza della texture in pixel</param>
-    public void createNew(int imageWidth, int imageHeight)
+    /// <param name="imageWidth">corrisponde alla larghezza dell'immgine</param>
+    /// <param name="imageHeight">corrisponde all'altezza dell'immagine</param>
+    public void CreateNew(int imageWidth, int imageHeight)
     {
+        // Se la larghezza definita dall'utente è minore di 0.
+        if(imageWidth < 0)
+        {
+            // La larghezza di default è di 100 pixels.
+            imageWidth = 100;
+        }
+        // Se l'altezza definita dall'utente è negativa.
+        if(imageHeight < 0)
+        {
+            // L'altezza di default è di 100 pixels.
+            imageHeight = 100;
+        }
         // Crea la texture
         var texture = new Texture2D(imageWidth, imageHeight, TextureFormat.RGBA32, false);
         telaDisegnabile.gameObject.transform.localScale = new Vector3(UnityToPixels(imageWidth), 0, UnityToPixels(imageHeight));
@@ -121,7 +146,8 @@ public class CreateFile : MonoBehaviour
         string filePath = StandaloneFileBrowser.SaveFilePanel("Save File", "", "MySaveFile", extensionsFile);
         // Apre il file della texture in modalità scrittura
         file = new FileManager(filePath, FileManager.WRITE_MODE);
-        //Contiene l'estensione del file e lo salva
+
+        // Contiene l'estensione del file e lo salva
         string extension = filePath.Substring(filePath.Length - 3, 3);
         if (extension.Equals("png"))
         {
@@ -131,11 +157,11 @@ public class CreateFile : MonoBehaviour
         {
             file.SaveTextureJPG(texture);
         }
-        
+
         List<Paths> paths = new List<Paths>();
         paths = new List<Paths>
         {
-            // Inserisco la path della nuova texture
+            // Inserisco la oath della nuova texture
             new Paths {path = filePath}
         };
         // Controlla che la lista contenga almeno un percorso, altrimenti inserisce direttamente la path nella lista
@@ -166,17 +192,20 @@ public class CreateFile : MonoBehaviour
     /// <summary>
     /// Crea una nuova tela.
     /// </summary>
-    public void createNewTela()
+    public void CreateNewTela()
     {
-        //inputAltezza e inputLarghezza sono i nomi dei form da cui prendere i dati
-        createNew(Int32.Parse(InputLarghezza.text), Int32.Parse(InputAltezza.text));
-        actionController.GetComponent<MoveCanvas>().SetCanMove();
+        // Parsing in intero dell'altezza inserita dall'utente nel menù delle impostazioni della tela.
+        int height = Int32.Parse(InputAltezza.text);
+        // Parsing in intero della larghezza inserita dall'utente nel menù delle impostazioni della tela.
+        int width = Int32.Parse(InputLarghezza.text);
+        // Crea una nuova tela a partire dall'altezza e la larghezza definite dall'utente.
+        CreateNew(width, height);
     }
 
     /// <summary>
-    /// Converte il valore nella scala di unity.
+    /// Trasforma le unità Unity in pixels.
     /// </summary>
-    /// <param name="unityValue"></param>
+    /// <param name="unityValue">valore di Unity da convertire</param>
     /// <returns></returns>
     public static float UnityToPixels(int unityValue)
     {

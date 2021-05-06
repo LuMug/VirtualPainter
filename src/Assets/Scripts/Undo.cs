@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+// Author: Karim Galliciotti
 
 /// <summary>
 /// La classe <c>Undo</c> ha lo scopo di annullare l'ultima azione eseguita.
