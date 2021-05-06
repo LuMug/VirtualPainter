@@ -23,20 +23,20 @@ namespace VirtualPainter
         /// A dipendenza di questo numero verranno generate le righe
         /// clonando il GameObject della proprietà color.
         /// </summary>
-        private const int ROWS_OF_SELECTABLE_COLORS = 4;
+        public const int ROWS_OF_SELECTABLE_COLORS = 4;
 
         ///<summary>
         /// Il numero di colonne della matrice di colori della paletta.
         /// A dipendenza di questo numero verranno generate le colonne
         /// clonando il GameObject della proprietà color.
         ///</summary>
-        private const int COLS_OF_SELECTABLE_COLORS = 3;
+        public const int COLS_OF_SELECTABLE_COLORS = 3;
 
         ///<summary>
         /// Rappresenta lo spazio tra i GameObject che rappresentano i colori
         /// della paletta.
         /// </summary>
-        private const float COLORS_DISTANCE = 0.2f;
+        public const float COLORS_DISTANCE = 0.2f;
 
         ///<summary>
         /// Il colore di default che avrano tutti i pallini all'inizio.
