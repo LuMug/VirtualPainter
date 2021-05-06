@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-06T11:16:56.050Z" agent="5.0 (Windows)" etag="vboaEAUenv696TzUT5Ve" version="14.6.10" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-06T11:30:03.559Z" agent="5.0 (Windows)" etag="GaaYiLPT83igF4vCxzfu" version="14.6.10" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="290" dy="456" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="0VeXUthnpNNuvw82r98w-10" value="ChangeInstrument" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="340" y="560" width="160" height="224" as="geometry" />
+          <mxGeometry x="200" y="560" width="160" height="224" as="geometry" />
         </mxCell>
         <mxCell id="0VeXUthnpNNuvw82r98w-11" value="+ rightHand : GameObject&#xa;+ pen : InteractionButton&#xa;+eraser : InteractionButton&#xa;+ fill : InteractionButton&#xa;+ colorPicker : GameObject&#xa;- prevPenPress : bool&#xa;- activePen : bool&#xa;- prevErasePress : bool&#xa;- activeErase : bool&#xa;- prevFillPress : bool&#xa;- activeFill : bool&#xa;&#xa;&#xa;&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="0VeXUthnpNNuvw82r98w-10">
           <mxGeometry y="26" width="160" height="164" as="geometry" />
@@ -36,8 +36,20 @@
         <mxCell id="0VeXUthnpNNuvw82r98w-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="0VeXUthnpNNuvw82r98w-10">
           <mxGeometry y="190" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="0VeXUthnpNNuvw82r98w-13" value="- update()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="0VeXUthnpNNuvw82r98w-10">
+        <mxCell id="0VeXUthnpNNuvw82r98w-13" value="- Update()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="0VeXUthnpNNuvw82r98w-10">
           <mxGeometry y="198" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="0VeXUthnpNNuvw82r98w-17" value="Close" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="390" y="550" width="160" height="228" as="geometry" />
+        </mxCell>
+        <mxCell id="0VeXUthnpNNuvw82r98w-18" value="- file : FileManager&#xa;+ exitUI : GameObject&#xa;+ hands GameObject&#xa;+ si : Button&#xa;+ no : Button&#xa;+ annulla : Button&#xa;+ colori : GameObject&#xa;+ strumenti : GameObject&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="0VeXUthnpNNuvw82r98w-17">
+          <mxGeometry y="26" width="160" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="0VeXUthnpNNuvw82r98w-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="0VeXUthnpNNuvw82r98w-17">
+          <mxGeometry y="150" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="0VeXUthnpNNuvw82r98w-20" value="- Start() : void&#xa;- SalvaEdEsci() : void&#xa;- Esci() : void&#xa;- Annulla : void&#xa;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="0VeXUthnpNNuvw82r98w-17">
+          <mxGeometry y="158" width="160" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
