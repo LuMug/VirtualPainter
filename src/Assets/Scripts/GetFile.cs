@@ -8,30 +8,51 @@ using Newtonsoft.Json;
 // Author: Sara Bressan, Karim Galliciotti e Zeno Darani
 
 /// <summary>
-/// La classe <c>GetFile</c> serve a 
+/// La classe <c>GetFile</c> ha lo scopo di applicare sulla tela una texture presa da un file JPG o PNG esterno.
 /// </summary>
 public class GetFile : MonoBehaviour
 {
-    // Canvas di Start_menu
+    /// <summary>
+    /// Canvas di Start_menu.
+    /// </summary>
     public GameObject menu;
 
-    //Indica se il canvas dello start menu è attivo
+    /// <summary>
+    /// Indica se il canvas dello start menu è attivo
+    /// </summary>
     private bool showStart;
 
+    /// <summary>
+    /// Gestisce i salvataggi del file.
+    /// </summary>
     FileManager file;
+
+    /// <summary>
+    /// La texture.
+    /// </summary>
     Texture2D texture;
 
-    //Piano rappresentante la tela
+    /// <summary>
+    /// Piano rappresentante la tela.
+    /// </summary>
     public GameObject telaDisegnabile;
 
     //Bottone per scegliere l'immagine da caricare
     public Button getSheet;
 
+    /// <summary>
+    /// La main camera.
+    /// </summary>
     public new Camera camera;
 
+    /// <summary>
+    /// Gestisce la scala nel quale viene rappresentata la tela.
+    /// </summary>
     private AutoSize autoSize = new AutoSize();
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Metodo eseguito all'avvio dello script.
+    /// </summary>
     private void Start()
     {
         // Aggiunge un listener al bottone
@@ -39,7 +60,9 @@ public class GetFile : MonoBehaviour
         getSheet.onClick.AddListener(OpenFilePanel);
     }
 
-    //Carica un immagine e nasconde il menu
+    /// <summary>
+    /// Carica un immagine e nasconde il menu.
+    /// </summary>
     public void OpenFilePanel()
     {
         //Filtri per far scegliere all'utente solo immagini
@@ -78,7 +101,9 @@ public class GetFile : MonoBehaviour
         }
     }
 
-    //Disattiva lo Start_Menu
+    /// <summary>
+    /// Disattiva lo Start_Menu.
+    /// </summary>
     public void hideMenuStart()
     {
         showStart = false;
