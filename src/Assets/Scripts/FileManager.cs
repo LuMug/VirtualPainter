@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+// Author: Zeno Darani
 
-namespace VirtualPainter
-{
     ///<summary>
     /// La classe <c>FileManager</c> contiene funzionalità per il caricamento ed il
     /// salvataggio di texture in formato JPG e PNG.
@@ -50,6 +49,7 @@ namespace VirtualPainter
         public FileManager(string path, int mode)
         {
             Path = path;
+            this.mode = mode;
         }
 
         /// <summary>
@@ -124,4 +124,3 @@ namespace VirtualPainter
             }
         }
     }
-}

@@ -5,133 +5,167 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 // Author: Zeno Darani, Sara Bressan, Karim Galliciotti, Stefano Mureddu
 
 /// <summary>
-/// 
+/// La classe <c>Manage Right</c> serve a gestire le azioni eseguite dalla mano destra,
+/// in pratica legge il Leap Motion capta i movimenti della mano destra e questo script
+/// interpreta i movimenti.
 /// </summary>
 public class ManageRight : HandTransitionBehavior
 {
     /// <summary>
-    /// La dimensione massima del pennello.
+    /// La dimensione massima del pennello
     /// </summary>
     public const int MAX_BRUSH_SIZE = 80;
+
     /// <summary>
     /// Lo slider che assegna il suo valore alla grandezza del pennello.
     /// </summary>
     public InteractionSlider BrushSizeSlider;
+
     /// <summary>
     /// La dimensione del pennello in px.
     /// </summary>
     private int brushSize = 10;
+
     /// <summary>
-    /// Il contenitore delle mani.
+    /// Il contenitore/modello delle mani.
     /// </summary>
     HandModel hand_model;
+
     /// <summary>
-    /// La mano.
+    /// La mano destra inserita/visibile.
     /// </summary>
     Hand leap_hand;
+
     /// <summary>
     /// Il controller delle mani.
     /// </summary>
     Controller controller = new Controller();
+
     /// <summary>
     /// Menù di selezione del colore.
     /// </summary>
     public GameObject colorPicker;
+
     /// <summary>
-    /// Il colore del pennarello
+    /// Il colore attuale della penna.
     /// </summary>
     Color color = new Color(0,0,0);
+
     /// <summary>
-    /// Controller delle azioni
+    /// Oggetto per la gestione degli script del programma.
     /// </summary>
     public GameObject actionController;
+
     /// <summary>
-    /// La mano sinistra
+    /// La mano sinistra inserita.
     /// </summary>
     public GameObject leftHand;
+
     /// <summary>
-    /// Piano su cui si applica a tela.
+    /// Piano su cui si applica a tela/texture.
     /// </summary>
     public GameObject tela;
+
     /// <summary>
-    /// Contiene lo stato precedente della mano.
+    /// Mostra se in precedenza l'indice e il pollice della mano si toccavano.
     /// </summary>
     bool prevPinch = false;
+
     /// <summary>
-    /// Contiene lo stato di pinch attuale della mano
+    /// Indica se l'indice e il pollice della mano sono vicini.
     /// </summary>
     private bool pinch;
+
     /// <summary>
-    /// Contiene lo stato di grab attuale della mano
+    /// Indica se la mano è stretta a pugno.
     /// </summary>
     private bool grab;
+
     /// <summary>
-    /// Contiene lo stato della gomma
+    /// Indica se è attivo lo strumento gomma.
     /// </summary>
     private bool erase;
+
     /// <summary>
-    /// La distanza delle dita pinchate
+    /// Corrisponde alla distanza tra indice e pollice della mano.
     /// </summary>
     private float pinchDistance;
+
     /// <summary>
-    /// La posizione della mano
+    /// Corriponde alla posizione normalizzata della mano (posizione della mano)
     /// </summary>
     private Vector palmNormal;
+
     /// <summary>
-    /// 
+    /// Indica se la/una mano destra è rilevata dal LeapMotion Controller.
     /// </summary>
     private bool handIn;
+
     /// <summary>
-    /// La grandezza del pennarello compreso tra 0 e 1.
+    /// Corrsiponde alla grandezza del pannello tra 0 e 1.
     /// </summary>
     private float brushValue;
 
     /// <summary>
-    /// Meteodo eseguito all'avvio dell'applicazione.
+    /// Start viene eseguito una volta quando parte lo script.
     /// </summary>
     void Start()
     {
+        // Prende il componente RigidHand presente in questo oggetto (Mano destra).
         hand_model = this.GetComponent<RigidHand>();
+        // Seleziona la mano presente nel modello hand_model (Mano destra).
         leap_hand = hand_model.GetLeapHand();
+        // Se la mano non viene rilevata solleva un errore.
         if (leap_hand == null) Debug.LogError("No leap_hand founded");
 
         // assegna l'azione UpdateBrushSize all'evento di movimento dello slider
         BrushSizeSlider.HorizontalSlideEvent = new Action<float>(UpdateBrushSize);
 
         // Debugging code
+        // Assegnazione della texture.
         Texture2D tt = (Texture2D)tela.GetComponent<Renderer>().material.mainTexture;
         //DrawCircle(tt,Color.black, 0, 0, 10);
     }
 
     /// <summary>
-    /// Metodo eseguuto ad ogni frame.
+    /// Metodo eseguito ad ogni frame.
     /// </summary>
     void Update()
     {
+        // Seleziona la mano destra presente nel frame attuale.
         leap_hand = hand_model.GetLeapHand();
+        // Se non viene trovata nessuna mano crea un errore.
         if (leap_hand == null) Debug.LogError("No leap_hand founded");
 
         try
         {
+            // Se la mano destra è presente.
             if (handIn)
             {
+                // Salva la posizione normalizzata della mano.
                 palmNormal = leap_hand.PalmPosition;
 
+                // Se il pollice e l'indice si avvicinano.
                 if (leap_hand.IsPinching())
                 {
+                    // Imposta la mano come "pinchante"
                     pinch = true;
+                    // Salva la distanza tra pollice e indice.
                     pinchDistance = leap_hand.PinchDistance;
 
+                    // Disegna
                     Draw();
                     //fill();
                 }
+                // Se la mano non fa pinch.
                 else
                 {
+                    // Indica che l'indice e il pollice non sono vicini.
                     pinch = false;
+                    // Indica che l'indice e il pollice non sono più vicini.
                     prevPinch = false;
 
                     //if (leftHand.GetComponent<ManageLeft>().IsFaceUp())
@@ -151,31 +185,38 @@ public class ManageRight : HandTransitionBehavior
                     //}
                 }
 
+                // Se la mano è stretta a pugno
                 if (leap_hand.GrabStrength == 1)
                 {
+                    // Indica che la mano è stretta a pugno.
                     grab = true;
                 }
                 else
                 {
+                    // Indica che la mano non è stretta a pugno.
                     grab = false;
                 }
 
             }
         }
+        // Se la mano non è inserita
         catch (NullReferenceException e)
         {
+            // Crea un errore.
             Debug.LogError("Mani non inserite " + e.Message);
         }
     }
 
     /// <summary>
-    /// Ritorna se la mano è pinchata
+    /// Ritorna se la mano è pinchata (indice e pollice sono vicini)
     /// </summary>
     /// <returns>lo stato di pinching della mano</returns>
     public bool IsHandPinching()
     {
+        // Ritorna se il pollice e l'indice della mano sono molto vicini o si toccano.
         return pinch;
     }
+
     /// <summary>
     /// Ritorna se la mano è totalmente chiusa (pugno)
     /// </summary>
@@ -184,14 +225,16 @@ public class ManageRight : HandTransitionBehavior
     {
         return grab;
     }
+
     /// <summary>
-    /// Ritorna la distanza fra la dita pinchate
+    /// Ritorna la distanza tra indice e pollice della mano.
     /// </summary>
-    /// <returns>la distanza fra le dita pinchate</returns>
+    /// <returns>la distanza tra indice e pollice della mano</returns>
     public float GetPinchDistance()
     {
         return pinchDistance;
     }
+
     /// <summary>
     /// Ritorna la posizione della mano
     /// </summary>
@@ -200,6 +243,7 @@ public class ManageRight : HandTransitionBehavior
     {
         return palmNormal;
     }
+
     /// <summary>
     /// Disegna prendendo il dito indice come riferimento.
     /// </summary>
@@ -227,6 +271,7 @@ public class ManageRight : HandTransitionBehavior
             //Debug.Log("Y: " + finger.GetTipPosition().z);
             //Debug.Log("XT: " + (tex.width * (finger.GetTipPosition().x + width / 2)));
             //Debug.Log("YT: " + (tex.height * (finger.GetTipPosition().z + height / 2)));
+            // applica il disegno sulla tela
             tex.Apply();
         }
     }
@@ -239,7 +284,7 @@ public class ManageRight : HandTransitionBehavior
     /// <param name="x">coordinata x del punto in cui disegnare</param>
     /// <param name="y">coordinata y del punto in cui disegnare</param>
     /// <param name="radius">raggio del pallino</param>
-    /// <returns></returns>
+    /// <returns>la texture</returns>
     public Texture2D DrawCircle(Texture2D tex, Color color, int x, int y, int radius)
     {
         //Debug.Log("X: " + x);
@@ -277,6 +322,7 @@ public class ManageRight : HandTransitionBehavior
             brushSize = 1;
         }
     }
+
     /// <summary>
     /// Cambia il colore del pennello.
     /// </summary>
@@ -285,32 +331,42 @@ public class ManageRight : HandTransitionBehavior
         color = colorPicker.GetComponent<ColorPicker>().SelectedColor;
         GameObject.Find("ActionController").GetComponent<CurrentInstrument>().ChangeColor(color);
     }
+
+
     /// <summary>
     /// Imposta la gomma come strumento attivo.
     /// </summary>
     public void SetEraser()
     {
+        // Imposta la gomma come attiva.
         erase = true;
+        // Il colore del pennello è ora bianco così da "cancellare" gli altri colori.
         color = Color.white;
     }
+    
     /// <summary>
-    /// Imposta il pennello come strumento attivo.
+    /// Imposta la penna come strumento attivo.
     /// </summary>
     public void SetPen()
     {
+        // Disattiva la gomma.
         erase = false;
+        // Reimposta il colore che era attivo prima di selezionare lo strumento gomma.
         ChangeColor();
     }
+
     /// <summary>
-    /// Ritorna lo stato delle gomma (attivo/disattivo)
+    /// Ritrona lo stato della gomma (attivo/disattivo)
     /// </summary>
     /// <returns>lo stato della gomma</returns>
     public bool GetEraser()
     {
         return erase;
     }
+
     /// <summary>
     /// Effettua l'azione di riempimento.
+    /// L'azione riempimento è disattivata in quanto non funzionante.
     /// </summary>
     public void fill()
     {
@@ -361,8 +417,10 @@ public class ManageRight : HandTransitionBehavior
             this.y = y;
         }
     }
+
     /// <summary>
-    /// Algoritmo utile per il riempimento
+    /// Algoritmo utile per il riempimento.
+    /// Funzione non utilizzata momentaneamente in quanto rallentava eccessivamente il programma.
     /// </summary>
     /// <param name="texture">la texture su cui disegnare</param>
     /// <param name="tollerance">valore che determina quanto un valore rgb può cambiare per essere preso in considerazione</param>
@@ -417,15 +475,17 @@ public class ManageRight : HandTransitionBehavior
             iterations++;
         }
     }
+
     /// <summary>
-    /// 
+    /// Controlla se il pixel seguente è da colorare oppure no.
+    /// Funzione utilizzata dal filler e quindi non più utilizzata.
     /// </summary>
-    /// <param name="texture"></param>
-    /// <param name="width"></param>
-    /// <param name="height"></param>
-    /// <param name="p"></param>
-    /// <param name="sourceColor"></param>
-    /// <param name="tollerance"></param>
+    /// <param name="texture">la texture</param>
+    /// <param name="width">la larghezza della texture</param>
+    /// <param name="height">l'altezza della texture</param>
+    /// <param name="p">il punto </param>
+    /// <param name="sourceColor">colore in cui trasformare i pixel</param>
+    /// <param name="tollerance">valore di tolleranza</param>
     /// <returns></returns>
     static bool CheckValidity(Texture2D texture, int width, int height, Point p, Color sourceColor, float tollerance)
     {
@@ -450,27 +510,48 @@ public class ManageRight : HandTransitionBehavior
         return distance <= tollerance;
     }
 
+    /// <summary>
+	/// Metodo che viene richiamato quando la mano sinistra viene captata dal Leap Motion.
+	/// </summary>
     protected override void HandReset()
     {
+        // Se la mano è veramente inserita
         if (leap_hand != null)
         {
+            // Notifica che la mano destra è inserita.
             Debug.Log("RIGHT IN");
+            // Imposta la mano destra come inserita.
             handIn = true;
+            // Imposta l'attuale grandezza della penna come l'ultima utilizzata.
             UpdateBrushSize(brushValue);
+            // Se la gomma è disattivata
             if (!erase)
             {
+                // Imposta il colore della penna come l'ultimo utilizzato.
                 ChangeColor();
             }
             else
             {
+                // Attiva la gomma
                 SetEraser();
             }
         }
+        else
+        {
+            // Imposta la mano come non inserita
+            handIn = false;
+        }
     }
 
+    /// <summary>
+	/// Metodo che viene richiamato quando il Leap Motion termina di captare la mano, 
+	/// se la mano prima era inserita e ora non lo è più.
+	/// </summary>
     protected override void HandFinish()
     {
+        // Notifica l'uscita della mano dal programma.
         Debug.Log("RIGHT OUT");
+        // Imposta la mano come non inserita.
         handIn = false;
     }
 }

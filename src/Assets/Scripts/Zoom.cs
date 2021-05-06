@@ -3,24 +3,36 @@ using Leap.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// Author: Sara Bressan
 
+/// <summary>
+/// Lo script <c>Zoom</c> serve a fare zoom in e zoom out della tela.
+/// </summary>
 public class Zoom : MonoBehaviour
 {
-    // tela
+    /// <summary>
+    /// Oggetto tela sulla quale disegnare.
+    /// </summary>
     public GameObject tela;
 
-    // posizione iniziale
+    /// <summary>
+    /// Corrisponde alla posizione originale della tela.
+    /// </summary>
     private Vector3 oldPosition;
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Metodo che viene richiamato una volta prima del primo frame.
+    /// </summary>
     void Start()
     {
         // Salva la posizione iniziale della tela rispetto alla telecamera
         oldPosition = tela.transform.position;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Metodo richiamato ad ogni frame.
+    /// </summary>
     void Update()
     {
         // Se viene premuto il bottone A
@@ -45,9 +57,9 @@ public class Zoom : MonoBehaviour
         }
     }
 
-    /**
-     * Avvicina la tela alla telecamera donando un effetto di Zoom In.
-     */
+    /// <summary>
+    /// Avvicina la tela alla telecamera donando un effetto di Zoom In.
+    /// </summary>
     public void ZoomIn()
     {
         // La tela si avvicina alla telecamera
@@ -55,17 +67,17 @@ public class Zoom : MonoBehaviour
         
     }
 
-    /**
-     * Allontana la tela dalla telecamera
-     */
+    /// <summary>
+    /// Allontana la tela dalla telecamera donando un effetto di Zoom Out.
+    /// </summary>
     public void ZoomOut()
     {
         tela.transform.position -= new Vector3(0,0,1);
     }
 
-    /**
-     * Rimette la tela in posizione originale
-     */
+    /// <summary>
+    /// Reimposta la tela in posizione originale.
+    /// </summary>
     public void NormalizeZoom()
     {
         tela.transform.position = oldPosition;
