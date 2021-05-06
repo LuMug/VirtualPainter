@@ -24,11 +24,11 @@ Oggi ho perlopiù documentato e revisionato le parti di implementazioni svolte d
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:45 | Documentazione codice|
+|08:20 - 15:45 | Documentazione ColorPicker e FileManager|
 
-#### Documentazione codice
-Oggi ho ripreso i miei codici e gli ho riccommentati utilizando tag XML così da poter poi generare la documentazione per le classi.
-Ho fatto una prova utilizando il software Doxygen e ho generato una doc di prova in formato HTML.
+#### Documentazione ColorPicker e FileManager
+Ho documentato l'iplementazione della tavolozza dei colori con la relativa classe ColorPicker per il funzionamento. Documentata anche la classe FileManager.
+
 
 ### Stefano Mureddu
 
