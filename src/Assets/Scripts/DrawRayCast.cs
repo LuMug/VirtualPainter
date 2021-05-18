@@ -6,27 +6,53 @@ using System;
 using System.Collections.Generic;
 using Leap.Unity.Interaction;
 
+// Author: Karim Galliciotti, Stefano Mureddu, Zeno Darani
+
+/// <summary>
+/// La classe <c>DrawRayCast</c> contiene funzionalità per poter disegnare usando il LeapMotion.
+/// </summary>
 public class DrawRayCast : MonoBehaviour
 {
+	/// <summary>
+    /// Dimensione massima del pennello.
+    /// </summary>
 	public const int MAX_BRUSH_SIZE = 100;
-	/** 
-	 *  Lo slider che assegna il suo valore alla grandezza del pennello.
-	 */
+	/// <summary>
+	/// Lo slider che assegna il suo valore alla grandezza del pennello.
+	/// </summary>
 	public InteractionSlider BrushSizeSlider;
-	/**
-	 * La dimensione del pennello in px.
-	 */
+	/// <summary>
+	/// La dimensione del pennello in px.
+	/// </summary>
 	private int brushSize = 10;
-
+	/// <summary>
+    /// Contenitore delle mani.
+    /// </summary>
 	HandModel hand_model;
+	/// <summary>
+    /// La mano.
+    /// </summary>
 	Hand leap_hand;
+	/// <summary>
+    /// Il controller delle mani.
+    /// </summary>
 	Controller controller = new Controller();
+	/// <summary>
+    /// Il colore del pennarello.
+    /// </summary>
 	Color color = Color.black;
-
+	/// <summary>
+    /// La tela su cui disegnare.
+    /// </summary>
 	public GameObject telaDisegnabile;
-
+	/// <summary>
+    /// La mano sinistra.
+    /// </summary>
 	public GameObject leftHand;
 
+	/// <summary>
+    /// Meteodo eseguito all'avvio dello script.
+    /// </summary>
 	void Start()
 	{
 		hand_model = GetComponent<HandModel>();
@@ -36,7 +62,9 @@ public class DrawRayCast : MonoBehaviour
 		BrushSizeSlider.HorizontalSlideEvent = new Action<float>(UpdateBrushSize);
 
 	}
-
+	/// <summary>
+    /// Metodo eseguito ad ogni frame.
+    /// </summary>
 	void Update()
 	{
 		try
@@ -76,10 +104,19 @@ public class DrawRayCast : MonoBehaviour
 		}
 		catch (NullReferenceException e)
 		{
-			Debug.LogError("Mani non inserite " + e.Message);
+			Debug.LogError("Mani non inserite");
 		}
 	}
 
+	/// <summary>
+    /// Disegna un pallino di raggio "radius" in un punto.
+    /// </summary>
+    /// <param name="tex">la texture su cui disegnare</param>
+    /// <param name="color">il colore da disegnare</param>
+    /// <param name="x">coordinata x del centro del pallino</param>
+    /// <param name="y">coordinata y del centro del pallini</param>
+    /// <param name="radius">raggio del pallino</param>
+    /// <returns></returns>
 	public Texture2D DrawCircle(Texture2D tex, Color color, int x, int y, int radius)
 	{
 		//Debug.Log("X: " + x);
@@ -96,10 +133,10 @@ public class DrawRayCast : MonoBehaviour
 		return tex;
 	}
 
-	/**
-	 * Aggiorna la dimensione del pennello.
-	 * @param value il valore di moltiplicazione [0;1] della dimensione massima del pennello
-	 */
+	/// <summary>
+    /// Modifica la grandezza del pennarello
+    /// </summary>
+    /// <param name="value">la grandezza del pennarello</param>
 	private void UpdateBrushSize(float value)
 	{
 		Debug.Log(value);
