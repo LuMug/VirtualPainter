@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-18T09:48:56.242Z" agent="5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="a_bDDSKZwI4T89YKngL-" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-18T09:58:48.437Z" agent="5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="8CNHv52UeSYL0IKjVDtR" version="14.6.13" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1712" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="1808" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -119,16 +119,16 @@
           <mxGeometry y="128" width="260" height="68" as="geometry" />
         </mxCell>
         <mxCell id="M-HyiIcxL1wfESy_Ib01-8" value="Fill" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="340" y="1040" width="540" height="170" as="geometry" />
+          <mxGeometry x="340" y="1040" width="570" height="170" as="geometry" />
         </mxCell>
         <mxCell id="M-HyiIcxL1wfESy_Ib01-9" value="- hand_model : HandModel&#xa;- leap_hand : Hand&#xa;+ telaDisegnabile : GameObject&#xa;- prevPinch : bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="M-HyiIcxL1wfESy_Ib01-8">
-          <mxGeometry y="26" width="540" height="64" as="geometry" />
+          <mxGeometry y="26" width="570" height="64" as="geometry" />
         </mxCell>
         <mxCell id="M-HyiIcxL1wfESy_Ib01-10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="M-HyiIcxL1wfESy_Ib01-8">
-          <mxGeometry y="90" width="540" height="8" as="geometry" />
+          <mxGeometry y="90" width="570" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="M-HyiIcxL1wfESy_Ib01-11" value="- Start() : void&lt;br&gt;- Update() : void&lt;br&gt;&lt;u&gt;+ FloodFill(Texture2D texture, float tollerance, int x, int y)&lt;/u&gt;&lt;u&gt;&lt;br&gt;- ChackValidity(Texture2D texture, int width, int height, Point p, Color sourceColor, float tollerance)&lt;/u&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="M-HyiIcxL1wfESy_Ib01-8">
-          <mxGeometry y="98" width="540" height="72" as="geometry" />
+        <mxCell id="M-HyiIcxL1wfESy_Ib01-11" value="- Start() : void&lt;br&gt;- Update() : void&lt;br&gt;&lt;u&gt;+ FloodFill(Texture2D texture, float tollerance, int x, int y) : void&lt;/u&gt;&lt;u&gt;&lt;br&gt;- ChackValidity(Texture2D texture, int width, int height, Point p, Color sourceColor, float tollerance) : bool&lt;/u&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="M-HyiIcxL1wfESy_Ib01-8">
+          <mxGeometry y="98" width="570" height="72" as="geometry" />
         </mxCell>
         <mxCell id="M-HyiIcxL1wfESy_Ib01-12" value="&amp;lt;&amp;lt; struct &amp;gt;&amp;gt;&lt;br&gt;Point" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="710" y="1280" width="160" height="108" as="geometry" />
@@ -146,6 +146,24 @@
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="790" y="1209" as="sourcePoint" />
             <mxPoint x="560" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M-HyiIcxL1wfESy_Ib01-17" value="GetFile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-220" y="348" width="160" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="M-HyiIcxL1wfESy_Ib01-18" value="+ menu :  GameObject&#xa;- showStart : bool&#xa;- file : FileManager&#xa;- texture : Texture2D&#xa;+ telaDisegnabile : GameObject&#xa;+ getSheet : Button&#xa;+ camera : Camera&#xa;- autoSize : AutoSize" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="M-HyiIcxL1wfESy_Ib01-17">
+          <mxGeometry y="26" width="160" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="M-HyiIcxL1wfESy_Ib01-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="M-HyiIcxL1wfESy_Ib01-17">
+          <mxGeometry y="150" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="M-HyiIcxL1wfESy_Ib01-20" value="- Start() : void&#xa;+ OpenFilePanel() : void&#xa;+ hideMenuStart() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="M-HyiIcxL1wfESy_Ib01-17">
+          <mxGeometry y="158" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="M-HyiIcxL1wfESy_Ib01-21" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="M-HyiIcxL1wfESy_Ib01-18" target="zkfFHV4jXpPFQw0GAbJ--0">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint y="370" as="sourcePoint" />
+            <mxPoint x="160" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
