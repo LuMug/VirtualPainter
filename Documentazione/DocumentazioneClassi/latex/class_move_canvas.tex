@@ -1,0 +1,185 @@
+\hypertarget{class_move_canvas}{}\doxysection{Riferimenti per la classe Move\+Canvas}
+\label{class_move_canvas}\index{MoveCanvas@{MoveCanvas}}
+
+
+Lo script {\ttfamily \mbox{\hyperlink{class_move_canvas}{Move\+Canvas}}} serve a muovere la tela rispetto alla telecamera (ciò che l\textquotesingle{}utente vede).  
+
+
+Diagramma delle classi per Move\+Canvas\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_move_canvas}
+\end{center}
+\end{figure}
+\doxysubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_move_canvas_a33bbfbfb1cfa624db91a746ecd0a9e9e}{Set\+Can\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Setta la tela come muovibile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_canvas_a7ce26ef7e12b04fde11da166e2645315}{Set\+Cant\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Setta la tela come non muovibile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_canvas_a1c7da3c802b142445beaaf5550bdad76}{Move\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Sposta la tela verso l\textquotesingle{}alto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_canvas_a7330d389991c07bfa3e2390e18d960bf}{Move\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Sposta la tela verso il basso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_canvas_ae1108ba27ffaef14b1a5cc6fa9c02d5c}{Move\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Sposta la tela verso destra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_canvas_a17cf955d78446b1da3c8cc2d2f5fe25a}{Move\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Sposta la tela verso sinistra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_canvas_ac1e4f26ce501ecd0397ff903a839f3ee}{Reset\+Poition}} ()
+\begin{DoxyCompactList}\small\item\em Resetta la posizione della tela nella sua posizione originale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_move_canvas_a1b9ece90d7b6a25b2956b200398dc31a}{tela}}
+\begin{DoxyCompactList}\small\item\em Corrisponde all\textquotesingle{}oggetto Tela. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_move_canvas_ad14174ce9094a6628c70dbb4c9f78dbc}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start è un metodo che viene richiamato una volta la prima esecuzione di questo script (primo frame). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_canvas_a87de26abd0af5c872e96c65f9f0644eb}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update è un metodo che viene richiamato ad ogni frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_move_canvas_a858cc6ba4067bca2ccc6d58606829b4c}{old\+Position}}
+\begin{DoxyCompactList}\small\item\em Corrisponde alla posizione originale della tela. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_move_canvas_a6d1ffaf63a3868bccb9b8b08df6ba0ae}{can\+Move}}
+\begin{DoxyCompactList}\small\item\em Indica se è possibile muovere la tela. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Lo script {\ttfamily \mbox{\hyperlink{class_move_canvas}{Move\+Canvas}}} serve a muovere la tela rispetto alla telecamera (ciò che l\textquotesingle{}utente vede). 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_move_canvas_a7330d389991c07bfa3e2390e18d960bf}\label{class_move_canvas_a7330d389991c07bfa3e2390e18d960bf}} 
+\index{MoveCanvas@{MoveCanvas}!MoveDown@{MoveDown}}
+\index{MoveDown@{MoveDown}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{MoveDown()}{MoveDown()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sposta la tela verso il basso. 
+
+\mbox{\Hypertarget{class_move_canvas_a17cf955d78446b1da3c8cc2d2f5fe25a}\label{class_move_canvas_a17cf955d78446b1da3c8cc2d2f5fe25a}} 
+\index{MoveCanvas@{MoveCanvas}!MoveLeft@{MoveLeft}}
+\index{MoveLeft@{MoveLeft}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{MoveLeft()}{MoveLeft()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Move\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sposta la tela verso sinistra. 
+
+\mbox{\Hypertarget{class_move_canvas_ae1108ba27ffaef14b1a5cc6fa9c02d5c}\label{class_move_canvas_ae1108ba27ffaef14b1a5cc6fa9c02d5c}} 
+\index{MoveCanvas@{MoveCanvas}!MoveRight@{MoveRight}}
+\index{MoveRight@{MoveRight}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{MoveRight()}{MoveRight()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Move\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sposta la tela verso destra. 
+
+\mbox{\Hypertarget{class_move_canvas_a1c7da3c802b142445beaaf5550bdad76}\label{class_move_canvas_a1c7da3c802b142445beaaf5550bdad76}} 
+\index{MoveCanvas@{MoveCanvas}!MoveUp@{MoveUp}}
+\index{MoveUp@{MoveUp}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{MoveUp()}{MoveUp()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Move\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sposta la tela verso l\textquotesingle{}alto. 
+
+\mbox{\Hypertarget{class_move_canvas_ac1e4f26ce501ecd0397ff903a839f3ee}\label{class_move_canvas_ac1e4f26ce501ecd0397ff903a839f3ee}} 
+\index{MoveCanvas@{MoveCanvas}!ResetPoition@{ResetPoition}}
+\index{ResetPoition@{ResetPoition}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{ResetPoition()}{ResetPoition()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Reset\+Poition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resetta la posizione della tela nella sua posizione originale. 
+
+\mbox{\Hypertarget{class_move_canvas_a33bbfbfb1cfa624db91a746ecd0a9e9e}\label{class_move_canvas_a33bbfbfb1cfa624db91a746ecd0a9e9e}} 
+\index{MoveCanvas@{MoveCanvas}!SetCanMove@{SetCanMove}}
+\index{SetCanMove@{SetCanMove}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{SetCanMove()}{SetCanMove()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Set\+Can\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setta la tela come muovibile. 
+
+\mbox{\Hypertarget{class_move_canvas_a7ce26ef7e12b04fde11da166e2645315}\label{class_move_canvas_a7ce26ef7e12b04fde11da166e2645315}} 
+\index{MoveCanvas@{MoveCanvas}!SetCantMove@{SetCantMove}}
+\index{SetCantMove@{SetCantMove}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{SetCantMove()}{SetCantMove()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Set\+Cant\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setta la tela come non muovibile. 
+
+\mbox{\Hypertarget{class_move_canvas_ad14174ce9094a6628c70dbb4c9f78dbc}\label{class_move_canvas_ad14174ce9094a6628c70dbb4c9f78dbc}} 
+\index{MoveCanvas@{MoveCanvas}!Start@{Start}}
+\index{Start@{Start}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start è un metodo che viene richiamato una volta la prima esecuzione di questo script (primo frame). 
+
+\mbox{\Hypertarget{class_move_canvas_a87de26abd0af5c872e96c65f9f0644eb}\label{class_move_canvas_a87de26abd0af5c872e96c65f9f0644eb}} 
+\index{MoveCanvas@{MoveCanvas}!Update@{Update}}
+\index{Update@{Update}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Move\+Canvas.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update è un metodo che viene richiamato ad ogni frame. 
+
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_move_canvas_a6d1ffaf63a3868bccb9b8b08df6ba0ae}\label{class_move_canvas_a6d1ffaf63a3868bccb9b8b08df6ba0ae}} 
+\index{MoveCanvas@{MoveCanvas}!canMove@{canMove}}
+\index{canMove@{canMove}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{canMove}{canMove}}
+{\footnotesize\ttfamily bool Move\+Canvas.\+can\+Move\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se è possibile muovere la tela. 
+
+\mbox{\Hypertarget{class_move_canvas_a858cc6ba4067bca2ccc6d58606829b4c}\label{class_move_canvas_a858cc6ba4067bca2ccc6d58606829b4c}} 
+\index{MoveCanvas@{MoveCanvas}!oldPosition@{oldPosition}}
+\index{oldPosition@{oldPosition}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{oldPosition}{oldPosition}}
+{\footnotesize\ttfamily Vector3 Move\+Canvas.\+old\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Corrisponde alla posizione originale della tela. 
+
+\mbox{\Hypertarget{class_move_canvas_a1b9ece90d7b6a25b2956b200398dc31a}\label{class_move_canvas_a1b9ece90d7b6a25b2956b200398dc31a}} 
+\index{MoveCanvas@{MoveCanvas}!tela@{tela}}
+\index{tela@{tela}!MoveCanvas@{MoveCanvas}}
+\doxysubsubsection{\texorpdfstring{tela}{tela}}
+{\footnotesize\ttfamily Game\+Object Move\+Canvas.\+tela}
+
+
+
+Corrisponde all\textquotesingle{}oggetto Tela. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Move\+Canvas.\+cs\end{DoxyCompactItemize}

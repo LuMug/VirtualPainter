@@ -1,0 +1,179 @@
+\hypertarget{class_file_manager}{}\doxysection{Riferimenti per la classe File\+Manager}
+\label{class_file_manager}\index{FileManager@{FileManager}}
+
+
+La classe {\ttfamily \mbox{\hyperlink{class_file_manager}{File\+Manager}}} contiene funzionalità per il caricamento ed il salvataggio di texture in formato JPG e PNG.  
+
+
+\doxysubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_manager_a5034c577c238d15f4dba6443357ebaeb}{File\+Manager}} (string \mbox{\hyperlink{class_file_manager_a66f042ada10fca9299799cc8733b853e}{path}}, int \mbox{\hyperlink{class_file_manager_a42ec27f362ad6e0e335594945a5db7b8}{mode}})
+\begin{DoxyCompactList}\small\item\em Instanzia un oggetto \mbox{\hyperlink{class_file_manager}{File\+Manager}} con le sue caratteristiche. \end{DoxyCompactList}\item 
+Texture2D \mbox{\hyperlink{class_file_manager_afcd5c642583f477b10cc2fb6b841a1de}{Get\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Ricava una texture dal file JPEG o PNG definito dalla proprietà path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_file_manager_a489663c7037e456137ab96e3f64e937e}{Save\+Texture\+JPG}} (Texture2D tex)
+\begin{DoxyCompactList}\small\item\em Salva una texture in formato JPG nel percorso designiato. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_file_manager_a6ae9a9076a44a9f8d1e6039f8487d3a6}{Save\+Texture\+PNG}} (Texture2D tex)
+\begin{DoxyCompactList}\small\item\em Salva una texture in formato PNG nel percorso designiato. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_file_manager_a20f501d5a5e63583f4f21c69049c3562}{WRITE\+\_\+\+MODE}} = 0
+\begin{DoxyCompactList}\small\item\em Indica la modalità di scrittura da usare quando si instanzia un oggetto \mbox{\hyperlink{class_file_manager}{File\+Manager}}. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_file_manager_a3ef6b60d2b5fc6615f33d0303ee053a4}{READ\+\_\+\+MODE}} = 1
+\begin{DoxyCompactList}\small\item\em Indica la modalità di lettura da usare quando si instanzia un oggetto \mbox{\hyperlink{class_file_manager}{File\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Proprietà}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_file_manager_a0cae5bb354025d0bd2c9f7df9aba5441}\label{class_file_manager_a0cae5bb354025d0bd2c9f7df9aba5441}} 
+string {\bfseries Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_file_manager_a403bdffb3cf61623f47ac771871339e5}\label{class_file_manager_a403bdffb3cf61623f47ac771871339e5}} 
+int {\bfseries Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_file_manager_a66f042ada10fca9299799cc8733b853e}{path}}
+\begin{DoxyCompactList}\small\item\em Il percorso del file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_file_manager_a42ec27f362ad6e0e335594945a5db7b8}{mode}}
+\begin{DoxyCompactList}\small\item\em La modalità con cui il file è aperto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+La classe {\ttfamily \mbox{\hyperlink{class_file_manager}{File\+Manager}}} contiene funzionalità per il caricamento ed il salvataggio di texture in formato JPG e PNG. 
+
+
+
+\doxysubsection{Documentazione dei costruttori e dei distruttori}
+\mbox{\Hypertarget{class_file_manager_a5034c577c238d15f4dba6443357ebaeb}\label{class_file_manager_a5034c577c238d15f4dba6443357ebaeb}} 
+\index{FileManager@{FileManager}!FileManager@{FileManager}}
+\index{FileManager@{FileManager}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{FileManager()}{FileManager()}}
+{\footnotesize\ttfamily File\+Manager.\+File\+Manager (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Instanzia un oggetto \mbox{\hyperlink{class_file_manager}{File\+Manager}} con le sue caratteristiche. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em path} & Il percorso del file da salvare o caricare.\\
+\hline
+{\em mode} & La modalità con cui l\textquotesingle{}oggetto verrà istanziato.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_file_manager_afcd5c642583f477b10cc2fb6b841a1de}\label{class_file_manager_afcd5c642583f477b10cc2fb6b841a1de}} 
+\index{FileManager@{FileManager}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{GetTexture()}{GetTexture()}}
+{\footnotesize\ttfamily Texture2D File\+Manager.\+Get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ricava una texture dal file JPEG o PNG definito dalla proprietà path. 
+
+\begin{DoxyReturn}{Restituisce}
+La texture ricavata dall\textquotesingle{}immagine
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Eccezioni}
+{\em System.\+IO.\+File\+Not\+Found\+Exception} & \\
+\hline
+{\em Invalid\+Operation\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_file_manager_a489663c7037e456137ab96e3f64e937e}\label{class_file_manager_a489663c7037e456137ab96e3f64e937e}} 
+\index{FileManager@{FileManager}!SaveTextureJPG@{SaveTextureJPG}}
+\index{SaveTextureJPG@{SaveTextureJPG}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{SaveTextureJPG()}{SaveTextureJPG()}}
+{\footnotesize\ttfamily void File\+Manager.\+Save\+Texture\+JPG (\begin{DoxyParamCaption}\item[{Texture2D}]{tex }\end{DoxyParamCaption})}
+
+
+
+Salva una texture in formato JPG nel percorso designiato. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em tex} & La texture da salvare come immagine.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Eccezioni}
+{\em Invalid\+Operation\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_file_manager_a6ae9a9076a44a9f8d1e6039f8487d3a6}\label{class_file_manager_a6ae9a9076a44a9f8d1e6039f8487d3a6}} 
+\index{FileManager@{FileManager}!SaveTexturePNG@{SaveTexturePNG}}
+\index{SaveTexturePNG@{SaveTexturePNG}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{SaveTexturePNG()}{SaveTexturePNG()}}
+{\footnotesize\ttfamily void File\+Manager.\+Save\+Texture\+PNG (\begin{DoxyParamCaption}\item[{Texture2D}]{tex }\end{DoxyParamCaption})}
+
+
+
+Salva una texture in formato PNG nel percorso designiato. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em tex} & La texture da salvare come immagine.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Eccezioni}
+{\em Invalid\+Operation\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_file_manager_a42ec27f362ad6e0e335594945a5db7b8}\label{class_file_manager_a42ec27f362ad6e0e335594945a5db7b8}} 
+\index{FileManager@{FileManager}!mode@{mode}}
+\index{mode@{mode}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily int File\+Manager.\+mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La modalità con cui il file è aperto. 
+
+Se mode = 0 l\textquotesingle{}istanza è in modalità scrittura
+
+Se mode = 1 l\textquotesingle{}istanza è in modalità lettura\mbox{\Hypertarget{class_file_manager_a66f042ada10fca9299799cc8733b853e}\label{class_file_manager_a66f042ada10fca9299799cc8733b853e}} 
+\index{FileManager@{FileManager}!path@{path}}
+\index{path@{path}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily string File\+Manager.\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il percorso del file. 
+
+\mbox{\Hypertarget{class_file_manager_a3ef6b60d2b5fc6615f33d0303ee053a4}\label{class_file_manager_a3ef6b60d2b5fc6615f33d0303ee053a4}} 
+\index{FileManager@{FileManager}!READ\_MODE@{READ\_MODE}}
+\index{READ\_MODE@{READ\_MODE}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{READ\_MODE}{READ\_MODE}}
+{\footnotesize\ttfamily const int File\+Manager.\+READ\+\_\+\+MODE = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Indica la modalità di lettura da usare quando si instanzia un oggetto \mbox{\hyperlink{class_file_manager}{File\+Manager}}. 
+
+\mbox{\Hypertarget{class_file_manager_a20f501d5a5e63583f4f21c69049c3562}\label{class_file_manager_a20f501d5a5e63583f4f21c69049c3562}} 
+\index{FileManager@{FileManager}!WRITE\_MODE@{WRITE\_MODE}}
+\index{WRITE\_MODE@{WRITE\_MODE}!FileManager@{FileManager}}
+\doxysubsubsection{\texorpdfstring{WRITE\_MODE}{WRITE\_MODE}}
+{\footnotesize\ttfamily const int File\+Manager.\+WRITE\+\_\+\+MODE = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Indica la modalità di scrittura da usare quando si instanzia un oggetto \mbox{\hyperlink{class_file_manager}{File\+Manager}}. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/File\+Manager.\+cs\end{DoxyCompactItemize}

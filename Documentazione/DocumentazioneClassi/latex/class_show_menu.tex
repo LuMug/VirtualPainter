@@ -1,0 +1,236 @@
+\hypertarget{class_show_menu}{}\doxysection{Riferimenti per la classe Show\+Menu}
+\label{class_show_menu}\index{ShowMenu@{ShowMenu}}
+
+
+Lo script {\ttfamily \mbox{\hyperlink{class_show_menu}{Show\+Menu}}} parte allo start del programma e gestisce le impostazioni iniziali del programma.  
+
+
+Diagramma delle classi per Show\+Menu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_show_menu}
+\end{center}
+\end{figure}
+\doxysubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_show_menu_a444578483627fd692a92325aa549c97d}{change\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Attiva la UI per impostare altezza e larghezza tela e disattiva l\textquotesingle{}UI attuale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_show_menu_ad90e71132c3eae651429f9db5d49978d}{create\+Json}} ()
+\begin{DoxyCompactList}\small\item\em Crea il file json nella quale salvare le paths delle immagini. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_a699c16c66a73e85cdb86767318ef6038}{menu}}
+\begin{DoxyCompactList}\small\item\em Canvas start\+\_\+menu nella quale selezionare un\textquotesingle{}immagine preesistente o creare una nuova tela. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_ae791c36e1767c578af50450a68ded0ed}{config\+Menu}}
+\begin{DoxyCompactList}\small\item\em Canvas delle impostazioni della tela (altezza e larghezza). \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_adb6ba7eaf45dac79ffde47f706f5cdff}{color\+Picker}}
+\begin{DoxyCompactList}\small\item\em Corrisponde al color\+Picker. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_ab122f6961ad5c9f54ee6c937a686596d}{instruments}}
+\begin{DoxyCompactList}\small\item\em Corrisponde al pannello di bottoni per la selezione dello strumento da utilizzare. \end{DoxyCompactList}\item 
+Button \mbox{\hyperlink{class_show_menu_ad02ef7fae44294446016c8e4f2e50067}{nuovo\+Foglio}}
+\begin{DoxyCompactList}\small\item\em Bottone presente nella Start\+\_\+\+Page, il quale apre il menu di impostazioni di una nuova tela \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_a0343a5f13fff60e13d8a6a6df58d1477}{hands}}
+\begin{DoxyCompactList}\small\item\em Corrisponde all\textquotesingle{}oggetto contenente le mani. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_a81bd580a3c6bd5d9a3a67a8ded8c8f17}{tela\+Disegnabile}}
+\begin{DoxyCompactList}\small\item\em Corrisponde alla tela disegnabile. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_afe40c41dc543676708e2264b7e5352dc}{exit\+Menu}}
+\begin{DoxyCompactList}\small\item\em Corrisponde all\textquotesingle{}UI del menù di uscita. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_show_menu_af5bc1a7576dfa80b9c9e7ce3210e727b}{info}}
+\begin{DoxyCompactList}\small\item\em Corriponde al pannello informativo del Virtual Painter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_show_menu_a491b94cdc755f0dc0c43c9d22d0eb663}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Metodo che viene richiamato una volta prima del primo frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_show_menu_af9282be2293bafd2d79be651b4f7fe33}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Metodo richiamato ad ogni frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_show_menu_a38fcfc4857ca1078de03963940b0514f}{show\+Start}}
+\begin{DoxyCompactList}\small\item\em Indica se il start\+\_\+menu è attivo o disattivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_show_menu_ad8f692899e006ec8cb33db6d0a72881e}{show\+Config}}
+\begin{DoxyCompactList}\small\item\em Indica se il canvas delle impostazioni della tela (altezza e larghezza) è attivo o disattivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_show_menu_af335b749c5181e25af0584fc4da6674e}{info\+State}} = false
+\begin{DoxyCompactList}\small\item\em Indica se l\textquotesingle{}info panel è attivo o disattivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Lo script {\ttfamily \mbox{\hyperlink{class_show_menu}{Show\+Menu}}} parte allo start del programma e gestisce le impostazioni iniziali del programma. 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_show_menu_a444578483627fd692a92325aa549c97d}\label{class_show_menu_a444578483627fd692a92325aa549c97d}} 
+\index{ShowMenu@{ShowMenu}!changeConfig@{changeConfig}}
+\index{changeConfig@{changeConfig}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{changeConfig()}{changeConfig()}}
+{\footnotesize\ttfamily void Show\+Menu.\+change\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Attiva la UI per impostare altezza e larghezza tela e disattiva l\textquotesingle{}UI attuale. 
+
+\mbox{\Hypertarget{class_show_menu_ad90e71132c3eae651429f9db5d49978d}\label{class_show_menu_ad90e71132c3eae651429f9db5d49978d}} 
+\index{ShowMenu@{ShowMenu}!createJson@{createJson}}
+\index{createJson@{createJson}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{createJson()}{createJson()}}
+{\footnotesize\ttfamily static void Show\+Menu.\+create\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Crea il file json nella quale salvare le paths delle immagini. 
+
+\mbox{\Hypertarget{class_show_menu_a491b94cdc755f0dc0c43c9d22d0eb663}\label{class_show_menu_a491b94cdc755f0dc0c43c9d22d0eb663}} 
+\index{ShowMenu@{ShowMenu}!Start@{Start}}
+\index{Start@{Start}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Show\+Menu.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo che viene richiamato una volta prima del primo frame. 
+
+\mbox{\Hypertarget{class_show_menu_af9282be2293bafd2d79be651b4f7fe33}\label{class_show_menu_af9282be2293bafd2d79be651b4f7fe33}} 
+\index{ShowMenu@{ShowMenu}!Update@{Update}}
+\index{Update@{Update}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Show\+Menu.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo richiamato ad ogni frame. 
+
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_show_menu_adb6ba7eaf45dac79ffde47f706f5cdff}\label{class_show_menu_adb6ba7eaf45dac79ffde47f706f5cdff}} 
+\index{ShowMenu@{ShowMenu}!colorPicker@{colorPicker}}
+\index{colorPicker@{colorPicker}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{colorPicker}{colorPicker}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+color\+Picker}
+
+
+
+Corrisponde al color\+Picker. 
+
+\mbox{\Hypertarget{class_show_menu_ae791c36e1767c578af50450a68ded0ed}\label{class_show_menu_ae791c36e1767c578af50450a68ded0ed}} 
+\index{ShowMenu@{ShowMenu}!configMenu@{configMenu}}
+\index{configMenu@{configMenu}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{configMenu}{configMenu}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+config\+Menu}
+
+
+
+Canvas delle impostazioni della tela (altezza e larghezza). 
+
+\mbox{\Hypertarget{class_show_menu_afe40c41dc543676708e2264b7e5352dc}\label{class_show_menu_afe40c41dc543676708e2264b7e5352dc}} 
+\index{ShowMenu@{ShowMenu}!exitMenu@{exitMenu}}
+\index{exitMenu@{exitMenu}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{exitMenu}{exitMenu}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+exit\+Menu}
+
+
+
+Corrisponde all\textquotesingle{}UI del menù di uscita. 
+
+\mbox{\Hypertarget{class_show_menu_a0343a5f13fff60e13d8a6a6df58d1477}\label{class_show_menu_a0343a5f13fff60e13d8a6a6df58d1477}} 
+\index{ShowMenu@{ShowMenu}!hands@{hands}}
+\index{hands@{hands}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{hands}{hands}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+hands}
+
+
+
+Corrisponde all\textquotesingle{}oggetto contenente le mani. 
+
+\mbox{\Hypertarget{class_show_menu_af5bc1a7576dfa80b9c9e7ce3210e727b}\label{class_show_menu_af5bc1a7576dfa80b9c9e7ce3210e727b}} 
+\index{ShowMenu@{ShowMenu}!info@{info}}
+\index{info@{info}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+info}
+
+
+
+Corriponde al pannello informativo del Virtual Painter. 
+
+\mbox{\Hypertarget{class_show_menu_af335b749c5181e25af0584fc4da6674e}\label{class_show_menu_af335b749c5181e25af0584fc4da6674e}} 
+\index{ShowMenu@{ShowMenu}!infoState@{infoState}}
+\index{infoState@{infoState}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{infoState}{infoState}}
+{\footnotesize\ttfamily bool Show\+Menu.\+info\+State = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se l\textquotesingle{}info panel è attivo o disattivo. 
+
+\mbox{\Hypertarget{class_show_menu_ab122f6961ad5c9f54ee6c937a686596d}\label{class_show_menu_ab122f6961ad5c9f54ee6c937a686596d}} 
+\index{ShowMenu@{ShowMenu}!instruments@{instruments}}
+\index{instruments@{instruments}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{instruments}{instruments}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+instruments}
+
+
+
+Corrisponde al pannello di bottoni per la selezione dello strumento da utilizzare. 
+
+\mbox{\Hypertarget{class_show_menu_a699c16c66a73e85cdb86767318ef6038}\label{class_show_menu_a699c16c66a73e85cdb86767318ef6038}} 
+\index{ShowMenu@{ShowMenu}!menu@{menu}}
+\index{menu@{menu}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+menu}
+
+
+
+Canvas start\+\_\+menu nella quale selezionare un\textquotesingle{}immagine preesistente o creare una nuova tela. 
+
+\mbox{\Hypertarget{class_show_menu_ad02ef7fae44294446016c8e4f2e50067}\label{class_show_menu_ad02ef7fae44294446016c8e4f2e50067}} 
+\index{ShowMenu@{ShowMenu}!nuovoFoglio@{nuovoFoglio}}
+\index{nuovoFoglio@{nuovoFoglio}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{nuovoFoglio}{nuovoFoglio}}
+{\footnotesize\ttfamily Button Show\+Menu.\+nuovo\+Foglio}
+
+
+
+Bottone presente nella Start\+\_\+\+Page, il quale apre il menu di impostazioni di una nuova tela 
+
+\mbox{\Hypertarget{class_show_menu_ad8f692899e006ec8cb33db6d0a72881e}\label{class_show_menu_ad8f692899e006ec8cb33db6d0a72881e}} 
+\index{ShowMenu@{ShowMenu}!showConfig@{showConfig}}
+\index{showConfig@{showConfig}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{showConfig}{showConfig}}
+{\footnotesize\ttfamily bool Show\+Menu.\+show\+Config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se il canvas delle impostazioni della tela (altezza e larghezza) è attivo o disattivo. 
+
+\mbox{\Hypertarget{class_show_menu_a38fcfc4857ca1078de03963940b0514f}\label{class_show_menu_a38fcfc4857ca1078de03963940b0514f}} 
+\index{ShowMenu@{ShowMenu}!showStart@{showStart}}
+\index{showStart@{showStart}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{showStart}{showStart}}
+{\footnotesize\ttfamily bool Show\+Menu.\+show\+Start\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se il start\+\_\+menu è attivo o disattivo. 
+
+\mbox{\Hypertarget{class_show_menu_a81bd580a3c6bd5d9a3a67a8ded8c8f17}\label{class_show_menu_a81bd580a3c6bd5d9a3a67a8ded8c8f17}} 
+\index{ShowMenu@{ShowMenu}!telaDisegnabile@{telaDisegnabile}}
+\index{telaDisegnabile@{telaDisegnabile}!ShowMenu@{ShowMenu}}
+\doxysubsubsection{\texorpdfstring{telaDisegnabile}{telaDisegnabile}}
+{\footnotesize\ttfamily Game\+Object Show\+Menu.\+tela\+Disegnabile}
+
+
+
+Corrisponde alla tela disegnabile. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Show\+Menu.\+cs\end{DoxyCompactItemize}

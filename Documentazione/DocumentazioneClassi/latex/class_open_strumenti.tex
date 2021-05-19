@@ -1,0 +1,122 @@
+\hypertarget{class_open_strumenti}{}\doxysection{Riferimenti per la classe Open\+Strumenti}
+\label{class_open_strumenti}\index{OpenStrumenti@{OpenStrumenti}}
+
+
+Lo script {\ttfamily \mbox{\hyperlink{class_open_strumenti}{Open\+Strumenti}}} serve a mostrare il menù di selezione dello strumento attivo e della grandezza della penna.  
+
+
+Diagramma delle classi per Open\+Strumenti\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_open_strumenti}
+\end{center}
+\end{figure}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_open_strumenti_a6bbee01edfeafa8e5ce81f6b963a6534}{instrument}}
+\begin{DoxyCompactList}\small\item\em Corriponde al pannello di bottoni che funge da menù strumenti. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_open_strumenti_ae14ca330999298dae4712a7590d3af84}{right\+Hand}}
+\begin{DoxyCompactList}\small\item\em Corrisponde alla mano destra attiva. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_open_strumenti_a377db37ee8a7e6987f765d9ab4d29d5e}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Metodo che viene richiamato una volta al primo frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_strumenti_ab963c5e29fb42f1de696638daee4a29e}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Metodo che viene richiamato ad ogni frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+Interaction\+Button \mbox{\hyperlink{class_open_strumenti_aad413ee3f8c089be36c07c4b0a6b688c}{button}}
+\begin{DoxyCompactList}\small\item\em Bottone presente nel menù inventario per far apparire e sparire il menù degli strumenti. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_strumenti_a78759943c3ba3d4a92a02321cf73c2be}{prev\+Press}}
+\begin{DoxyCompactList}\small\item\em Indica se il bottone è stato premuto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_strumenti_af0365f790a95165a44a6c4c40a7e615f}{active}} = false
+\begin{DoxyCompactList}\small\item\em Indica se il menù strumenti è visibile (attivo). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Lo script {\ttfamily \mbox{\hyperlink{class_open_strumenti}{Open\+Strumenti}}} serve a mostrare il menù di selezione dello strumento attivo e della grandezza della penna. 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_open_strumenti_a377db37ee8a7e6987f765d9ab4d29d5e}\label{class_open_strumenti_a377db37ee8a7e6987f765d9ab4d29d5e}} 
+\index{OpenStrumenti@{OpenStrumenti}!Start@{Start}}
+\index{Start@{Start}!OpenStrumenti@{OpenStrumenti}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Open\+Strumenti.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo che viene richiamato una volta al primo frame. 
+
+\mbox{\Hypertarget{class_open_strumenti_ab963c5e29fb42f1de696638daee4a29e}\label{class_open_strumenti_ab963c5e29fb42f1de696638daee4a29e}} 
+\index{OpenStrumenti@{OpenStrumenti}!Update@{Update}}
+\index{Update@{Update}!OpenStrumenti@{OpenStrumenti}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Open\+Strumenti.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo che viene richiamato ad ogni frame. 
+
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_open_strumenti_af0365f790a95165a44a6c4c40a7e615f}\label{class_open_strumenti_af0365f790a95165a44a6c4c40a7e615f}} 
+\index{OpenStrumenti@{OpenStrumenti}!active@{active}}
+\index{active@{active}!OpenStrumenti@{OpenStrumenti}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool Open\+Strumenti.\+active = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se il menù strumenti è visibile (attivo). 
+
+\mbox{\Hypertarget{class_open_strumenti_aad413ee3f8c089be36c07c4b0a6b688c}\label{class_open_strumenti_aad413ee3f8c089be36c07c4b0a6b688c}} 
+\index{OpenStrumenti@{OpenStrumenti}!button@{button}}
+\index{button@{button}!OpenStrumenti@{OpenStrumenti}}
+\doxysubsubsection{\texorpdfstring{button}{button}}
+{\footnotesize\ttfamily Interaction\+Button Open\+Strumenti.\+button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bottone presente nel menù inventario per far apparire e sparire il menù degli strumenti. 
+
+\mbox{\Hypertarget{class_open_strumenti_a6bbee01edfeafa8e5ce81f6b963a6534}\label{class_open_strumenti_a6bbee01edfeafa8e5ce81f6b963a6534}} 
+\index{OpenStrumenti@{OpenStrumenti}!instrument@{instrument}}
+\index{instrument@{instrument}!OpenStrumenti@{OpenStrumenti}}
+\doxysubsubsection{\texorpdfstring{instrument}{instrument}}
+{\footnotesize\ttfamily Game\+Object Open\+Strumenti.\+instrument}
+
+
+
+Corriponde al pannello di bottoni che funge da menù strumenti. 
+
+\mbox{\Hypertarget{class_open_strumenti_a78759943c3ba3d4a92a02321cf73c2be}\label{class_open_strumenti_a78759943c3ba3d4a92a02321cf73c2be}} 
+\index{OpenStrumenti@{OpenStrumenti}!prevPress@{prevPress}}
+\index{prevPress@{prevPress}!OpenStrumenti@{OpenStrumenti}}
+\doxysubsubsection{\texorpdfstring{prevPress}{prevPress}}
+{\footnotesize\ttfamily bool Open\+Strumenti.\+prev\+Press\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se il bottone è stato premuto. 
+
+\mbox{\Hypertarget{class_open_strumenti_ae14ca330999298dae4712a7590d3af84}\label{class_open_strumenti_ae14ca330999298dae4712a7590d3af84}} 
+\index{OpenStrumenti@{OpenStrumenti}!rightHand@{rightHand}}
+\index{rightHand@{rightHand}!OpenStrumenti@{OpenStrumenti}}
+\doxysubsubsection{\texorpdfstring{rightHand}{rightHand}}
+{\footnotesize\ttfamily Game\+Object Open\+Strumenti.\+right\+Hand}
+
+
+
+Corrisponde alla mano destra attiva. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Open\+Strumenti.\+cs\end{DoxyCompactItemize}

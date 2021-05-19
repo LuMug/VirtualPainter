@@ -1,0 +1,194 @@
+\hypertarget{class_change_instrument}{}\doxysection{Riferimenti per la classe Change\+Instrument}
+\label{class_change_instrument}\index{ChangeInstrument@{ChangeInstrument}}
+
+
+Questo script viene utilizzato dal menù nella quale viene selezionato lo strumento attualmente in uso (penna, gomma o filler).  
+
+
+Diagramma delle classi per Change\+Instrument\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_change_instrument}
+\end{center}
+\end{figure}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_change_instrument_ae1d878991bb90b0819c2b8c483f2ce81}{right\+Hand}}
+\begin{DoxyCompactList}\small\item\em Corrisponde alla mano destra. \end{DoxyCompactList}\item 
+Interaction\+Button \mbox{\hyperlink{class_change_instrument_afd7851174c85ec4ecb87194ccffb8f7e}{pen}}
+\begin{DoxyCompactList}\small\item\em Corrisponde al bottone per selezionare lo strumento penna. \end{DoxyCompactList}\item 
+Interaction\+Button \mbox{\hyperlink{class_change_instrument_ad855d33c35e44bc1775948cc410a3b5c}{eraser}}
+\begin{DoxyCompactList}\small\item\em Corrisponde al bottone per selezionare lo strumento gomma. \end{DoxyCompactList}\item 
+Interaction\+Button \mbox{\hyperlink{class_change_instrument_a73e7a5bad89a1153850324afb4d7c2bf}{fill}}
+\begin{DoxyCompactList}\small\item\em Corrisponde al bottone per selezionare lo strumento filler. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_change_instrument_acc99719a1669b7ae1897cefd156b4ae7}{color\+Picker}}
+\begin{DoxyCompactList}\small\item\em Oggetto color\+Picker nella quale viene selezionato il colore attivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_change_instrument_ab3b4d85a420d985039981dff44dc9591}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Parte una volta all\textquotesingle{}avvio di questo script. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_change_instrument_a2ce25f3abf100bec0ea12067a8aaefda}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Viene eseguito ad ogni frame del programma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_change_instrument_a53fe48efc540f2b9dc43e69432149d74}{prev\+Pen\+Press}}
+\begin{DoxyCompactList}\small\item\em Mostra se il bottone pen è stato premuto nello scorso ciclo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_change_instrument_ab77470658ebebcc6eff1613d3cffb639}{active\+Pen}}
+\begin{DoxyCompactList}\small\item\em Indica se lo strumento penna è attivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_change_instrument_a590778b414564b593de37fcd9f6dce74}{prev\+Erase\+Press}}
+\begin{DoxyCompactList}\small\item\em Mostra se il bottone erease è stato premuto nello scorso ciclo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_change_instrument_a94e1d36731ce37bbd3514d3f143df479}{active\+Erase}}
+\begin{DoxyCompactList}\small\item\em Indica se lo strumento gomma è attivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_change_instrument_a5578edc20c69ffa0f9146fa8c257731d}{prev\+Fill\+Press}}
+\begin{DoxyCompactList}\small\item\em Mostra se il bottone erease è stato premuto nello scorso ciclo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_change_instrument_ad11fa34d85b7cdc1ce63d15509612921}{active\+Fill}}
+\begin{DoxyCompactList}\small\item\em Indica se lo strumento gomma è attivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+Questo script viene utilizzato dal menù nella quale viene selezionato lo strumento attualmente in uso (penna, gomma o filler). 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_change_instrument_ab3b4d85a420d985039981dff44dc9591}\label{class_change_instrument_ab3b4d85a420d985039981dff44dc9591}} 
+\index{ChangeInstrument@{ChangeInstrument}!Start@{Start}}
+\index{Start@{Start}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Change\+Instrument.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parte una volta all\textquotesingle{}avvio di questo script. 
+
+\mbox{\Hypertarget{class_change_instrument_a2ce25f3abf100bec0ea12067a8aaefda}\label{class_change_instrument_a2ce25f3abf100bec0ea12067a8aaefda}} 
+\index{ChangeInstrument@{ChangeInstrument}!Update@{Update}}
+\index{Update@{Update}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Change\+Instrument.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Viene eseguito ad ogni frame del programma. 
+
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_change_instrument_a94e1d36731ce37bbd3514d3f143df479}\label{class_change_instrument_a94e1d36731ce37bbd3514d3f143df479}} 
+\index{ChangeInstrument@{ChangeInstrument}!activeErase@{activeErase}}
+\index{activeErase@{activeErase}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{activeErase}{activeErase}}
+{\footnotesize\ttfamily bool Change\+Instrument.\+active\+Erase\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se lo strumento gomma è attivo. 
+
+\mbox{\Hypertarget{class_change_instrument_ad11fa34d85b7cdc1ce63d15509612921}\label{class_change_instrument_ad11fa34d85b7cdc1ce63d15509612921}} 
+\index{ChangeInstrument@{ChangeInstrument}!activeFill@{activeFill}}
+\index{activeFill@{activeFill}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{activeFill}{activeFill}}
+{\footnotesize\ttfamily bool Change\+Instrument.\+active\+Fill\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se lo strumento gomma è attivo. 
+
+\mbox{\Hypertarget{class_change_instrument_ab77470658ebebcc6eff1613d3cffb639}\label{class_change_instrument_ab77470658ebebcc6eff1613d3cffb639}} 
+\index{ChangeInstrument@{ChangeInstrument}!activePen@{activePen}}
+\index{activePen@{activePen}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{activePen}{activePen}}
+{\footnotesize\ttfamily bool Change\+Instrument.\+active\+Pen\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se lo strumento penna è attivo. 
+
+\mbox{\Hypertarget{class_change_instrument_acc99719a1669b7ae1897cefd156b4ae7}\label{class_change_instrument_acc99719a1669b7ae1897cefd156b4ae7}} 
+\index{ChangeInstrument@{ChangeInstrument}!colorPicker@{colorPicker}}
+\index{colorPicker@{colorPicker}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{colorPicker}{colorPicker}}
+{\footnotesize\ttfamily Game\+Object Change\+Instrument.\+color\+Picker}
+
+
+
+Oggetto color\+Picker nella quale viene selezionato il colore attivo. 
+
+\mbox{\Hypertarget{class_change_instrument_ad855d33c35e44bc1775948cc410a3b5c}\label{class_change_instrument_ad855d33c35e44bc1775948cc410a3b5c}} 
+\index{ChangeInstrument@{ChangeInstrument}!eraser@{eraser}}
+\index{eraser@{eraser}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{eraser}{eraser}}
+{\footnotesize\ttfamily Interaction\+Button Change\+Instrument.\+eraser}
+
+
+
+Corrisponde al bottone per selezionare lo strumento gomma. 
+
+\mbox{\Hypertarget{class_change_instrument_a73e7a5bad89a1153850324afb4d7c2bf}\label{class_change_instrument_a73e7a5bad89a1153850324afb4d7c2bf}} 
+\index{ChangeInstrument@{ChangeInstrument}!fill@{fill}}
+\index{fill@{fill}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{fill}{fill}}
+{\footnotesize\ttfamily Interaction\+Button Change\+Instrument.\+fill}
+
+
+
+Corrisponde al bottone per selezionare lo strumento filler. 
+
+\mbox{\Hypertarget{class_change_instrument_afd7851174c85ec4ecb87194ccffb8f7e}\label{class_change_instrument_afd7851174c85ec4ecb87194ccffb8f7e}} 
+\index{ChangeInstrument@{ChangeInstrument}!pen@{pen}}
+\index{pen@{pen}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{pen}{pen}}
+{\footnotesize\ttfamily Interaction\+Button Change\+Instrument.\+pen}
+
+
+
+Corrisponde al bottone per selezionare lo strumento penna. 
+
+\mbox{\Hypertarget{class_change_instrument_a590778b414564b593de37fcd9f6dce74}\label{class_change_instrument_a590778b414564b593de37fcd9f6dce74}} 
+\index{ChangeInstrument@{ChangeInstrument}!prevErasePress@{prevErasePress}}
+\index{prevErasePress@{prevErasePress}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{prevErasePress}{prevErasePress}}
+{\footnotesize\ttfamily bool Change\+Instrument.\+prev\+Erase\+Press\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mostra se il bottone erease è stato premuto nello scorso ciclo. 
+
+\mbox{\Hypertarget{class_change_instrument_a5578edc20c69ffa0f9146fa8c257731d}\label{class_change_instrument_a5578edc20c69ffa0f9146fa8c257731d}} 
+\index{ChangeInstrument@{ChangeInstrument}!prevFillPress@{prevFillPress}}
+\index{prevFillPress@{prevFillPress}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{prevFillPress}{prevFillPress}}
+{\footnotesize\ttfamily bool Change\+Instrument.\+prev\+Fill\+Press\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mostra se il bottone erease è stato premuto nello scorso ciclo. 
+
+\mbox{\Hypertarget{class_change_instrument_a53fe48efc540f2b9dc43e69432149d74}\label{class_change_instrument_a53fe48efc540f2b9dc43e69432149d74}} 
+\index{ChangeInstrument@{ChangeInstrument}!prevPenPress@{prevPenPress}}
+\index{prevPenPress@{prevPenPress}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{prevPenPress}{prevPenPress}}
+{\footnotesize\ttfamily bool Change\+Instrument.\+prev\+Pen\+Press\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mostra se il bottone pen è stato premuto nello scorso ciclo. 
+
+\mbox{\Hypertarget{class_change_instrument_ae1d878991bb90b0819c2b8c483f2ce81}\label{class_change_instrument_ae1d878991bb90b0819c2b8c483f2ce81}} 
+\index{ChangeInstrument@{ChangeInstrument}!rightHand@{rightHand}}
+\index{rightHand@{rightHand}!ChangeInstrument@{ChangeInstrument}}
+\doxysubsubsection{\texorpdfstring{rightHand}{rightHand}}
+{\footnotesize\ttfamily Game\+Object Change\+Instrument.\+right\+Hand}
+
+
+
+Corrisponde alla mano destra. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Change\+Instrument.\+cs\end{DoxyCompactItemize}

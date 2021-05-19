@@ -1,0 +1,257 @@
+\hypertarget{class_manage_left}{}\doxysection{Riferimenti per la classe Manage\+Left}
+\label{class_manage_left}\index{ManageLeft@{ManageLeft}}
+
+
+La classe {\ttfamily Manage Left} serve a gestire le azioni eseguite dalla mano sinistra, in pratica legge il Leap Motion capta i movimenti della mano sinistra e questo script interpreta i movimenti.  
+
+
+Diagramma delle classi per Manage\+Left\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_manage_left}
+\end{center}
+\end{figure}
+\doxysubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_manage_left_a14989cbf9b2193cc0a4b1082dd2c66ed}{Is\+Grabbing}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna se la mano è totalmente chiusa (pugno) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_left_a71f520cb136c848b5ff5b3b5d80a939f}{Is\+Face\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna se la mano è girata \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_left_a0abff30c11533614dbc5ac3409dac7e9}{Is\+Pinching}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna se la mano è pinchata (indice e pollice sono vicini) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_manage_left_aed1a7b91fe03c33ec7dae5d7ae101c93}{menu}}
+\begin{DoxyCompactList}\small\item\em Corrisponde al pannello di bottoni dell\textquotesingle{}inventario (quello che appare ruotando la mano sinistra). \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_manage_left_a14e1afbf571618dcf50d25daa0fb1a39}{right\+Hand}}
+\begin{DoxyCompactList}\small\item\em Il modello di mano che utilizziamo. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_manage_left_aa64e9fa1a69b49110b3354e886de8525}{action\+Controller}}
+\begin{DoxyCompactList}\small\item\em Corrisponde all\textquotesingle{}oggetto che gestisce i vari script del programma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri protetti}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_manage_left_a78db7759277036a44ccace36dda8b644}{Hand\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Metodo che viene richiamato quando la mano sinistra viene captata dal Leap Motion. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_manage_left_a439b28fb0510fd9066220a82ea4bb980}{Hand\+Finish}} ()
+\begin{DoxyCompactList}\small\item\em Metodo che viene richiamato quando il Leap Motion termina di captare la mano, se la mano prima era inserita e ora non lo è più. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_manage_left_a82fcef41fa4a9af0fb0d4ec7e4243a65}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start viene eseguito una volta quando parte lo script (al primo frame). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_left_a32007aa0142a792feac65bd3a14e26e8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Metodo eseguito ad ogni frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+Hand\+Model \mbox{\hyperlink{class_manage_left_aa114b3be92a18f2500a2f522befa8800}{hand\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Il contenitore/modello delle mani. \end{DoxyCompactList}\item 
+Hand \mbox{\hyperlink{class_manage_left_a4ccd0fc5749929feae8e21db57189afa}{leap\+\_\+hand}}
+\begin{DoxyCompactList}\small\item\em La mano sinistra inserita/visibile. \end{DoxyCompactList}\item 
+Controller \mbox{\hyperlink{class_manage_left_a89a89ec51b0ee6f652787a770909adea}{controller}} = new Controller()
+\begin{DoxyCompactList}\small\item\em Il controller delle mani. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_left_ad00a84376de8088b5d6addd7ec281429}{is\+Grabbing}}
+\begin{DoxyCompactList}\small\item\em Indica se la mano è stretta a pugno. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_left_a8d80b0e6fa3563d0c39a0fd1aab5cd69}{is\+Face\+Up}}
+\begin{DoxyCompactList}\small\item\em Indica se il palmo della mano è ruotato verso l\textquotesingle{}alto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_left_ab791523e3a9f457397118a6c7c8d620c}{is\+Pinching}}
+\begin{DoxyCompactList}\small\item\em Indica se il pollice e l\textquotesingle{}indice della mano si toccano. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_left_a0237903265e4a68caa6f14848ba43900}{hand\+In}}
+\begin{DoxyCompactList}\small\item\em Indica se la mano è captata dal Leap Motion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+La classe {\ttfamily Manage Left} serve a gestire le azioni eseguite dalla mano sinistra, in pratica legge il Leap Motion capta i movimenti della mano sinistra e questo script interpreta i movimenti. 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_manage_left_a439b28fb0510fd9066220a82ea4bb980}\label{class_manage_left_a439b28fb0510fd9066220a82ea4bb980}} 
+\index{ManageLeft@{ManageLeft}!HandFinish@{HandFinish}}
+\index{HandFinish@{HandFinish}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{HandFinish()}{HandFinish()}}
+{\footnotesize\ttfamily override void Manage\+Left.\+Hand\+Finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Metodo che viene richiamato quando il Leap Motion termina di captare la mano, se la mano prima era inserita e ora non lo è più. 
+
+\mbox{\Hypertarget{class_manage_left_a78db7759277036a44ccace36dda8b644}\label{class_manage_left_a78db7759277036a44ccace36dda8b644}} 
+\index{ManageLeft@{ManageLeft}!HandReset@{HandReset}}
+\index{HandReset@{HandReset}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{HandReset()}{HandReset()}}
+{\footnotesize\ttfamily override void Manage\+Left.\+Hand\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Metodo che viene richiamato quando la mano sinistra viene captata dal Leap Motion. 
+
+\mbox{\Hypertarget{class_manage_left_a71f520cb136c848b5ff5b3b5d80a939f}\label{class_manage_left_a71f520cb136c848b5ff5b3b5d80a939f}} 
+\index{ManageLeft@{ManageLeft}!IsFaceUp@{IsFaceUp}}
+\index{IsFaceUp@{IsFaceUp}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{IsFaceUp()}{IsFaceUp()}}
+{\footnotesize\ttfamily bool Manage\+Left.\+Is\+Face\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritorna se la mano è girata 
+
+\begin{DoxyReturn}{Restituisce}
+ritorna se la mano è girata
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_left_a14989cbf9b2193cc0a4b1082dd2c66ed}\label{class_manage_left_a14989cbf9b2193cc0a4b1082dd2c66ed}} 
+\index{ManageLeft@{ManageLeft}!IsGrabbing@{IsGrabbing}}
+\index{IsGrabbing@{IsGrabbing}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{IsGrabbing()}{IsGrabbing()}}
+{\footnotesize\ttfamily bool Manage\+Left.\+Is\+Grabbing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritorna se la mano è totalmente chiusa (pugno) 
+
+\begin{DoxyReturn}{Restituisce}
+ritorna lo stato di grab della mano
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_left_a0abff30c11533614dbc5ac3409dac7e9}\label{class_manage_left_a0abff30c11533614dbc5ac3409dac7e9}} 
+\index{ManageLeft@{ManageLeft}!IsPinching@{IsPinching}}
+\index{IsPinching@{IsPinching}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{IsPinching()}{IsPinching()}}
+{\footnotesize\ttfamily bool Manage\+Left.\+Is\+Pinching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritorna se la mano è pinchata (indice e pollice sono vicini) 
+
+\begin{DoxyReturn}{Restituisce}
+lo stato di pinching della mano
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_left_a82fcef41fa4a9af0fb0d4ec7e4243a65}\label{class_manage_left_a82fcef41fa4a9af0fb0d4ec7e4243a65}} 
+\index{ManageLeft@{ManageLeft}!Start@{Start}}
+\index{Start@{Start}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Manage\+Left.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start viene eseguito una volta quando parte lo script (al primo frame). 
+
+\mbox{\Hypertarget{class_manage_left_a32007aa0142a792feac65bd3a14e26e8}\label{class_manage_left_a32007aa0142a792feac65bd3a14e26e8}} 
+\index{ManageLeft@{ManageLeft}!Update@{Update}}
+\index{Update@{Update}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Manage\+Left.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo eseguito ad ogni frame. 
+
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_manage_left_aa64e9fa1a69b49110b3354e886de8525}\label{class_manage_left_aa64e9fa1a69b49110b3354e886de8525}} 
+\index{ManageLeft@{ManageLeft}!actionController@{actionController}}
+\index{actionController@{actionController}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{actionController}{actionController}}
+{\footnotesize\ttfamily Game\+Object Manage\+Left.\+action\+Controller}
+
+
+
+Corrisponde all\textquotesingle{}oggetto che gestisce i vari script del programma. 
+
+\mbox{\Hypertarget{class_manage_left_a89a89ec51b0ee6f652787a770909adea}\label{class_manage_left_a89a89ec51b0ee6f652787a770909adea}} 
+\index{ManageLeft@{ManageLeft}!controller@{controller}}
+\index{controller@{controller}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily Controller Manage\+Left.\+controller = new Controller()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il controller delle mani. 
+
+\mbox{\Hypertarget{class_manage_left_aa114b3be92a18f2500a2f522befa8800}\label{class_manage_left_aa114b3be92a18f2500a2f522befa8800}} 
+\index{ManageLeft@{ManageLeft}!hand\_model@{hand\_model}}
+\index{hand\_model@{hand\_model}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{hand\_model}{hand\_model}}
+{\footnotesize\ttfamily Hand\+Model Manage\+Left.\+hand\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il contenitore/modello delle mani. 
+
+\mbox{\Hypertarget{class_manage_left_a0237903265e4a68caa6f14848ba43900}\label{class_manage_left_a0237903265e4a68caa6f14848ba43900}} 
+\index{ManageLeft@{ManageLeft}!handIn@{handIn}}
+\index{handIn@{handIn}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{handIn}{handIn}}
+{\footnotesize\ttfamily bool Manage\+Left.\+hand\+In\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se la mano è captata dal Leap Motion. 
+
+\mbox{\Hypertarget{class_manage_left_a8d80b0e6fa3563d0c39a0fd1aab5cd69}\label{class_manage_left_a8d80b0e6fa3563d0c39a0fd1aab5cd69}} 
+\index{ManageLeft@{ManageLeft}!isFaceUp@{isFaceUp}}
+\index{isFaceUp@{isFaceUp}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{isFaceUp}{isFaceUp}}
+{\footnotesize\ttfamily bool Manage\+Left.\+is\+Face\+Up\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se il palmo della mano è ruotato verso l\textquotesingle{}alto. 
+
+\mbox{\Hypertarget{class_manage_left_ad00a84376de8088b5d6addd7ec281429}\label{class_manage_left_ad00a84376de8088b5d6addd7ec281429}} 
+\index{ManageLeft@{ManageLeft}!isGrabbing@{isGrabbing}}
+\index{isGrabbing@{isGrabbing}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{isGrabbing}{isGrabbing}}
+{\footnotesize\ttfamily bool Manage\+Left.\+is\+Grabbing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se la mano è stretta a pugno. 
+
+\mbox{\Hypertarget{class_manage_left_ab791523e3a9f457397118a6c7c8d620c}\label{class_manage_left_ab791523e3a9f457397118a6c7c8d620c}} 
+\index{ManageLeft@{ManageLeft}!isPinching@{isPinching}}
+\index{isPinching@{isPinching}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{isPinching}{isPinching}}
+{\footnotesize\ttfamily bool Manage\+Left.\+is\+Pinching\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se il pollice e l\textquotesingle{}indice della mano si toccano. 
+
+\mbox{\Hypertarget{class_manage_left_a4ccd0fc5749929feae8e21db57189afa}\label{class_manage_left_a4ccd0fc5749929feae8e21db57189afa}} 
+\index{ManageLeft@{ManageLeft}!leap\_hand@{leap\_hand}}
+\index{leap\_hand@{leap\_hand}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{leap\_hand}{leap\_hand}}
+{\footnotesize\ttfamily Hand Manage\+Left.\+leap\+\_\+hand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La mano sinistra inserita/visibile. 
+
+\mbox{\Hypertarget{class_manage_left_aed1a7b91fe03c33ec7dae5d7ae101c93}\label{class_manage_left_aed1a7b91fe03c33ec7dae5d7ae101c93}} 
+\index{ManageLeft@{ManageLeft}!menu@{menu}}
+\index{menu@{menu}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily Game\+Object Manage\+Left.\+menu}
+
+
+
+Corrisponde al pannello di bottoni dell\textquotesingle{}inventario (quello che appare ruotando la mano sinistra). 
+
+\mbox{\Hypertarget{class_manage_left_a14e1afbf571618dcf50d25daa0fb1a39}\label{class_manage_left_a14e1afbf571618dcf50d25daa0fb1a39}} 
+\index{ManageLeft@{ManageLeft}!rightHand@{rightHand}}
+\index{rightHand@{rightHand}!ManageLeft@{ManageLeft}}
+\doxysubsubsection{\texorpdfstring{rightHand}{rightHand}}
+{\footnotesize\ttfamily Game\+Object Manage\+Left.\+right\+Hand}
+
+
+
+Il modello di mano che utilizziamo. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Manage\+Left.\+cs\end{DoxyCompactItemize}

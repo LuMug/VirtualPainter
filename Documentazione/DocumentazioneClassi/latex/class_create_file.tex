@@ -1,0 +1,239 @@
+\hypertarget{class_create_file}{}\doxysection{Riferimenti per la classe Create\+File}
+\label{class_create_file}\index{CreateFile@{CreateFile}}
+
+
+La classe {\ttfamily \mbox{\hyperlink{class_create_file}{Create\+File}}} ha lo scopo di creare una nuova tela con texture bianca.  
+
+
+Diagramma delle classi per Create\+File\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_create_file}
+\end{center}
+\end{figure}
+\doxysubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_create_file_aafee0b05ff18787a3d658bad28f8a0d6}{create\+New}} (int image\+Width, int image\+Height)
+\begin{DoxyCompactList}\small\item\em Crea una nuova texture che viene applicata al piano che funge da tela salvandola in formato jpg o png e in seguito ne salva il percorso nel file \char`\"{}paths.\+json\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_create_file_ad09f252f5ceef8fa38205dbe7fd265b3}{create\+New\+Tela}} ()
+\begin{DoxyCompactList}\small\item\em Crea una nuova tela. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{class_create_file_a1c4438891af1f2c64f58d2aa78a4ce4d}{Unity\+To\+Pixels}} (int unity\+Value)
+\begin{DoxyCompactList}\small\item\em Converte il valore nella scala di unity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Input\+Field \mbox{\hyperlink{class_create_file_affd9ca88cc23574cd7aeaffdf76eeddb}{Input\+Altezza}}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}altezza della tela in pixel. \end{DoxyCompactList}\item 
+Input\+Field \mbox{\hyperlink{class_create_file_a75e21515e0cef1708b1ab80ede58af70}{Input\+Larghezza}}
+\begin{DoxyCompactList}\small\item\em La larghezza della tela in pixel \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_create_file_a52636a5c7404ee4b760d6c498e4cb67d}{tela\+Disegnabile}}
+\begin{DoxyCompactList}\small\item\em La tela su cui disegnare. \end{DoxyCompactList}\item 
+Button \mbox{\hyperlink{class_create_file_ac976392ca464a10823192f56a3f2f0e4}{continua}}
+\begin{DoxyCompactList}\small\item\em Il bottone che permette di cominciare a disegnare. \end{DoxyCompactList}\item 
+new Camera \mbox{\hyperlink{class_create_file_a845e3c7601d7c01a5b354bf26c3d5d90}{camera}}
+\begin{DoxyCompactList}\small\item\em La main camera. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_create_file_ac9d24319a1ce4c2357ed0657a713c2a1}{colori}}
+\begin{DoxyCompactList}\small\item\em La tavola dei colori. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_create_file_a96d31715fa58cdfe26d7597ba59f2f6e}{strumenti}}
+\begin{DoxyCompactList}\small\item\em Menu di selezione dei strumenti \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_create_file_a8f78368aa869398bcfd5899bf95956c9}{action\+Controller}}
+\begin{DoxyCompactList}\small\item\em Controller delle azioni. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_create_file_a0d077785e11315986ca6ca71932e9b25}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Metodo eseguito all\textquotesingle{}avvio dell\textquotesingle{}applicazione. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_manager}{File\+Manager}} \mbox{\hyperlink{class_create_file_a3e564f796e03aedc93d799974a6ea232}{file}}
+\begin{DoxyCompactList}\small\item\em Gestisce il salvataggio del file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_auto_size}{Auto\+Size}} \mbox{\hyperlink{class_create_file_a90bda89e5900c14e1f3f3f5410f2340c}{auto\+Size}} = new \mbox{\hyperlink{class_auto_size}{Auto\+Size}}()
+\begin{DoxyCompactList}\small\item\em Gestisce la scala nel quale viene rappresentata la tela. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_create_file_a12f60efbee46573c86a3eb2bc4e95d6e}{already\+Created}}
+\begin{DoxyCompactList}\small\item\em Contiene lo stato della tela (Creata = true) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+La classe {\ttfamily \mbox{\hyperlink{class_create_file}{Create\+File}}} ha lo scopo di creare una nuova tela con texture bianca. 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_create_file_aafee0b05ff18787a3d658bad28f8a0d6}\label{class_create_file_aafee0b05ff18787a3d658bad28f8a0d6}} 
+\index{CreateFile@{CreateFile}!createNew@{createNew}}
+\index{createNew@{createNew}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{createNew()}{createNew()}}
+{\footnotesize\ttfamily void Create\+File.\+create\+New (\begin{DoxyParamCaption}\item[{int}]{image\+Width,  }\item[{int}]{image\+Height }\end{DoxyParamCaption})}
+
+
+
+Crea una nuova texture che viene applicata al piano che funge da tela salvandola in formato jpg o png e in seguito ne salva il percorso nel file \char`\"{}paths.\+json\char`\"{}. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em image\+Width} & larghezza della texture in pixel\\
+\hline
+{\em image\+Height} & altezza della texture in pixel\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_create_file_ad09f252f5ceef8fa38205dbe7fd265b3}\label{class_create_file_ad09f252f5ceef8fa38205dbe7fd265b3}} 
+\index{CreateFile@{CreateFile}!createNewTela@{createNewTela}}
+\index{createNewTela@{createNewTela}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{createNewTela()}{createNewTela()}}
+{\footnotesize\ttfamily void Create\+File.\+create\+New\+Tela (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea una nuova tela. 
+
+\mbox{\Hypertarget{class_create_file_a0d077785e11315986ca6ca71932e9b25}\label{class_create_file_a0d077785e11315986ca6ca71932e9b25}} 
+\index{CreateFile@{CreateFile}!Start@{Start}}
+\index{Start@{Start}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Create\+File.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo eseguito all\textquotesingle{}avvio dell\textquotesingle{}applicazione. 
+
+\mbox{\Hypertarget{class_create_file_a1c4438891af1f2c64f58d2aa78a4ce4d}\label{class_create_file_a1c4438891af1f2c64f58d2aa78a4ce4d}} 
+\index{CreateFile@{CreateFile}!UnityToPixels@{UnityToPixels}}
+\index{UnityToPixels@{UnityToPixels}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{UnityToPixels()}{UnityToPixels()}}
+{\footnotesize\ttfamily static float Create\+File.\+Unity\+To\+Pixels (\begin{DoxyParamCaption}\item[{int}]{unity\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converte il valore nella scala di unity. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em unity\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_create_file_a8f78368aa869398bcfd5899bf95956c9}\label{class_create_file_a8f78368aa869398bcfd5899bf95956c9}} 
+\index{CreateFile@{CreateFile}!actionController@{actionController}}
+\index{actionController@{actionController}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{actionController}{actionController}}
+{\footnotesize\ttfamily Game\+Object Create\+File.\+action\+Controller}
+
+
+
+Controller delle azioni. 
+
+\mbox{\Hypertarget{class_create_file_a12f60efbee46573c86a3eb2bc4e95d6e}\label{class_create_file_a12f60efbee46573c86a3eb2bc4e95d6e}} 
+\index{CreateFile@{CreateFile}!alreadyCreated@{alreadyCreated}}
+\index{alreadyCreated@{alreadyCreated}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{alreadyCreated}{alreadyCreated}}
+{\footnotesize\ttfamily bool Create\+File.\+already\+Created\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contiene lo stato della tela (Creata = true) 
+
+\mbox{\Hypertarget{class_create_file_a90bda89e5900c14e1f3f3f5410f2340c}\label{class_create_file_a90bda89e5900c14e1f3f3f5410f2340c}} 
+\index{CreateFile@{CreateFile}!autoSize@{autoSize}}
+\index{autoSize@{autoSize}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{autoSize}{autoSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_auto_size}{Auto\+Size}} Create\+File.\+auto\+Size = new \mbox{\hyperlink{class_auto_size}{Auto\+Size}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gestisce la scala nel quale viene rappresentata la tela. 
+
+\mbox{\Hypertarget{class_create_file_a845e3c7601d7c01a5b354bf26c3d5d90}\label{class_create_file_a845e3c7601d7c01a5b354bf26c3d5d90}} 
+\index{CreateFile@{CreateFile}!camera@{camera}}
+\index{camera@{camera}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily new Camera Create\+File.\+camera}
+
+
+
+La main camera. 
+
+\mbox{\Hypertarget{class_create_file_ac9d24319a1ce4c2357ed0657a713c2a1}\label{class_create_file_ac9d24319a1ce4c2357ed0657a713c2a1}} 
+\index{CreateFile@{CreateFile}!colori@{colori}}
+\index{colori@{colori}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{colori}{colori}}
+{\footnotesize\ttfamily Game\+Object Create\+File.\+colori}
+
+
+
+La tavola dei colori. 
+
+\mbox{\Hypertarget{class_create_file_ac976392ca464a10823192f56a3f2f0e4}\label{class_create_file_ac976392ca464a10823192f56a3f2f0e4}} 
+\index{CreateFile@{CreateFile}!continua@{continua}}
+\index{continua@{continua}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{continua}{continua}}
+{\footnotesize\ttfamily Button Create\+File.\+continua}
+
+
+
+Il bottone che permette di cominciare a disegnare. 
+
+\mbox{\Hypertarget{class_create_file_a3e564f796e03aedc93d799974a6ea232}\label{class_create_file_a3e564f796e03aedc93d799974a6ea232}} 
+\index{CreateFile@{CreateFile}!file@{file}}
+\index{file@{file}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_file_manager}{File\+Manager}} Create\+File.\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gestisce il salvataggio del file. 
+
+\mbox{\Hypertarget{class_create_file_affd9ca88cc23574cd7aeaffdf76eeddb}\label{class_create_file_affd9ca88cc23574cd7aeaffdf76eeddb}} 
+\index{CreateFile@{CreateFile}!InputAltezza@{InputAltezza}}
+\index{InputAltezza@{InputAltezza}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{InputAltezza}{InputAltezza}}
+{\footnotesize\ttfamily Input\+Field Create\+File.\+Input\+Altezza}
+
+
+
+L\textquotesingle{}altezza della tela in pixel. 
+
+\mbox{\Hypertarget{class_create_file_a75e21515e0cef1708b1ab80ede58af70}\label{class_create_file_a75e21515e0cef1708b1ab80ede58af70}} 
+\index{CreateFile@{CreateFile}!InputLarghezza@{InputLarghezza}}
+\index{InputLarghezza@{InputLarghezza}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{InputLarghezza}{InputLarghezza}}
+{\footnotesize\ttfamily Input\+Field Create\+File.\+Input\+Larghezza}
+
+
+
+La larghezza della tela in pixel 
+
+\mbox{\Hypertarget{class_create_file_a96d31715fa58cdfe26d7597ba59f2f6e}\label{class_create_file_a96d31715fa58cdfe26d7597ba59f2f6e}} 
+\index{CreateFile@{CreateFile}!strumenti@{strumenti}}
+\index{strumenti@{strumenti}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{strumenti}{strumenti}}
+{\footnotesize\ttfamily Game\+Object Create\+File.\+strumenti}
+
+
+
+Menu di selezione dei strumenti 
+
+\mbox{\Hypertarget{class_create_file_a52636a5c7404ee4b760d6c498e4cb67d}\label{class_create_file_a52636a5c7404ee4b760d6c498e4cb67d}} 
+\index{CreateFile@{CreateFile}!telaDisegnabile@{telaDisegnabile}}
+\index{telaDisegnabile@{telaDisegnabile}!CreateFile@{CreateFile}}
+\doxysubsubsection{\texorpdfstring{telaDisegnabile}{telaDisegnabile}}
+{\footnotesize\ttfamily Game\+Object Create\+File.\+tela\+Disegnabile}
+
+
+
+La tela su cui disegnare. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Create\+File.\+cs\end{DoxyCompactItemize}

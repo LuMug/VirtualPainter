@@ -1,0 +1,134 @@
+\hypertarget{class_undo}{}\doxysection{Riferimenti per la classe Undo}
+\label{class_undo}\index{Undo@{Undo}}
+
+
+La classe {\ttfamily \mbox{\hyperlink{class_undo}{Undo}}} ha lo scopo di annullare l\textquotesingle{}ultima azione eseguita.  
+
+
+Diagramma delle classi per Undo\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_undo}
+\end{center}
+\end{figure}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_undo_abc136d29c25c611d474c5a3b70d0ef57}{tela\+Disegnabile}}
+\begin{DoxyCompactList}\small\item\em La tela su cui disegnare. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_undo_a19e31ef26e80d34530d4e8a4fa3530d3}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Metodo eseguito all\textquotesingle{}avvio dello script. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_undo_aae9838cdc0fe331eaa70be8e8a4facc1}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Metodo eseguito ad ogni frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_undo_a85524b1d04e6163fe6d605827b761b08}{last}} = false
+\begin{DoxyCompactList}\small\item\em Salva lo stato della mano (is\+Pinched = true) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_undo_a6f7d9ddcac89bc0d1a7698518b6f639b}{pressed}} = false
+\begin{DoxyCompactList}\small\item\em Salva lo stato dei tasti ctrl+z (premuti = true) \end{DoxyCompactList}\item 
+Hand\+Model \mbox{\hyperlink{class_undo_a553b6758b343c219bede311886e1a10f}{hand\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Contenitore delle mani. \end{DoxyCompactList}\item 
+Hand \mbox{\hyperlink{class_undo_ac808ce2801c770b6ecce0996c623e167}{leap\+\_\+hand}}
+\begin{DoxyCompactList}\small\item\em La mano. \end{DoxyCompactList}\item 
+List$<$ Texture2D $>$ \mbox{\hyperlink{class_undo_ad9752994b82cd6969808822a2f7bb7b1}{textures}} = new List$<$Texture2D$>$()
+\begin{DoxyCompactList}\small\item\em Lista delle texture sul quale è stata effettuata una modifica \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+La classe {\ttfamily \mbox{\hyperlink{class_undo}{Undo}}} ha lo scopo di annullare l\textquotesingle{}ultima azione eseguita. 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_undo_a19e31ef26e80d34530d4e8a4fa3530d3}\label{class_undo_a19e31ef26e80d34530d4e8a4fa3530d3}} 
+\index{Undo@{Undo}!Start@{Start}}
+\index{Start@{Start}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Undo.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo eseguito all\textquotesingle{}avvio dello script. 
+
+\mbox{\Hypertarget{class_undo_aae9838cdc0fe331eaa70be8e8a4facc1}\label{class_undo_aae9838cdc0fe331eaa70be8e8a4facc1}} 
+\index{Undo@{Undo}!Update@{Update}}
+\index{Update@{Update}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Undo.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo eseguito ad ogni frame. 
+
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_undo_a553b6758b343c219bede311886e1a10f}\label{class_undo_a553b6758b343c219bede311886e1a10f}} 
+\index{Undo@{Undo}!hand\_model@{hand\_model}}
+\index{hand\_model@{hand\_model}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{hand\_model}{hand\_model}}
+{\footnotesize\ttfamily Hand\+Model Undo.\+hand\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contenitore delle mani. 
+
+\mbox{\Hypertarget{class_undo_a85524b1d04e6163fe6d605827b761b08}\label{class_undo_a85524b1d04e6163fe6d605827b761b08}} 
+\index{Undo@{Undo}!last@{last}}
+\index{last@{last}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{last}{last}}
+{\footnotesize\ttfamily bool Undo.\+last = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Salva lo stato della mano (is\+Pinched = true) 
+
+\mbox{\Hypertarget{class_undo_ac808ce2801c770b6ecce0996c623e167}\label{class_undo_ac808ce2801c770b6ecce0996c623e167}} 
+\index{Undo@{Undo}!leap\_hand@{leap\_hand}}
+\index{leap\_hand@{leap\_hand}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{leap\_hand}{leap\_hand}}
+{\footnotesize\ttfamily Hand Undo.\+leap\+\_\+hand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La mano. 
+
+\mbox{\Hypertarget{class_undo_a6f7d9ddcac89bc0d1a7698518b6f639b}\label{class_undo_a6f7d9ddcac89bc0d1a7698518b6f639b}} 
+\index{Undo@{Undo}!pressed@{pressed}}
+\index{pressed@{pressed}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{pressed}{pressed}}
+{\footnotesize\ttfamily bool Undo.\+pressed = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Salva lo stato dei tasti ctrl+z (premuti = true) 
+
+\mbox{\Hypertarget{class_undo_abc136d29c25c611d474c5a3b70d0ef57}\label{class_undo_abc136d29c25c611d474c5a3b70d0ef57}} 
+\index{Undo@{Undo}!telaDisegnabile@{telaDisegnabile}}
+\index{telaDisegnabile@{telaDisegnabile}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{telaDisegnabile}{telaDisegnabile}}
+{\footnotesize\ttfamily Game\+Object Undo.\+tela\+Disegnabile}
+
+
+
+La tela su cui disegnare. 
+
+\mbox{\Hypertarget{class_undo_ad9752994b82cd6969808822a2f7bb7b1}\label{class_undo_ad9752994b82cd6969808822a2f7bb7b1}} 
+\index{Undo@{Undo}!textures@{textures}}
+\index{textures@{textures}!Undo@{Undo}}
+\doxysubsubsection{\texorpdfstring{textures}{textures}}
+{\footnotesize\ttfamily List$<$Texture2D$>$ Undo.\+textures = new List$<$Texture2D$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista delle texture sul quale è stata effettuata una modifica 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Undo.\+cs\end{DoxyCompactItemize}

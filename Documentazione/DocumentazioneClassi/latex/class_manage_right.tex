@@ -1,0 +1,567 @@
+\hypertarget{class_manage_right}{}\doxysection{Riferimenti per la classe Manage\+Right}
+\label{class_manage_right}\index{ManageRight@{ManageRight}}
+
+
+La classe {\ttfamily Manage Right} serve a gestire le azioni eseguite dalla mano destra, in pratica legge il Leap Motion capta i movimenti della mano destra e questo script interpreta i movimenti.  
+
+
+Diagramma delle classi per Manage\+Right\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_manage_right}
+\end{center}
+\end{figure}
+\doxysubsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_manage_right_1_1_point}{Point}}
+\begin{DoxyCompactList}\small\item\em Rappresentazione di un punto \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_manage_right_aa78adcb10342df49cb42d825f1deb2fd}{Is\+Hand\+Pinching}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna se la mano è pinchata (indice e pollice sono vicini) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_right_aa8343aa4f25f2fc7638b802af5558e51}{Is\+Hand\+Grabbing}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna se la mano è totalmente chiusa (pugno) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_manage_right_a777c85bf2d73f742f5450853aa87eeb2}{Get\+Pinch\+Distance}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna la distanza tra indice e pollice della mano. \end{DoxyCompactList}\item 
+Vector \mbox{\hyperlink{class_manage_right_a1b8b23a78542a6aa798a9c3032825cd9}{Get\+Palm\+Normal}} ()
+\begin{DoxyCompactList}\small\item\em Ritorna la posizione della mano \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_right_a28a077b500729023025a51526b78c06e}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em Disegna prendendo il dito indice come riferimento. \end{DoxyCompactList}\item 
+Texture2D \mbox{\hyperlink{class_manage_right_a6238dee266b494482237606ef72ee8dd}{Draw\+Circle}} (Texture2D tex, Color \mbox{\hyperlink{class_manage_right_acd224f5ee5f38cf9e7a51fa24f46375a}{color}}, int x, int y, int radius)
+\begin{DoxyCompactList}\small\item\em Disegna un pallino di raggio \char`\"{}radius\char`\"{} in un punto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_right_a4f589a0296a617cecb97de454a524bd9}{Change\+Color}} ()
+\begin{DoxyCompactList}\small\item\em Cambia il colore del pennello. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_right_a9eabb080e364b3fabb78d9faf4b0be8c}{Set\+Eraser}} ()
+\begin{DoxyCompactList}\small\item\em Imposta la gomma come strumento attivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_right_ae1d9875f5a31212ec4c0e1879acde214}{Set\+Pen}} ()
+\begin{DoxyCompactList}\small\item\em Imposta la penna come strumento attivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_right_ac213f09348de14376123f7f48cd69f8a}{Get\+Eraser}} ()
+\begin{DoxyCompactList}\small\item\em Ritrona lo stato della gomma (attivo/disattivo) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_right_a4ebeac24fc673fa8047118d1814af3e2}{fill}} ()
+\begin{DoxyCompactList}\small\item\em Effettua l\textquotesingle{}azione di riempimento. L\textquotesingle{}azione riempimento è disattivata in quanto non funzionante. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_manage_right_a46bc1c167b2f7e4ba85be1855d27725c}{Flood\+Fill}} (Texture2D texture, float tollerance, int x, int y)
+\begin{DoxyCompactList}\small\item\em Algoritmo utile per il riempimento. Funzione non utilizzata momentaneamente in quanto rallentava eccessivamente il programma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Interaction\+Slider \mbox{\hyperlink{class_manage_right_ada78a0d7ae42aee40e6dd3d052eb5a2b}{Brush\+Size\+Slider}}
+\begin{DoxyCompactList}\small\item\em Lo slider che assegna il suo valore alla grandezza del pennello. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_manage_right_a5d3f523c4dc63bc5be83d8c34e401d56}{color\+Picker}}
+\begin{DoxyCompactList}\small\item\em Menù di selezione del colore. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_manage_right_a4661e9e6569ca1a68c17f6606eabfa2b}{action\+Controller}}
+\begin{DoxyCompactList}\small\item\em Oggetto per la gestione degli script del programma. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_manage_right_a095607df35d43e9a5ec6a861e4266148}{left\+Hand}}
+\begin{DoxyCompactList}\small\item\em La mano sinistra inserita. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_manage_right_a85b9a1ab4afd3c93815e809aa4ccb98a}{tela}}
+\begin{DoxyCompactList}\small\item\em Piano su cui si applica a tela/texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_manage_right_aa6f53f45f0a8b5efb668160906884a86}{MAX\+\_\+\+BRUSH\+\_\+\+SIZE}} = 80
+\begin{DoxyCompactList}\small\item\em La dimensione massima del pennello \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri protetti}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_manage_right_acf1f9b9680f2d5713f3102f310518bc1}{Hand\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Metodo che viene richiamato quando la mano sinistra viene captata dal Leap Motion. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_manage_right_afe2ae79bb66201fbf3fb353ee48117e7}{Hand\+Finish}} ()
+\begin{DoxyCompactList}\small\item\em Metodo che viene richiamato quando il Leap Motion termina di captare la mano, se la mano prima era inserita e ora non lo è più. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_manage_right_a22eafce44dc30eec4d4a41bda4ff4d92}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start viene eseguito una volta quando parte lo script. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_right_a41ea28aceb35fdc42b91fd785a042c1c}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Metodo eseguito ad ogni frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_manage_right_aa5a667483c7d55d2996979a56ddc27cb}{Update\+Brush\+Size}} (float value)
+\begin{DoxyCompactList}\small\item\em Aggiorna la dimensione del pennello. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati statici}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_manage_right_a8801e54083ae7cd6b46d3741a7b96252}{Check\+Validity}} (Texture2D texture, int width, int height, \mbox{\hyperlink{struct_manage_right_1_1_point}{Point}} p, Color source\+Color, float tollerance)
+\begin{DoxyCompactList}\small\item\em Controlla se il pixel seguente è da colorare oppure no. Funzione utilizzata dal filler e quindi non più utilizzata. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_manage_right_a051146418b9fe5b47060963fcda70225}{brush\+Size}} = 10
+\begin{DoxyCompactList}\small\item\em La dimensione del pennello in px. \end{DoxyCompactList}\item 
+Hand\+Model \mbox{\hyperlink{class_manage_right_ae022db4c5f987191adc6c637f5659699}{hand\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Il contenitore/modello delle mani. \end{DoxyCompactList}\item 
+Hand \mbox{\hyperlink{class_manage_right_a8288f68358c05126a21745e1259844f7}{leap\+\_\+hand}}
+\begin{DoxyCompactList}\small\item\em La mano destra inserita/visibile. \end{DoxyCompactList}\item 
+Controller \mbox{\hyperlink{class_manage_right_af873d7a2b36f466a34ec893cdbd59b7f}{controller}} = new Controller()
+\begin{DoxyCompactList}\small\item\em Il controller delle mani. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_manage_right_acd224f5ee5f38cf9e7a51fa24f46375a}{color}} = new Color(0,0,0)
+\begin{DoxyCompactList}\small\item\em Il colore attuale della penna. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_right_aba1ede52edd2051e765e5f9f9efbd5e0}{prev\+Pinch}} = false
+\begin{DoxyCompactList}\small\item\em Mostra se in precedenza l\textquotesingle{}indice e il pollice della mano si toccavano. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_right_a0598588b9ce69d60d55a6b6033b40de9}{pinch}}
+\begin{DoxyCompactList}\small\item\em Indica se l\textquotesingle{}indice e il pollice della mano sono vicini. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_right_a3470876ed1bb709381ca0cbf92514e2f}{grab}}
+\begin{DoxyCompactList}\small\item\em Indica se la mano è stretta a pugno. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_right_ac633729ae7ae3fa2072400fe4a48b698}{erase}}
+\begin{DoxyCompactList}\small\item\em Indica se è attivo lo strumento gomma. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_manage_right_ab403c06e5647198d1da0f03058e5fd05}{pinch\+Distance}}
+\begin{DoxyCompactList}\small\item\em Corrisponde alla distanza tra indice e pollice della mano. \end{DoxyCompactList}\item 
+Vector \mbox{\hyperlink{class_manage_right_a7bd04ec0b11db00da0b120b01e0d4e8b}{palm\+Normal}}
+\begin{DoxyCompactList}\small\item\em Corriponde alla posizione normalizzata della mano (posizione della mano) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_manage_right_a4c65807a0d7a64c6a4188c9ec809930b}{hand\+In}}
+\begin{DoxyCompactList}\small\item\em Indica se la/una mano destra è rilevata dal Leap\+Motion Controller. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_manage_right_a6b4728d361c615d7d957cf0a8387f94b}{brush\+Value}}
+\begin{DoxyCompactList}\small\item\em Corrsiponde alla grandezza del pannello tra 0 e 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+La classe {\ttfamily Manage Right} serve a gestire le azioni eseguite dalla mano destra, in pratica legge il Leap Motion capta i movimenti della mano destra e questo script interpreta i movimenti. 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_manage_right_a4f589a0296a617cecb97de454a524bd9}\label{class_manage_right_a4f589a0296a617cecb97de454a524bd9}} 
+\index{ManageRight@{ManageRight}!ChangeColor@{ChangeColor}}
+\index{ChangeColor@{ChangeColor}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{ChangeColor()}{ChangeColor()}}
+{\footnotesize\ttfamily void Manage\+Right.\+Change\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cambia il colore del pennello. 
+
+\mbox{\Hypertarget{class_manage_right_a8801e54083ae7cd6b46d3741a7b96252}\label{class_manage_right_a8801e54083ae7cd6b46d3741a7b96252}} 
+\index{ManageRight@{ManageRight}!CheckValidity@{CheckValidity}}
+\index{CheckValidity@{CheckValidity}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{CheckValidity()}{CheckValidity()}}
+{\footnotesize\ttfamily static bool Manage\+Right.\+Check\+Validity (\begin{DoxyParamCaption}\item[{Texture2D}]{texture,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{struct_manage_right_1_1_point}{Point}}}]{p,  }\item[{Color}]{source\+Color,  }\item[{float}]{tollerance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Controlla se il pixel seguente è da colorare oppure no. Funzione utilizzata dal filler e quindi non più utilizzata. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em texture} & la texture\\
+\hline
+{\em width} & la larghezza della texture\\
+\hline
+{\em height} & l\textquotesingle{}altezza della texture\\
+\hline
+{\em p} & il punto \\
+\hline
+{\em source\+Color} & colore in cui trasformare i pixel\\
+\hline
+{\em tollerance} & valore di tolleranza\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_right_a28a077b500729023025a51526b78c06e}\label{class_manage_right_a28a077b500729023025a51526b78c06e}} 
+\index{ManageRight@{ManageRight}!Draw@{Draw}}
+\index{Draw@{Draw}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Manage\+Right.\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disegna prendendo il dito indice come riferimento. 
+
+\mbox{\Hypertarget{class_manage_right_a6238dee266b494482237606ef72ee8dd}\label{class_manage_right_a6238dee266b494482237606ef72ee8dd}} 
+\index{ManageRight@{ManageRight}!DrawCircle@{DrawCircle}}
+\index{DrawCircle@{DrawCircle}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}}
+{\footnotesize\ttfamily Texture2D Manage\+Right.\+Draw\+Circle (\begin{DoxyParamCaption}\item[{Texture2D}]{tex,  }\item[{Color}]{color,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+Disegna un pallino di raggio \char`\"{}radius\char`\"{} in un punto. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em tex} & texture su cui disegnare\\
+\hline
+{\em color} & colore del pennello\\
+\hline
+{\em x} & coordinata x del punto in cui disegnare\\
+\hline
+{\em y} & coordinata y del punto in cui disegnare\\
+\hline
+{\em radius} & raggio del pallino\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+la texture
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_right_a4ebeac24fc673fa8047118d1814af3e2}\label{class_manage_right_a4ebeac24fc673fa8047118d1814af3e2}} 
+\index{ManageRight@{ManageRight}!fill@{fill}}
+\index{fill@{fill}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily void Manage\+Right.\+fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Effettua l\textquotesingle{}azione di riempimento. L\textquotesingle{}azione riempimento è disattivata in quanto non funzionante. 
+
+\mbox{\Hypertarget{class_manage_right_a46bc1c167b2f7e4ba85be1855d27725c}\label{class_manage_right_a46bc1c167b2f7e4ba85be1855d27725c}} 
+\index{ManageRight@{ManageRight}!FloodFill@{FloodFill}}
+\index{FloodFill@{FloodFill}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{FloodFill()}{FloodFill()}}
+{\footnotesize\ttfamily static void Manage\+Right.\+Flood\+Fill (\begin{DoxyParamCaption}\item[{Texture2D}]{texture,  }\item[{float}]{tollerance,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Algoritmo utile per il riempimento. Funzione non utilizzata momentaneamente in quanto rallentava eccessivamente il programma. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em texture} & la texture su cui disegnare\\
+\hline
+{\em tollerance} & valore che determina quanto un valore rgb può cambiare per essere preso in considerazione\\
+\hline
+{\em x} & coordinata x di un punto\\
+\hline
+{\em y} & coordinata y di un punto\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_manage_right_ac213f09348de14376123f7f48cd69f8a}\label{class_manage_right_ac213f09348de14376123f7f48cd69f8a}} 
+\index{ManageRight@{ManageRight}!GetEraser@{GetEraser}}
+\index{GetEraser@{GetEraser}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{GetEraser()}{GetEraser()}}
+{\footnotesize\ttfamily bool Manage\+Right.\+Get\+Eraser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritrona lo stato della gomma (attivo/disattivo) 
+
+\begin{DoxyReturn}{Restituisce}
+lo stato della gomma
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_right_a1b8b23a78542a6aa798a9c3032825cd9}\label{class_manage_right_a1b8b23a78542a6aa798a9c3032825cd9}} 
+\index{ManageRight@{ManageRight}!GetPalmNormal@{GetPalmNormal}}
+\index{GetPalmNormal@{GetPalmNormal}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{GetPalmNormal()}{GetPalmNormal()}}
+{\footnotesize\ttfamily Vector Manage\+Right.\+Get\+Palm\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritorna la posizione della mano 
+
+\begin{DoxyReturn}{Restituisce}
+la posizione della mano
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_right_a777c85bf2d73f742f5450853aa87eeb2}\label{class_manage_right_a777c85bf2d73f742f5450853aa87eeb2}} 
+\index{ManageRight@{ManageRight}!GetPinchDistance@{GetPinchDistance}}
+\index{GetPinchDistance@{GetPinchDistance}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{GetPinchDistance()}{GetPinchDistance()}}
+{\footnotesize\ttfamily float Manage\+Right.\+Get\+Pinch\+Distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritorna la distanza tra indice e pollice della mano. 
+
+\begin{DoxyReturn}{Restituisce}
+la distanza tra indice e pollice della mano
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_right_afe2ae79bb66201fbf3fb353ee48117e7}\label{class_manage_right_afe2ae79bb66201fbf3fb353ee48117e7}} 
+\index{ManageRight@{ManageRight}!HandFinish@{HandFinish}}
+\index{HandFinish@{HandFinish}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{HandFinish()}{HandFinish()}}
+{\footnotesize\ttfamily override void Manage\+Right.\+Hand\+Finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Metodo che viene richiamato quando il Leap Motion termina di captare la mano, se la mano prima era inserita e ora non lo è più. 
+
+\mbox{\Hypertarget{class_manage_right_acf1f9b9680f2d5713f3102f310518bc1}\label{class_manage_right_acf1f9b9680f2d5713f3102f310518bc1}} 
+\index{ManageRight@{ManageRight}!HandReset@{HandReset}}
+\index{HandReset@{HandReset}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{HandReset()}{HandReset()}}
+{\footnotesize\ttfamily override void Manage\+Right.\+Hand\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Metodo che viene richiamato quando la mano sinistra viene captata dal Leap Motion. 
+
+\mbox{\Hypertarget{class_manage_right_aa8343aa4f25f2fc7638b802af5558e51}\label{class_manage_right_aa8343aa4f25f2fc7638b802af5558e51}} 
+\index{ManageRight@{ManageRight}!IsHandGrabbing@{IsHandGrabbing}}
+\index{IsHandGrabbing@{IsHandGrabbing}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{IsHandGrabbing()}{IsHandGrabbing()}}
+{\footnotesize\ttfamily bool Manage\+Right.\+Is\+Hand\+Grabbing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritorna se la mano è totalmente chiusa (pugno) 
+
+\begin{DoxyReturn}{Restituisce}
+ritorna lo stato di grab della mano
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_right_aa78adcb10342df49cb42d825f1deb2fd}\label{class_manage_right_aa78adcb10342df49cb42d825f1deb2fd}} 
+\index{ManageRight@{ManageRight}!IsHandPinching@{IsHandPinching}}
+\index{IsHandPinching@{IsHandPinching}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{IsHandPinching()}{IsHandPinching()}}
+{\footnotesize\ttfamily bool Manage\+Right.\+Is\+Hand\+Pinching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ritorna se la mano è pinchata (indice e pollice sono vicini) 
+
+\begin{DoxyReturn}{Restituisce}
+lo stato di pinching della mano
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_manage_right_a9eabb080e364b3fabb78d9faf4b0be8c}\label{class_manage_right_a9eabb080e364b3fabb78d9faf4b0be8c}} 
+\index{ManageRight@{ManageRight}!SetEraser@{SetEraser}}
+\index{SetEraser@{SetEraser}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{SetEraser()}{SetEraser()}}
+{\footnotesize\ttfamily void Manage\+Right.\+Set\+Eraser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imposta la gomma come strumento attivo. 
+
+\mbox{\Hypertarget{class_manage_right_ae1d9875f5a31212ec4c0e1879acde214}\label{class_manage_right_ae1d9875f5a31212ec4c0e1879acde214}} 
+\index{ManageRight@{ManageRight}!SetPen@{SetPen}}
+\index{SetPen@{SetPen}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{SetPen()}{SetPen()}}
+{\footnotesize\ttfamily void Manage\+Right.\+Set\+Pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imposta la penna come strumento attivo. 
+
+\mbox{\Hypertarget{class_manage_right_a22eafce44dc30eec4d4a41bda4ff4d92}\label{class_manage_right_a22eafce44dc30eec4d4a41bda4ff4d92}} 
+\index{ManageRight@{ManageRight}!Start@{Start}}
+\index{Start@{Start}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Manage\+Right.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start viene eseguito una volta quando parte lo script. 
+
+\mbox{\Hypertarget{class_manage_right_a41ea28aceb35fdc42b91fd785a042c1c}\label{class_manage_right_a41ea28aceb35fdc42b91fd785a042c1c}} 
+\index{ManageRight@{ManageRight}!Update@{Update}}
+\index{Update@{Update}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Manage\+Right.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo eseguito ad ogni frame. 
+
+\mbox{\Hypertarget{class_manage_right_aa5a667483c7d55d2996979a56ddc27cb}\label{class_manage_right_aa5a667483c7d55d2996979a56ddc27cb}} 
+\index{ManageRight@{ManageRight}!UpdateBrushSize@{UpdateBrushSize}}
+\index{UpdateBrushSize@{UpdateBrushSize}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{UpdateBrushSize()}{UpdateBrushSize()}}
+{\footnotesize\ttfamily void Manage\+Right.\+Update\+Brush\+Size (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aggiorna la dimensione del pennello. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em value} & il valore di moltiplicazione \mbox{[}0;1\mbox{]} della dimensione massima del pennello\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_manage_right_a4661e9e6569ca1a68c17f6606eabfa2b}\label{class_manage_right_a4661e9e6569ca1a68c17f6606eabfa2b}} 
+\index{ManageRight@{ManageRight}!actionController@{actionController}}
+\index{actionController@{actionController}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{actionController}{actionController}}
+{\footnotesize\ttfamily Game\+Object Manage\+Right.\+action\+Controller}
+
+
+
+Oggetto per la gestione degli script del programma. 
+
+\mbox{\Hypertarget{class_manage_right_a051146418b9fe5b47060963fcda70225}\label{class_manage_right_a051146418b9fe5b47060963fcda70225}} 
+\index{ManageRight@{ManageRight}!brushSize@{brushSize}}
+\index{brushSize@{brushSize}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{brushSize}{brushSize}}
+{\footnotesize\ttfamily int Manage\+Right.\+brush\+Size = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La dimensione del pennello in px. 
+
+\mbox{\Hypertarget{class_manage_right_ada78a0d7ae42aee40e6dd3d052eb5a2b}\label{class_manage_right_ada78a0d7ae42aee40e6dd3d052eb5a2b}} 
+\index{ManageRight@{ManageRight}!BrushSizeSlider@{BrushSizeSlider}}
+\index{BrushSizeSlider@{BrushSizeSlider}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{BrushSizeSlider}{BrushSizeSlider}}
+{\footnotesize\ttfamily Interaction\+Slider Manage\+Right.\+Brush\+Size\+Slider}
+
+
+
+Lo slider che assegna il suo valore alla grandezza del pennello. 
+
+\mbox{\Hypertarget{class_manage_right_a6b4728d361c615d7d957cf0a8387f94b}\label{class_manage_right_a6b4728d361c615d7d957cf0a8387f94b}} 
+\index{ManageRight@{ManageRight}!brushValue@{brushValue}}
+\index{brushValue@{brushValue}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{brushValue}{brushValue}}
+{\footnotesize\ttfamily float Manage\+Right.\+brush\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Corrsiponde alla grandezza del pannello tra 0 e 1. 
+
+\mbox{\Hypertarget{class_manage_right_acd224f5ee5f38cf9e7a51fa24f46375a}\label{class_manage_right_acd224f5ee5f38cf9e7a51fa24f46375a}} 
+\index{ManageRight@{ManageRight}!color@{color}}
+\index{color@{color}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily Color Manage\+Right.\+color = new Color(0,0,0)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il colore attuale della penna. 
+
+\mbox{\Hypertarget{class_manage_right_a5d3f523c4dc63bc5be83d8c34e401d56}\label{class_manage_right_a5d3f523c4dc63bc5be83d8c34e401d56}} 
+\index{ManageRight@{ManageRight}!colorPicker@{colorPicker}}
+\index{colorPicker@{colorPicker}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{colorPicker}{colorPicker}}
+{\footnotesize\ttfamily Game\+Object Manage\+Right.\+color\+Picker}
+
+
+
+Menù di selezione del colore. 
+
+\mbox{\Hypertarget{class_manage_right_af873d7a2b36f466a34ec893cdbd59b7f}\label{class_manage_right_af873d7a2b36f466a34ec893cdbd59b7f}} 
+\index{ManageRight@{ManageRight}!controller@{controller}}
+\index{controller@{controller}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily Controller Manage\+Right.\+controller = new Controller()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il controller delle mani. 
+
+\mbox{\Hypertarget{class_manage_right_ac633729ae7ae3fa2072400fe4a48b698}\label{class_manage_right_ac633729ae7ae3fa2072400fe4a48b698}} 
+\index{ManageRight@{ManageRight}!erase@{erase}}
+\index{erase@{erase}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{erase}{erase}}
+{\footnotesize\ttfamily bool Manage\+Right.\+erase\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se è attivo lo strumento gomma. 
+
+\mbox{\Hypertarget{class_manage_right_a3470876ed1bb709381ca0cbf92514e2f}\label{class_manage_right_a3470876ed1bb709381ca0cbf92514e2f}} 
+\index{ManageRight@{ManageRight}!grab@{grab}}
+\index{grab@{grab}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{grab}{grab}}
+{\footnotesize\ttfamily bool Manage\+Right.\+grab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se la mano è stretta a pugno. 
+
+\mbox{\Hypertarget{class_manage_right_ae022db4c5f987191adc6c637f5659699}\label{class_manage_right_ae022db4c5f987191adc6c637f5659699}} 
+\index{ManageRight@{ManageRight}!hand\_model@{hand\_model}}
+\index{hand\_model@{hand\_model}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{hand\_model}{hand\_model}}
+{\footnotesize\ttfamily Hand\+Model Manage\+Right.\+hand\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il contenitore/modello delle mani. 
+
+\mbox{\Hypertarget{class_manage_right_a4c65807a0d7a64c6a4188c9ec809930b}\label{class_manage_right_a4c65807a0d7a64c6a4188c9ec809930b}} 
+\index{ManageRight@{ManageRight}!handIn@{handIn}}
+\index{handIn@{handIn}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{handIn}{handIn}}
+{\footnotesize\ttfamily bool Manage\+Right.\+hand\+In\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se la/una mano destra è rilevata dal Leap\+Motion Controller. 
+
+\mbox{\Hypertarget{class_manage_right_a8288f68358c05126a21745e1259844f7}\label{class_manage_right_a8288f68358c05126a21745e1259844f7}} 
+\index{ManageRight@{ManageRight}!leap\_hand@{leap\_hand}}
+\index{leap\_hand@{leap\_hand}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{leap\_hand}{leap\_hand}}
+{\footnotesize\ttfamily Hand Manage\+Right.\+leap\+\_\+hand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La mano destra inserita/visibile. 
+
+\mbox{\Hypertarget{class_manage_right_a095607df35d43e9a5ec6a861e4266148}\label{class_manage_right_a095607df35d43e9a5ec6a861e4266148}} 
+\index{ManageRight@{ManageRight}!leftHand@{leftHand}}
+\index{leftHand@{leftHand}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{leftHand}{leftHand}}
+{\footnotesize\ttfamily Game\+Object Manage\+Right.\+left\+Hand}
+
+
+
+La mano sinistra inserita. 
+
+\mbox{\Hypertarget{class_manage_right_aa6f53f45f0a8b5efb668160906884a86}\label{class_manage_right_aa6f53f45f0a8b5efb668160906884a86}} 
+\index{ManageRight@{ManageRight}!MAX\_BRUSH\_SIZE@{MAX\_BRUSH\_SIZE}}
+\index{MAX\_BRUSH\_SIZE@{MAX\_BRUSH\_SIZE}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{MAX\_BRUSH\_SIZE}{MAX\_BRUSH\_SIZE}}
+{\footnotesize\ttfamily const int Manage\+Right.\+MAX\+\_\+\+BRUSH\+\_\+\+SIZE = 80\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+La dimensione massima del pennello 
+
+\mbox{\Hypertarget{class_manage_right_a7bd04ec0b11db00da0b120b01e0d4e8b}\label{class_manage_right_a7bd04ec0b11db00da0b120b01e0d4e8b}} 
+\index{ManageRight@{ManageRight}!palmNormal@{palmNormal}}
+\index{palmNormal@{palmNormal}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{palmNormal}{palmNormal}}
+{\footnotesize\ttfamily Vector Manage\+Right.\+palm\+Normal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Corriponde alla posizione normalizzata della mano (posizione della mano) 
+
+\mbox{\Hypertarget{class_manage_right_a0598588b9ce69d60d55a6b6033b40de9}\label{class_manage_right_a0598588b9ce69d60d55a6b6033b40de9}} 
+\index{ManageRight@{ManageRight}!pinch@{pinch}}
+\index{pinch@{pinch}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{pinch}{pinch}}
+{\footnotesize\ttfamily bool Manage\+Right.\+pinch\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se l\textquotesingle{}indice e il pollice della mano sono vicini. 
+
+\mbox{\Hypertarget{class_manage_right_ab403c06e5647198d1da0f03058e5fd05}\label{class_manage_right_ab403c06e5647198d1da0f03058e5fd05}} 
+\index{ManageRight@{ManageRight}!pinchDistance@{pinchDistance}}
+\index{pinchDistance@{pinchDistance}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{pinchDistance}{pinchDistance}}
+{\footnotesize\ttfamily float Manage\+Right.\+pinch\+Distance\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Corrisponde alla distanza tra indice e pollice della mano. 
+
+\mbox{\Hypertarget{class_manage_right_aba1ede52edd2051e765e5f9f9efbd5e0}\label{class_manage_right_aba1ede52edd2051e765e5f9f9efbd5e0}} 
+\index{ManageRight@{ManageRight}!prevPinch@{prevPinch}}
+\index{prevPinch@{prevPinch}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{prevPinch}{prevPinch}}
+{\footnotesize\ttfamily bool Manage\+Right.\+prev\+Pinch = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mostra se in precedenza l\textquotesingle{}indice e il pollice della mano si toccavano. 
+
+\mbox{\Hypertarget{class_manage_right_a85b9a1ab4afd3c93815e809aa4ccb98a}\label{class_manage_right_a85b9a1ab4afd3c93815e809aa4ccb98a}} 
+\index{ManageRight@{ManageRight}!tela@{tela}}
+\index{tela@{tela}!ManageRight@{ManageRight}}
+\doxysubsubsection{\texorpdfstring{tela}{tela}}
+{\footnotesize\ttfamily Game\+Object Manage\+Right.\+tela}
+
+
+
+Piano su cui si applica a tela/texture. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Manage\+Right.\+cs\end{DoxyCompactItemize}

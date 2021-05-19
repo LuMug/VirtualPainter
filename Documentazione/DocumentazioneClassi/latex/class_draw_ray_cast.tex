@@ -1,0 +1,221 @@
+\hypertarget{class_draw_ray_cast}{}\doxysection{Riferimenti per la classe Draw\+Ray\+Cast}
+\label{class_draw_ray_cast}\index{DrawRayCast@{DrawRayCast}}
+
+
+La classe {\ttfamily \mbox{\hyperlink{class_draw_ray_cast}{Draw\+Ray\+Cast}}} contiene funzionalità per poter disegnare usando il Leap\+Motion.  
+
+
+Diagramma delle classi per Draw\+Ray\+Cast\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_draw_ray_cast}
+\end{center}
+\end{figure}
+\doxysubsection*{Membri pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Texture2D \mbox{\hyperlink{class_draw_ray_cast_ac50881c02ee7f7b3174e7e4a192de3cc}{Draw\+Circle}} (Texture2D tex, Color \mbox{\hyperlink{class_draw_ray_cast_a8f4b888ea5340af1106d05ab0a17890b}{color}}, int x, int y, int radius)
+\begin{DoxyCompactList}\small\item\em Disegna un pallino di raggio \char`\"{}radius\char`\"{} in un punto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+Interaction\+Slider \mbox{\hyperlink{class_draw_ray_cast_ab8b3d99da9b293f6e00fd59c7b31463b}{Brush\+Size\+Slider}}
+\begin{DoxyCompactList}\small\item\em Lo slider che assegna il suo valore alla grandezza del pennello. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_draw_ray_cast_a2ca4c6e1548a65f72e9a9c11a81f9897}{tela\+Disegnabile}}
+\begin{DoxyCompactList}\small\item\em La tela su cui disegnare. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_draw_ray_cast_ab1e82571ef37f7dd08453098b8376492}{left\+Hand}}
+\begin{DoxyCompactList}\small\item\em La mano sinistra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi pubblici statici}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_draw_ray_cast_af0cd7e836d9e70c7ffe27ebab0bf2ae2}{MAX\+\_\+\+BRUSH\+\_\+\+SIZE}} = 100
+\begin{DoxyCompactList}\small\item\em Dimensione massima del pennello. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membri privati}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_draw_ray_cast_a9a5b3440d80dea98f786d9d971c8ac94}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Meteodo eseguito all\textquotesingle{}avvio dello script. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_ray_cast_adf72ae32ee1da119fa872fa998586d6c}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Metodo eseguito ad ogni frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_draw_ray_cast_a4d27248e6819a2315c29ce378a348ab8}{Update\+Brush\+Size}} (float value)
+\begin{DoxyCompactList}\small\item\em Modifica la grandezza del pennarello \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributi privati}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_draw_ray_cast_a7017d7abec5f0fd598ac0ed6ec05d101}{brush\+Size}} = 10
+\begin{DoxyCompactList}\small\item\em La dimensione del pennello in px. \end{DoxyCompactList}\item 
+Hand\+Model \mbox{\hyperlink{class_draw_ray_cast_a9701e817e1c300037c98e2d7cce9333a}{hand\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Contenitore delle mani. \end{DoxyCompactList}\item 
+Hand \mbox{\hyperlink{class_draw_ray_cast_a73df325879df4cddd0864ef72327edf1}{leap\+\_\+hand}}
+\begin{DoxyCompactList}\small\item\em La mano. \end{DoxyCompactList}\item 
+Controller \mbox{\hyperlink{class_draw_ray_cast_a4d2fad3fa86c6c0553029310fe748f2c}{controller}} = new Controller()
+\begin{DoxyCompactList}\small\item\em Il controller delle mani. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_draw_ray_cast_a8f4b888ea5340af1106d05ab0a17890b}{color}} = Color.\+black
+\begin{DoxyCompactList}\small\item\em Il colore del pennarello. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrizione dettagliata}
+La classe {\ttfamily \mbox{\hyperlink{class_draw_ray_cast}{Draw\+Ray\+Cast}}} contiene funzionalità per poter disegnare usando il Leap\+Motion. 
+
+
+
+\doxysubsection{Documentazione delle funzioni membro}
+\mbox{\Hypertarget{class_draw_ray_cast_ac50881c02ee7f7b3174e7e4a192de3cc}\label{class_draw_ray_cast_ac50881c02ee7f7b3174e7e4a192de3cc}} 
+\index{DrawRayCast@{DrawRayCast}!DrawCircle@{DrawCircle}}
+\index{DrawCircle@{DrawCircle}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}}
+{\footnotesize\ttfamily Texture2D Draw\+Ray\+Cast.\+Draw\+Circle (\begin{DoxyParamCaption}\item[{Texture2D}]{tex,  }\item[{Color}]{color,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+Disegna un pallino di raggio \char`\"{}radius\char`\"{} in un punto. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em tex} & la texture su cui disegnare\\
+\hline
+{\em color} & il colore da disegnare\\
+\hline
+{\em x} & coordinata x del centro del pallino\\
+\hline
+{\em y} & coordinata y del centro del pallini\\
+\hline
+{\em radius} & raggio del pallino\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_draw_ray_cast_a9a5b3440d80dea98f786d9d971c8ac94}\label{class_draw_ray_cast_a9a5b3440d80dea98f786d9d971c8ac94}} 
+\index{DrawRayCast@{DrawRayCast}!Start@{Start}}
+\index{Start@{Start}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Draw\+Ray\+Cast.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Meteodo eseguito all\textquotesingle{}avvio dello script. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_adf72ae32ee1da119fa872fa998586d6c}\label{class_draw_ray_cast_adf72ae32ee1da119fa872fa998586d6c}} 
+\index{DrawRayCast@{DrawRayCast}!Update@{Update}}
+\index{Update@{Update}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Draw\+Ray\+Cast.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Metodo eseguito ad ogni frame. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_a4d27248e6819a2315c29ce378a348ab8}\label{class_draw_ray_cast_a4d27248e6819a2315c29ce378a348ab8}} 
+\index{DrawRayCast@{DrawRayCast}!UpdateBrushSize@{UpdateBrushSize}}
+\index{UpdateBrushSize@{UpdateBrushSize}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{UpdateBrushSize()}{UpdateBrushSize()}}
+{\footnotesize\ttfamily void Draw\+Ray\+Cast.\+Update\+Brush\+Size (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Modifica la grandezza del pennarello 
+
+
+\begin{DoxyParams}{Parametri}
+{\em value} & la grandezza del pennarello\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_draw_ray_cast_a7017d7abec5f0fd598ac0ed6ec05d101}\label{class_draw_ray_cast_a7017d7abec5f0fd598ac0ed6ec05d101}} 
+\index{DrawRayCast@{DrawRayCast}!brushSize@{brushSize}}
+\index{brushSize@{brushSize}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{brushSize}{brushSize}}
+{\footnotesize\ttfamily int Draw\+Ray\+Cast.\+brush\+Size = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La dimensione del pennello in px. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_ab8b3d99da9b293f6e00fd59c7b31463b}\label{class_draw_ray_cast_ab8b3d99da9b293f6e00fd59c7b31463b}} 
+\index{DrawRayCast@{DrawRayCast}!BrushSizeSlider@{BrushSizeSlider}}
+\index{BrushSizeSlider@{BrushSizeSlider}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{BrushSizeSlider}{BrushSizeSlider}}
+{\footnotesize\ttfamily Interaction\+Slider Draw\+Ray\+Cast.\+Brush\+Size\+Slider}
+
+
+
+Lo slider che assegna il suo valore alla grandezza del pennello. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_a8f4b888ea5340af1106d05ab0a17890b}\label{class_draw_ray_cast_a8f4b888ea5340af1106d05ab0a17890b}} 
+\index{DrawRayCast@{DrawRayCast}!color@{color}}
+\index{color@{color}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily Color Draw\+Ray\+Cast.\+color = Color.\+black\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il colore del pennarello. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_a4d2fad3fa86c6c0553029310fe748f2c}\label{class_draw_ray_cast_a4d2fad3fa86c6c0553029310fe748f2c}} 
+\index{DrawRayCast@{DrawRayCast}!controller@{controller}}
+\index{controller@{controller}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily Controller Draw\+Ray\+Cast.\+controller = new Controller()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Il controller delle mani. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_a9701e817e1c300037c98e2d7cce9333a}\label{class_draw_ray_cast_a9701e817e1c300037c98e2d7cce9333a}} 
+\index{DrawRayCast@{DrawRayCast}!hand\_model@{hand\_model}}
+\index{hand\_model@{hand\_model}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{hand\_model}{hand\_model}}
+{\footnotesize\ttfamily Hand\+Model Draw\+Ray\+Cast.\+hand\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contenitore delle mani. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_a73df325879df4cddd0864ef72327edf1}\label{class_draw_ray_cast_a73df325879df4cddd0864ef72327edf1}} 
+\index{DrawRayCast@{DrawRayCast}!leap\_hand@{leap\_hand}}
+\index{leap\_hand@{leap\_hand}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{leap\_hand}{leap\_hand}}
+{\footnotesize\ttfamily Hand Draw\+Ray\+Cast.\+leap\+\_\+hand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La mano. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_ab1e82571ef37f7dd08453098b8376492}\label{class_draw_ray_cast_ab1e82571ef37f7dd08453098b8376492}} 
+\index{DrawRayCast@{DrawRayCast}!leftHand@{leftHand}}
+\index{leftHand@{leftHand}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{leftHand}{leftHand}}
+{\footnotesize\ttfamily Game\+Object Draw\+Ray\+Cast.\+left\+Hand}
+
+
+
+La mano sinistra. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_af0cd7e836d9e70c7ffe27ebab0bf2ae2}\label{class_draw_ray_cast_af0cd7e836d9e70c7ffe27ebab0bf2ae2}} 
+\index{DrawRayCast@{DrawRayCast}!MAX\_BRUSH\_SIZE@{MAX\_BRUSH\_SIZE}}
+\index{MAX\_BRUSH\_SIZE@{MAX\_BRUSH\_SIZE}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{MAX\_BRUSH\_SIZE}{MAX\_BRUSH\_SIZE}}
+{\footnotesize\ttfamily const int Draw\+Ray\+Cast.\+MAX\+\_\+\+BRUSH\+\_\+\+SIZE = 100\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Dimensione massima del pennello. 
+
+\mbox{\Hypertarget{class_draw_ray_cast_a2ca4c6e1548a65f72e9a9c11a81f9897}\label{class_draw_ray_cast_a2ca4c6e1548a65f72e9a9c11a81f9897}} 
+\index{DrawRayCast@{DrawRayCast}!telaDisegnabile@{telaDisegnabile}}
+\index{telaDisegnabile@{telaDisegnabile}!DrawRayCast@{DrawRayCast}}
+\doxysubsubsection{\texorpdfstring{telaDisegnabile}{telaDisegnabile}}
+{\footnotesize\ttfamily Game\+Object Draw\+Ray\+Cast.\+tela\+Disegnabile}
+
+
+
+La tela su cui disegnare. 
+
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Zeno/\+Documents/\+Git\+Hub/\+Virtual\+Painter/src/\+Assets/\+Scripts/Draw\+Ray\+Cast.\+cs\end{DoxyCompactItemize}
