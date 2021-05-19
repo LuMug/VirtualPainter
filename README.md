@@ -7,3 +7,7 @@ https://www.swisstransfer.com/d/2243f69d-f422-47ed-b09a-17573a553279
 Il seguente link serve a scaricare la build del progetto funzionante su sistemi Windows 10 x64:
 
 https://www.swisstransfer.com/d/3dfea14f-19d2-44e7-a13a-9f6b6278afac
+
+Link alla documentazione completa delle classi
+
+http://www.samtinfo.ch/i18darzen/VirtualPainter/html/
