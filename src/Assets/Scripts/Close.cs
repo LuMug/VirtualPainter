@@ -88,14 +88,16 @@ public class Close : MonoBehaviour
         List<Paths> oldPaths = JsonConvert.DeserializeObject<List<Paths>>(json);
         // Prende l'estenzione dell'ultimo file utilizzato (ultimo file del file json).
         string extension = oldPaths[oldPaths.Count - 1].path.Substring(oldPaths[oldPaths.Count - 1].path.Length - 3, 3);
-        // Apre l'ultimo file (tela/immagine) presente nel file json in modalità scrittura.
-        file = new FileManager(oldPaths[oldPaths.Count - 1].path, FileManager.WRITE_MODE);
+        // Apre l'ultimo file (tela/immagine) presente nel file json in modalità lettura.
+        file = new FileManager(oldPaths[oldPaths.Count - 1].path, FileManager.READ_MODE);
         // Prende la texture (tela).
         var texture = file.GetTexture();
+        // Apre l'ultimo file (tela/immagine) presente nel file json in modalità scrittura.
+        file = new FileManager(oldPaths[oldPaths.Count - 1].path, FileManager.WRITE_MODE);
         // Se l'ultima immagine era un file png
         if (extension.Equals("png"))
         {
-            // Salva il disegno come file png.
+            // Salva il disegno come file png. 
             file.SaveTexturePNG(texture);
         }
         // Se l'ultima immagine era un file png
