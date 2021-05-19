@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-05-18T21:54:34.349Z" agent="5.0 (Windows)" etag="l3A8ItbNkl774cq0pHpi" version="14.6.13" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-19T21:02:50.880Z" agent="5.0 (Windows)" etag="_nUMaL9PcEfhsy__aDym" version="14.6.13" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="4369" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+    <mxGraphModel dx="4708" dy="1280" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -403,14 +403,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FQBeLtVU9E-2zMcjHEF5-1" value="" style="endArrow=open;endFill=1;endSize=12;html=1;entryX=0.237;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.95;exitY=1.005;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="BAl78yBo1YUgTFRK2SCL-55" target="M-HyiIcxL1wfESy_Ib01-26">
+        <mxCell id="FQBeLtVU9E-2zMcjHEF5-1" value="" style="endArrow=open;endFill=1;endSize=12;html=1;entryX=0.237;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.95;exitY=1.005;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="BAl78yBo1YUgTFRK2SCL-55" target="M-HyiIcxL1wfESy_Ib01-26" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-339" y="881" as="sourcePoint" />
             <mxPoint x="-800" y="870" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FQBeLtVU9E-2zMcjHEF5-2" value="&lt;div align=&quot;left&quot;&gt;Le classi presenti nel diagrmamma a cui non è esplicitamente indicata una eriditarietà, estendono la classe MonoBehaviour.&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Eccezione fatta per le classi:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;- &lt;br&gt;&lt;/div&gt;" style="rounded=0;strokeWidth=1;fontSize=14;align=left;whiteSpace=wrap;html=1;labelBorderColor=none;labelBackgroundColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-1640" y="1360" width="650" height="220" as="geometry" />
+        <mxCell id="FQBeLtVU9E-2zMcjHEF5-2" value="&lt;div align=&quot;left&quot;&gt;Le classi presenti nel diagrmamma a cui non è esplicitamente indicata una eriditarietà, estendono la classe MonoBehaviour.&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;Eccezione fatta per le classi:&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;- FileManager&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;- ManageLeft&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&amp;nbsp;- Paths&lt;br&gt;&lt;/div&gt;" style="rounded=0;strokeWidth=1;fontSize=14;align=left;whiteSpace=wrap;html=1;labelBorderColor=none;labelBackgroundColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-1640" y="1450" width="650" height="130" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
