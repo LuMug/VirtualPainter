@@ -12,7 +12,7 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|8:20  - 15:45 ||
+|8:20  - 15:45 |Documentato|
 
 
 
@@ -21,16 +21,14 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:45 | |
+|08:20 - 15:45 |Documentato|
 
 ### Stefano Mureddu
 
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:45 ||
-
-#### Documentato
+|08:20 - 15:45 |Documentato|
 
 
 
@@ -40,9 +38,11 @@ Link utili:
 
 |Orario        |Lavoro svolto                 |
 |--------------|------------------------------|
-|08:20 - 15:45 |  Documentazione|
+|08:20 - 15:45 |Documentato|
 
 
+#### Documentato
+Abbiamo passato l'intera giornata a mettere a posto e inserire dentro la documentazione i pezzi che ancora non erano stati completati.
 
 ##  Punto della situazione rispetto alla pianificazione
 
